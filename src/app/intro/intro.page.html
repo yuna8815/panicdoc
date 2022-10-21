@@ -1,0 +1,84 @@
+<ion-header>
+  <img class='logo w-[130px] pl-[20px] mt-4 mb-8' src='assets/logo.svg' />
+</ion-header>
+
+<ion-content>
+  <ion-grid class='page'>
+    <ng-container *ngIf='step == 1'>
+      <div class='flex justify-center'>
+        <img src='assets/img/placeholder.svg' />
+      </div>
+
+      <div class='mt-4'>
+        PanicDoc은 스스로 공황장애를 극복할 수 있는 방법을 익히는 인지행동치료(CBT,Cognitive Behavior Therapy)<span class='color-primary'>*</span>를 디지털화한 디지털치료기기 앱입니다.
+        <br /><br />
+        PanicDoc과 함께 지금부터 8주~12주 동안 공황장애에 대하여 알아보고 공황과 불안을 스스로 다스리는 방법을 배우게 될 것입니다.
+        <br /><br />
+        <span class='color-primary'>*</span>인지행동치료는 국내뿐만 아니라 미국, 영국, 캐나다 등 해외 공황장애 진료지침에서도 최우선으로 시행하기를 권고하는 치료 방법이며 나를 불안하게 하는 생각과 행동을 스스로 조절할 수 있도록 도와주는 치료입니다.
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf='step == 2'>
+      <ion-row class='mb-4'>
+        <ion-text class='text-bold'>
+          <span class='smd-underline'>디지털 인지행동치료</span>는 아래와 같이 진행됩니다
+        </ion-text>
+      </ion-row>
+
+      <ion-card class='w-full flex flex-row items-center m-0 mb-4 h-[80px]'
+        *ngFor='let tstep of treatmentSteps; let i = index'>
+        <ion-text color='primary' class='font-bold px-4'>{{ i + 1 }}</ion-text>
+        <ion-col>
+          <ion-row *ngIf='tstep.note'>
+            <ion-text color='primary' class='text-medium text-[12px]'>
+              {{ tstep.note }}
+            </ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text class='text-black text-semibold text-[15px]'>
+              {{ tstep.text }}
+            </ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-card>
+
+      <ion-row class='justify-center text-gray-600 mt-8 mb-12'>
+        프로그램은 맞춤형으로 8주~12주 동안 진행됩니다.
+      </ion-row>
+
+    </ng-container>
+
+  </ion-grid>
+
+  <ion-modal #modal trigger='open-modal' [initialBreakpoint]='breakpoint'>
+    <ng-template>
+      <div class='flex flex-col items-center'>
+        <img class='-z-10 w-[300px]' src='assets/img/img003.png' />
+        <div class='w-full h-screen text-center bg-white rounded-lg'>
+
+          <div class='mt-8 mb-8'>
+            이 치료는 <span class='smd-underline'>스스로의 노력</span>이 가장 중요합니다.<br />
+            아래의 내용을 약속해주세요.
+          </div>
+
+          <div class='divider ml-8 mr-8 mb-4'></div>
+
+          <smd-item-list #promises [items]='items' [radio]='false'></smd-item-list>
+
+          <ion-button #okButton color='primary' class='w-[90%] h-[56px]' (click)='ok()' [disabled]='promises.checkedCount != 3'>
+            PanicDoc과 약속을 잘 지키겠습니다
+          </ion-button>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
+
+<ion-footer>
+  <div class='page buttons-wrap mb-4'>
+    <ion-button color='primary' class='w-full' (click)='next()'>
+      {{ step == 1 ? '다음' : 'PanicDoc과 함께 치료를 시작합니다' }}
+    </ion-button>
+  </div>
+</ion-footer>

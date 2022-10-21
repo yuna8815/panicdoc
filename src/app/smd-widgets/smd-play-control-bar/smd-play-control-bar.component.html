@@ -1,0 +1,12 @@
+
+<ion-icon *ngIf='!isPlaying' name='play' size='large' (click)='play()'>
+</ion-icon>
+<ion-icon *ngIf='isPlaying' name='pause' size='large' (click)='pause()'>
+</ion-icon>
+
+<span class='current'>00:00</span>
+
+<!-- <input type='range'/> -->
+<progress [value]='20' [max]='100'></progress>
+
+<span class='total'>00:00</span>

@@ -1,0 +1,34 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+
+    <!-- 코스1 -->
+    <ng-container *ngIf='course == 1'>
+      <ng-container [ngSwitch]='step'>
+        <ng-container *ngSwitchCase='1'>
+          <p7-course1-step1 #stepContent></p7-course1-step1>
+        </ng-container>
+        <ng-container *ngSwitchCase='2'>
+          <p7-course1-step2 #stepContent></p7-course1-step2>
+        </ng-container>
+        <ng-container *ngSwitchCase='3'>
+          <p7-course1-step3 #stepContent></p7-course1-step3>
+        </ng-container>
+        <ng-container *ngSwitchCase='4'>
+          <p7-course1-step4 #stepContent></p7-course1-step4>
+        </ng-container>
+        <ng-container *ngSwitchCase='5'>
+          <p7-course1-step5 #stepContent></p7-course1-step5>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+
+  </ion-content>
+
+<ion-footer>
+  <div class='buttons-wrap flex'>
+    <ion-button color='primary' class='w-full' (click)='next()' [disabled]='stepContent?.nextDisabled?.()'>
+      {{ getButtonText() }}
+    </ion-button>
+  </div>
+</ion-footer>

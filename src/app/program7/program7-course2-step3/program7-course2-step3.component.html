@@ -1,0 +1,22 @@
+<ion-grid class='page flex flex-col'>
+  <h1>일상활동 노출훈련을 제시합니다.</h1>
+
+  <ion-row class='mt-4'>
+    <ion-text class='text-gray-500'>
+      아래 항목에 단계별 세부 노출훈련 계획을 세워보세요.
+    </ion-text>
+  </ion-row>
+
+  <ion-slides [pager]='true' [options]='{}' class='w-full mt-4'>
+    <ion-slide>
+      <smd-action-planner class='w-full mb-12'></smd-action-planner>
+    </ion-slide>
+    <ion-slide>
+      <smd-action-planner class='w-full mb-12'></smd-action-planner>
+    </ion-slide>
+    <ion-slide>
+      <smd-action-planner class='w-full mb-12'></smd-action-planner>
+    </ion-slide>
+  </ion-slides>
+
+</ion-grid>

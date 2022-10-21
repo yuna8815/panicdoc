@@ -1,0 +1,26 @@
+<ion-grid class='page flex flex-col'>
+  <h1>
+    재앙화 사고
+  </h1>
+  <smd-card class='mt-4'>
+    <div class='text-center'>
+      {{ context.p2_2.course2.step3answer?.name }}
+    </div>
+  </smd-card>
+  <smd-arrow class='mt-3' [gray]='false' [count]='3'></smd-arrow>
+  <ion-textarea class='pl-4' [rows]='6' placeholder='텍스트를 입력해 주세요.'
+    [(ngModel)]='context.p2_2.course2.step6answer'
+    [disabled]='true'>
+  </ion-textarea>
+
+  <div class='mt-6'>
+    수고했습니다!<br/>
+    <br/>
+    누구나 불안하고 두려울 수 있습니다. 하지만, 불안과 공황은 안전하며 나를 해치지 않습니다.<br/>
+    <br/>
+    다음에 불안과 공황이 찾아오면 자세히 관찰해 보세요. 그리고 나를 두렵게 만드는 생각의 오류를 찾아보세요.<br/>
+    <br/>
+    공황에 즉각적으로 반응하기 전에 한 걸음 뒤에서 관찰할 수 있다면 공황에 지배받는 삶에서 벗어나는데 도움이 될 것입니다.
+  </div>
+
+</ion-grid>

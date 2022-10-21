@@ -1,0 +1,16 @@
+<smd-header1 title='공황평가(PDSS)' back='/pdss-questionnaire-step9'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <h2 class='mt-8 mb-8'>
+      지난 주에 공황증상, 공황발작, 발작과 관련된 걱정 때문에 일상활동을 두려워하여 집안 일을 하거나 직장에서 업무를 수행할 때 얼마나 방해를 받았나요?
+    </h2>
+
+    <smd-item-list [items]='items' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+    </smd-item-list>
+
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='다음 (10/11)' (next)='next()' [disabled]='!valid'>
+</smd-program-footer>

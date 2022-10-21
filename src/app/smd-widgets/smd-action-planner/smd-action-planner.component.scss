@@ -1,0 +1,13 @@
+:host {
+  position: relative;
+}
+
+ion-modal {
+  &::part(content) {
+    background-color: transparent;
+  }
+}
+
+.darken {
+  filter: brightness(30%);
+}

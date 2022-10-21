@@ -1,0 +1,40 @@
+<ion-grid class='page flex flex-col'>
+
+  <h2>
+    3. {{ context.program4.course3.step3answer[2] }} <br />
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "신체감각"'>
+      어떤 신체감각을 느꼈나요?<br />
+      생각과 행동을 함께 고려해보세요.
+    </ng-container>
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "생각"'>
+      어떤 생각을 했나요? <br />
+      신체감각과 행동을 함께 고려해보세요.
+    </ng-container>
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "행동"'>
+      어떤 행동을 했나요?<br />
+      신체감각과 생각을 함께 고려해보세요.
+    </ng-container>
+  </h2>
+
+  <ion-textarea class='mt-8' placeholder='예시를 참고하여 직접 작성해보세요.' [rows]='6'>
+  </ion-textarea>
+
+  <ul class='mt-4 ml-4'>
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "신체감각"'>
+      <li>심장이 터져 죽을 것 같았다.</li>
+      <li>멀미가 나는 느낌이 들어 버스에서 내렸다. </li>
+      <li>땀이 너무 많이 나고 숨이 막혀 아무것도 할 수 없었다.</li>
+    </ng-container>
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "생각"'>
+      <li>기절할 것 같은 생각이 들어 주저앉았다.</li>
+      <li>아무것도 할 수 없을 것 같았으나 괜찮아질 거라 생각했다.</li>
+      <li>이러다 미쳐버릴지 모른다는 생각이 들었지만 이완호흡을 하며 나아질 거라 생각했다.</li>
+    </ng-container>
+    <ng-container *ngIf='context.program4.course3.step3answer[2] == "행동"'>
+      <li>너무 당황하여 버스에서 내렸지만 어지러움이 점차 나아졌다.</li>
+      <li>가만히 증상이 나아지길 기다렸다.</li>
+      <li>공황에서 벗어나고자 순간 마트를 나갈까 생각했지만 결코 큰일이 일어나지 않을 것이라 생각했더니 나아졌다.</li>
+    </ng-container>
+  </ul>
+
+</ion-grid>

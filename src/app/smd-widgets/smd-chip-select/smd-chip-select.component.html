@@ -1,0 +1,6 @@
+<div class='w-max mt-4'>
+  <ion-chip *ngFor='let i of [3, 4, 5, 6, 7, 8]' [class]='{ selected: i == selectedIndex }'
+    (click)='selected.emit(i)'>
+    {{ i }}주차
+  </ion-chip>
+</div>

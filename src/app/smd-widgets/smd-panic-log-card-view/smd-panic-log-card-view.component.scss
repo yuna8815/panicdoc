@@ -1,0 +1,23 @@
+:host {
+  display: contents;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .panel {
+    width: 7rem;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    flex-shrink: 0;
+  }
+}
+
+img {
+  filter: grayscale(100%) brightness(150.4%);
+}

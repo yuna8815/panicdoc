@@ -1,0 +1,89 @@
+<ion-grid class='page flex flex-col'>
+
+  <h1>인지행동치료 최종 리포트</h1>
+
+  <h2 class='mt-8 mb-2'>공황평가(PDSS)</h2>
+  <canvas baseChart class=''
+    width='200'
+    [data]='barChartData'
+    [options]='barChartOptions'
+    [plugins]='barChartPlugins'
+    [legend]='false'
+    type='bar'>
+  </canvas>
+</ion-grid>
+
+<hr class='w-full h-1 bg-gray-200 mt-4 mb-4' />
+
+<ion-grid class='page flex flex-col mb-8'>
+  <h2 class='mt-8 mb-2'>공황평가(APPQ)</h2>
+  <div class='flex flex-row justify-center'>
+    <smd-weekly-score-chart [labels]='["광장공포", "사회공포", "신체감각"]' [yStep]='10'
+      [xLabels]='["1주차", "2주차", "3주차", "4주차", "5주차", "6주차", "7주차", "8주차"]'>
+    </smd-weekly-score-chart>
+  </div>
+</ion-grid>
+
+<hr class='w-full h-1 bg-gray-200 mt-4 mb-4' />
+
+<ion-grid class='page flex flex-col mb-8'>
+  <h2 class='mt-8 mb-2'>7주간 나의 감정 변화</h2>
+  <div class='flex flex-row justify-center'>
+    <smd-weekly-score-chart></smd-weekly-score-chart>
+  </div>
+</ion-grid>
+
+<hr class='w-full h-1 bg-gray-200 mt-4 mb-4' />
+
+<ion-grid class='page flex flex-col mb-8'>
+  <h2 class='mt-8 mb-2'>나의 공황 발작 횟수</h2>
+  <canvas baseChart
+    width='335'
+    [data]='panicAttackChartData'
+    [options]='barChartOptions'
+    [plugins]='barChartPlugins'
+    [legend]='false'
+    type='bar'>
+  </canvas>
+
+</ion-grid>
+
+<hr class='w-full h-1 bg-gray-200 mt-4 mb-4' />
+
+<ion-grid class='page flex flex-col mb-8'>
+  <h2 class='mt-8 mb-2'>나의 훈련</h2>
+  <div class='divide-y text-lg'>
+    <div class='pt-4 pb-4 flex justify-between'>
+      광장공포
+      <span class='color-primary'>
+        00 / 72
+      </span>
+    </div>
+
+    <div class='pt-4 pb-4 flex justify-between'>
+      사회공포
+      <span class='color-primary'>
+        00 / 80
+      </span>
+    </div>
+
+    <div class='pt-4 flex justify-between'>
+      신체감각
+      <span class='color-primary'>
+        00 / 64
+      </span>
+    </div>
+  </div>
+</ion-grid>
+
+<hr class='w-full h-1 bg-gray-200 mt-4 mb-4' />
+
+<ion-grid class='page flex flex-col mb-8'>
+  <div class='panel gray1'>
+    결과가 만족스러울 수도, 아닐 수도 있습니다.<br />
+    비록 변화가 만족스러울만큼 크지 않더라도 이 것은 실패를 의미하는 것이 아닙니다.<br />
+    <br />
+    이 것은 그저 여러분에게 아직 성취해야 할 부분이 남아 있다는 의미이며, 이 프로그램을 끝마친 여러분에게는 그것을 성취할 수 있는 힘이 충분히 있습니다.<br />
+    분명한 것은 여러분은 지금까지 매우 노력하였고, 그 노력에 자부심을 가져도 된다는 것입니다.
+  </div>
+</ion-grid>

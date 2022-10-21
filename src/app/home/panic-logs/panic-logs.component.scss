@@ -1,0 +1,25 @@
+.panic-attack-card {
+  margin-top: 1em;
+  .inner {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: space-between;
+    align-items: center;
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+    }
+  }
+}
+
+ion-popover {
+  ion-buttons {
+    width: 10em;
+  }
+  ion-button {
+    color: dimgray;
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+}

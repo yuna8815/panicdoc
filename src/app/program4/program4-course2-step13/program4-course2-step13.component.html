@@ -1,0 +1,25 @@
+<ion-grid class='page flex flex-col'>
+  <h2 class='mt-6'>
+    자동사고를 다시 생각해봅시다.
+  </h2>
+
+  <smd-card class='mt-4'>
+    <div>
+      <div class='rected-word sky p-2 w-28'>생각</div>
+      <span class='ml-3'>
+        {{ context.program4.course2.step12answer }}
+      </span>
+    </div>
+  </smd-card>
+
+  <h2 class='mt-6'>
+    위와 같은 생각을 하게 된다면<br />
+    어떤 감정이 들까요?<br />
+  </h2>
+
+  <div class='mt-6'>
+    <smd-item-list [items]='items' [divider]='true' [(selection)]='context.program4.course2.step13answer'>
+    </smd-item-list>
+  </div>
+
+</ion-grid>

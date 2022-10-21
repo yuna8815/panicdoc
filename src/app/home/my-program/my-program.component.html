@@ -1,0 +1,19 @@
+<div class='px-[20px]'>
+
+  <div class='mt-4 mb-12' *ngFor='let prog of programs; let i = index'>
+    <div class=''>
+      <span class='color-primary'>프로그램{{ i + 1 }}</span>
+      {{ prog.title }}
+    </div>
+    <smd-course-card
+      *ngFor='let course of prog.courses'
+      [name]='course.name'
+      [icon]='course.icon'
+      [duration]='course.duration'
+      [link]='course.link'
+      [home]='course.home'
+      class='ml-3'
+    ></smd-course-card>
+  </div>
+
+</div>

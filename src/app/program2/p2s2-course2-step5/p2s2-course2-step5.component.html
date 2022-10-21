@@ -1,0 +1,43 @@
+<ion-grid class='page flex flex-col'>
+  <smd-card class='mt-4'>
+    <div class='text-center'>
+      {{ context.p2_2.course2.step3answer?.name }}
+    </div>
+  </smd-card>
+  <div class='mt-8'>
+    선택하신 항목이 실제로 일어날 확률은<br />
+    <span class='color-primary'>00%</span>입니다.
+  </div>
+  <div class='text-gray-500 mt-8'>
+    <ng-container *ngIf='context.p2_2.course2.step4answer < 30'>
+      맞습니다. 실제로 일어날 확률은 정말 낮습니다.<br />
+      <br />
+      하지만 불안하고 공황이 올 당시엔 나의 생각의<br />
+      오류로 잘못된 자동사고가 생겨난 것입니다.<br />
+      <br />
+      다음에도 불안하고 공황이 올 때<br />
+      나를 관찰해 보세요.<br />
+      그리고 생각의 오류를 찾아보세요.<br />
+      <br />
+      감정일기를 작성하고,  공황발작 기록을 작성하는 것은 생각의 오류를 발견하고 바로잡기 위한 훈련의 일환입니다.
+      <br />
+      한 발자국 떨어져 공황을 관찰합시다. 그리고 그 과정을 기록해봅시다.
+    </ng-container>
+    <ng-container *ngIf='context.p2_2.course2.step4answer >= 30'>
+      아직도 공황에 대한 오해가 있는 것 같습니다.<br />
+      불안과 공황은 결코 나를 해치지 않습니다.<br />
+      <br />
+      많이 불안하고 두려울 수는 있습니다.<br />
+      다시 한번 천천히 살펴보겠습니다.<br />
+      <br />
+      정말 실제로 일어날 확률은 높지 않습니다.<br />
+      그리고 이 생각을 바꿀 수 있는 것은<br />
+      바로  나 자신입니다.<br />
+      <br />
+      이렇게 공황과 불안을 관찰하고 기록해두는 것은 공황에서 벗어나 소중한 일상을 되찾는데 도움이 될 것입니다.<br />
+      <br />
+      한 발자국 떨어져 공황을 관찰합시다. 그리고 그 과정을 기록해봅시다.
+    </ng-container>
+  </div>
+
+</ion-grid>

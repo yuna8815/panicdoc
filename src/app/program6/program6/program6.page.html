@@ -1,0 +1,73 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <!-- 코스1 -->
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program6-course1-step1></program6-course1-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program6-course1-step2></program6-course1-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program6-course1-step3></program6-course1-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program6-course1-step4></program6-course1-step4>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program6-course2-intro1></program6-course2-intro1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program6-course2-step1></program6-course2-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program6-course2-step2></program6-course2-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program6-course2-step3></program6-course2-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program6-course2-step4></program6-course2-step4>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스3 -->
+  <ng-container *ngIf='course == 3'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program6-course3-step1 #stepContent></program6-course3-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program6-course3-step2 #stepContent></program6-course3-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program6-course3-step3 #stepContent></program6-course3-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program6-course3-step4 #stepContent></program6-course3-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program6-course3-step5 #stepContent></program6-course3-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program6-course3-step6 #stepContent></program6-course3-step6>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+</ion-content>
+
+<smd-program-footer *ngIf='!stepContent?.hideNext?.()'
+  text='다음({{ step }}/{{ total }})' (next)='next()'
+  [front]='stepContent?.front'
+  [disabled]='stepContent?.nextDisabled?.()'>
+</smd-program-footer>

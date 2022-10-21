@@ -1,0 +1,83 @@
+<smd-header1 [title]='Courses[course]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <!-- 코스1 -->
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program7-course1-step1></program7-course1-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program7-course1-step2></program7-course1-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program7-course1-step3></program7-course1-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program7-course1-step4></program7-course1-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program7-course1-step5></program7-course1-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program7-course1-step6></program7-course1-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program7-course1-step7></program7-course1-step7>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program7-course2-step1></program7-course2-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program7-course2-step2 #stepContent></program7-course2-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program7-course2-step3 #stepContent></program7-course2-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program7-course2-step4 #stepContent></program7-course2-step4>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스3 -->
+  <ng-container *ngIf='course == 3'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program7-course3-step1 #stepContent></program7-course3-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program7-course3-step2 #stepContent></program7-course3-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program7-course3-step3 #stepContent></program7-course3-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program7-course3-step4 #stepContent></program7-course3-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program7-course3-step5 #stepContent></program7-course3-step5>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf='course == 8'>
+    <edit-daily-exposure #stepContent></edit-daily-exposure>
+  </ng-container>
+
+</ion-content>
+
+<smd-program-footer *ngIf='!stepContent?.hideNext?.()'
+  [text]='stepContent?.getButtonText?.() || "다음"' (next)='next()'
+  [front]='stepContent?.front' frontButtonText='공황 촉발 요인 수정'
+  [top]='stepContent?.top' [topButtonText]='stepContent?.topButtonText?.()'
+  [fill]='stepContent?.top ? "outline" : "solid"'
+
+  [disabled]='stepContent?.nextDisabled?.()'>
+</smd-program-footer>

@@ -1,0 +1,66 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <!-- 코스1 -->
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program1-course1-step1></program1-course1-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program1-course1-step2></program1-course1-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program1-course1-step3></program1-course1-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program1-course1-step4></program1-course1-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program1-course1-step5></program1-course1-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program1-course1-step6></program1-course1-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program1-course1-step7></program1-course1-step7>
+      </ng-container>
+      <ng-container *ngSwitchCase='8'>
+        <program1-course1-step8></program1-course1-step8>
+      </ng-container>
+      <ng-container *ngSwitchCase='9'>
+        <program1-course1-step9></program1-course1-step9>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 오버레이 안내 -->
+  <smd-overlay-guide *ngIf='course == 1 && step == 1'>
+    <ion-text class='desc1'>
+      하단 슬라이드를 이용하여 프로그램을 진행할 수 있습니다.<br />
+      <br />
+      재생버튼을 눌러 음성 같이 듣기 기능을 이용하면<br />
+      본문 내용을 음성으로 지원받을 수 있습니다.<br />
+      <br />
+      슬라이드 끝까지 완료해야 프로그램이 완료됩니다.
+    </ion-text>
+  </smd-overlay-guide>
+
+</ion-content>
+
+<smd-program-footer text='다음({{ step }}/{{ total }})' [showPlayControl]='isVoiceSupported()' (next)='next()'>
+</smd-program-footer>

@@ -1,0 +1,6 @@
+
+<smd-chip *ngFor='let item of items; let i = index' [text]='item.name' [variant]='chipVariant'
+  [checked]='selected == item.value' [disabled]='disabled'
+  [class]='{ "default-margin": marginDefault }' [width]='itemWidth'
+  (checkedChange)='onCheckedChange(item)'>
+</smd-chip>

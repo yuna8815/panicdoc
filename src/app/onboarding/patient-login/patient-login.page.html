@@ -1,0 +1,35 @@
+<ion-header>
+  <img class='logo' src='assets/logo.svg' />
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class='page grow'>
+
+    <div class='mt-10'>
+      PanicDoc 앱 시작을 위해<br />
+      환자 이름과 코드를 입력해주세요.
+    </div>
+    <ion-col class='flex flex-col grow justify-center'>
+      <ion-row>
+        <ion-input color='medium' placeholder='이름을 입력해주세요' [(ngModel)]='patientName'></ion-input>
+      </ion-row>
+      <ion-row class='mt-4'>
+        <ion-input [color]='patientCodeUnmatched ? "danger" : "medium"' (ngModelChange)='onCodeChange()' [(ngModel)]='patientCode' placeholder='환자 코드를 입력해주세요'>
+        </ion-input>
+      </ion-row>
+      <ion-text color='danger' *ngIf='patientCodeUnmatched'>
+        환자 코드가 일치하지 않습니다.
+      </ion-text>
+    </ion-col>
+
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div class='page buttons-wrap mb-4'>
+    <ion-button color='primary' class='w-full' (click)='verify()'>
+      인증하기
+    </ion-button>
+  </div>
+</ion-footer>

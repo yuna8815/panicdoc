@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>[개발자] 날아가기</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='mt-4 ml-2'>
+    이름을 클릭하면 해당 페이지로 바로 이동합니다.
+  </div>
+
+  <div class='ml-4 mt-4'>
+    <div>
+      ● <a routerLink='/splash'>온보딩</a>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/intro/1'>앱시작</a>
+    </div>
+    <div>
+      &nbsp;&nbsp;● <a routerLink='/pdss-questionnaire'>PDSS 평가</a>
+    </div>
+    <div>
+      &nbsp;&nbsp;● <a routerLink='/pdss-questionnaire-step5'>PDSS 평가 (5단계)</a>
+    </div>
+    <div>
+      &nbsp;&nbsp;● <a routerLink='/appq-intro'>APPQ 평가</a>
+    </div>
+    <div>
+      &nbsp;&nbsp;● <a routerLink='/user-info-input'>사용자 정보 입력</a>
+    </div>
+    <div *ngFor='let week of [1, 2, 3, 4, 5, 6, 7, 8, 9]' class='mt-3'>
+      <a routerLink='/home' [queryParams]='{ program: week }'>
+        ● {{ week }} 주차
+      </a>
+      <ng-container *ngIf='week == 4'>
+        <br />
+        <a routerLink='/program4/course2/8'>
+          &nbsp;&nbsp;● 코스2 - 8단계
+        </a>
+      </ng-container>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/home' [queryParams]='{ program: "p2_1" }'>보강수업 - P2-1</a>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/home' [queryParams]='{ program: "p2_2" }'>보강수업 - P2-2</a>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/home' [queryParams]='{ program: "p5" }'>보강수업 - P5</a>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/home' [queryParams]='{ program: "p7" }'>보강수업 - P7</a>
+    </div>
+    <div class='mt-3'>
+      ● <a routerLink='/widgets-demo'>위젯 데모</a>
+    </div>
+  </div>
+
+</ion-content>

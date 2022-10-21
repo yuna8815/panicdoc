@@ -1,0 +1,6 @@
+
+ion-modal {
+  &::part(content) {
+    background-color: transparent;
+  }
+}

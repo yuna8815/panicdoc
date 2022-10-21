@@ -1,0 +1,16 @@
+h2 {
+  color: #333;
+  &.disabled {
+    color: gainsboro;
+  }
+}
+.buttons-wrap {
+  margin-top: 5px;
+}
+.guide {
+  margin-top: 5px;
+  color: #676767;
+  &.disabled {
+    color: gainsboro;
+  }
+}

@@ -1,0 +1,29 @@
+
+<div class='card flex flex-row justify-start items-center' [class]='{ complete: status == "complete", waiting: status == "waiting" }'>
+  <img src='assets/img/{{ icon }}.png' />
+  <div class='flex-col ml-3'>
+    <div class='truncate w-[12rem]'>
+      {{ name }}
+      <span *ngIf='count' class='rounded-full px-2 py-1 bg-black text-white'>{{ count }}회</span>
+    </div>
+    <div class='duration-label flex flex-row items-center'>
+      <ion-icon name='time'></ion-icon>
+      <span class='ml-1'>소요시간: {{ duration }}분</span>
+    </div>
+  </div>
+  <div class='flex grow'></div>
+  <ion-button *ngIf='status == "ready"' color='primary' class='flex justify-center items-center self-end w-[5rem] ml-4'
+    (click)='onClicked()'>
+    <span>진행</span>
+    <ion-icon name='chevron-forward-outline' class='ml-1' size='small'></ion-icon>
+  </ion-button>
+  <ng-container *ngIf='status == "complete"'>
+    <ion-icon name='checkmark-outline' class='mr-1'></ion-icon>
+    <span class='mr-8'>완료</span>
+  </ng-container>
+  <ng-container *ngIf='status == "waiting"'>
+    <span class='bg-gray-200 text-gray-500 rounded-full p-2 w-[5rem] text-center'>
+      대기중
+    </span>
+  </ng-container>
+</div>

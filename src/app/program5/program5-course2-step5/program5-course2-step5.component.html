@@ -1,0 +1,44 @@
+<ion-grid class='page flex flex-col'>
+  <div>
+    <div>
+      <smd-card>
+        <div class='text-center' [innerHTML]='context.program5.course2.step4answer[0]'>
+        </div>
+      </smd-card>
+    </div>
+    <div class='text-gray-500 mt-10'>
+      위 항목은 {{ auth.name }}님이 실제로 일어날 확률이 가장 높다고 선택한 항목입니다.
+    </div>
+    <br />
+
+    <div *ngIf='context.program5.course2.step4answer[0] == DistortionEventOptions[0]'>
+      공황발작으로 교감신경계가 활성화되었을 때 분비되는 아드레날린은 10분 정도면 체내에서 대부분 분해되어 신체증상이 사라집니다.<br />
+      <br />
+      대개의 공황발작은 10분 이내에 정점에 이르며, 20 ~ 30분 정도 지속되다가 저절로 사라지게 됩니다.
+    </div>
+    <div *ngIf='context.program5.course2.step4answer[0] == DistortionEventOptions[1]'>
+      공황을 겪는 사람의 50% 이상이 과호흡 증상을 보입니다. 느린 호흡으로 호흡을 조절하는 것은 부교감신경계를 활성화시켜 공황증상을 줄이는 데 도움이 됩니다.<br />
+      <br />
+      자율신경계는 교감신경계와 부교감신경계로 구성되어 있으며, 한 쪽이 활성화되면 다른 한 쪽은 억제됩니다.<br />
+      <br />
+      공황에서는 교감신경계가 활성화되고 부교감신경계가 활성화되지 않습니다. 의식을 잃는 것은 보통 부교감신경계와 더 밀접하게 관련되어 있기 때문에 공황 발작에서 실제 의식을 잃는 경우는 거의 없습니다.
+    </div>
+    <div *ngIf='context.program5.course2.step4answer[0] == DistortionEventOptions[2]'>
+      재앙화 사고를 하셨군요.<br />
+      공황발작은 실제 의식을 잃는 경우는<br />
+      거의 없습니다.<br />
+      <br />
+      공황에서는 교감신경계가 활성화되고 부교감신경계가 활성화되지 않습니다. 의식을 잃는 것은 보통 부교감신경계와 더 밀접하게 관련되어 있기 때문에 공황 발작에서 실제 의식을 잃는 경우는 거의 없습니다.
+    </div>
+    <div *ngIf='context.program5.course2.step4answer[0] == DistortionEventOptions[3]'>
+      공황발작이 오면 그 상황을 벗어나고 싶은 강한 욕구가 생겨납니다. 하지만 그 욕구를 통제력 상실과 혼동하곤 합니다.<br />
+      <br />
+      혼란스럽고 비현실적인 감각을 경험할 수 있겠지만 여전히 정상적으로 판단하고 행동할 수 있습니다.
+    </div>
+    <div *ngIf='context.program5.course2.step4answer[0] == DistortionEventOptions[4]'>
+      주의를 분산시키는 것은 단기적으로는 불안을 줄일 수 있지만, 공황증상을 직면하고 교정할 수 있는 치료 기회를 놓치게 하여 길게 보면 치료에 도움이 되지 않습니다.<br />
+      <br />
+      회피하는 행동보다는 공황을 인정하는 것이 치료에 도움이 됩니다.
+    </div>
+  </div>
+</ion-grid>

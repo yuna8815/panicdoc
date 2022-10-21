@@ -1,0 +1,48 @@
+<smd-card>
+  <div *ngIf='item' class='flex flex-col gap-4 p-2'>
+
+    <div class='item'>
+      <div class='panel'>일시</div>
+      <span [class]='{ "text-gray-500": !item?.time }'>
+        {{ (item?.time | date:TimeFormat_yyyyMMdd_e_a_hhmm) || '입력한 내용이 없습니다.' }}
+      </span>
+    </div>
+
+    <div class='item'>
+      <div class='panel'>촉발요인</div>
+      <span [class]='{ "text-gray-500": !item?.triggerFactor }'>
+        {{ item?.triggerFactor || '입력한 내용이 없습니다.' }}
+      </span>
+    </div>
+
+    <div class='item'>
+      <div class='panel'>공황 중 증상</div>
+      <span [class]='{ "text-gray-500": !item?.symptom }'>
+        {{ item?.symptom || '입력한 내용이 없습니다.' }}
+      </span>
+    </div>
+
+    <div class='item'>
+      <div class='panel'>나의 생각</div>
+      <span [class]='{ "text-gray-500": !item?.thought }'>
+        {{ item?.thought || '입력한 내용이 없습니다.' }}
+      </span>
+    </div>
+
+    <div class='item'>
+      <div class='panel'>나의 행동</div>
+      <span [class]='{ "text-gray-500": !item?.behavior }'>
+        {{ item?.behavior || '입력한 내용이 없습니다.' }}
+      </span>
+    </div>
+
+  </div>
+
+  <div *ngIf='!item' class='flex flex-col justify-center items-center py-20'>
+
+    <img src='assets/icon/footer_record.svg' />
+    <span>작성한 공황기록이 없습니다.</span>
+
+  </div>
+
+</smd-card>

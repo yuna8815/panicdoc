@@ -1,0 +1,40 @@
+<ion-grid class='page flex flex-col'>
+  <div class='mt-6'>
+    <ng-container *ngIf='context.program4.course2.step10answer?.value == 0'>
+      <div class='flex flex-row justify-center items-stretch'>
+        <div class='flex flex-col items-center'>
+          <span class='text-lg mb-4'>생각</span>
+          <div class='circled-word w-[130px] h-[130px] sky'>심장이 마비 될 것 같다</div>
+        </div>
+        <div class='flex flex-col justify-between items-center ml-12'>
+          <span class='text-lg mb-4'>실제</span>
+          <div class='circled-word w-[80px] h-[80px] dotted'>0번</div>
+          <span></span>
+        </div>
+      </div>
+      <div class='mt-10'>
+        자동사고에서 실제 일어날 위험에 비해 가능성을 과대평가한 생각의 오류를 찾아볼 수 있습니다.
+        <br /><br />
+        이렇게 위험을 과대평가하는 자동사고가 빠르게 스쳐지나가면 생각보다 불안한 감정이 먼저 들고 안절부절못하는 행동으로 이어지며 심장이 더 두근거리는 신체증상으로 이어집니다.
+      </div>
+    </ng-container>
+    <ng-container *ngIf='context.program4.course2.step10answer?.value != 0'>
+      <smd-card class='mt-4'>
+        <div>
+          <div class='rected-word sky p-2 w-28'>생각</div>
+          <span class='ml-3'>
+            심장이 마비될 것 같다
+          </span>
+        </div>
+      </smd-card>
+      <h2 class='mt-6'>다시 한번 생각해볼까요? </h2>
+      <div class='mt-10'>
+        실제로는 생각과 달리 공황발작으로 완전히 통제력을 잃는 일은 발생하지 않습니다.
+        <br /><br />
+        큰 공포와 두려움으로 이미 그럴 것이라고 단정하지는 않았나요?이런 생각을 재앙화 사고라고 부릅니다.
+        <br /><br />
+        걱정하고 염려하는 일이 현실에서 일어날 확률은 아주 낮습니다. PanicDoc을 통하여 보다 합리적인 생각으로 바꿀 수 있도록 훈련해봅시다.
+      </div>
+    </ng-container>
+  </div>
+</ion-grid>

@@ -1,0 +1,9 @@
+<div class='panel'>
+  <div class='flex flex-row items-center'>
+    <span class='text-bold color-primary-dark mr-2'>
+      <ion-icon [name]='!checkmark ? "bulb-outline" : "checkmark-sharp"'></ion-icon>{{ !checkmark ? "TIP" : "Check" }}
+    </span>
+    {{ text }}
+  </div>
+  <ng-content></ng-content>
+</div>

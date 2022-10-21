@@ -1,0 +1,28 @@
+<ion-grid class='page flex flex-col'>
+  <h2 class='relative'>
+    계획한 내용에 어느정도 수행을<br />
+    완료했습니까? <span class='absolute right-4'>{{ planAchieve * 25 }}%</span>
+  </h2>
+  <div class=''>
+    <ion-range [ticks]='true' [snaps]='true' [min]='0' [max]='4' [(ngModel)]='planAchieve'></ion-range>
+  </div>
+  <div class='w-full flex flex-row justify-between pl-4 pr-4 mt-[-1rem] text-gray-500'>
+    <div class='text-center'>0<br />전혀</div>
+    <div class='text-center'>25</div>
+    <div class='text-center'>50<br />중간</div>
+    <div class='text-center'>75</div>
+    <div class='text-center'>100<br />최상</div>
+  </div>
+
+  <hr class='mt-12' />
+  <div class='mt-6 mb-6'>
+    <smd-score-select text='훈련 전 나의 공포는 어느 정도입니까?' [texts]='GradeLabels2' [(selected)]='beforeFear'>
+    </smd-score-select>
+  </div>
+
+  <hr />
+  <div class='mt-6 mb-6'>
+    <smd-score-select class='mt-6' text='훈련 후 나의 공포는 어느 정도입니까?' [texts]='GradeLabels2' [(selected)]='afterFear'>
+    </smd-score-select>
+  </div>
+</ion-grid>

@@ -1,0 +1,83 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program8-course2-step1 #stepContent></program8-course2-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program8-course2-step2 #stepContent></program8-course2-step2>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스3 -->
+  <ng-container *ngIf='course == 3'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program8-course3-step1 #stepContent></program8-course3-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program8-course3-step2 #stepContent></program8-course3-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program8-course3-step3 #stepContent></program8-course3-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program8-course3-step4 #stepContent></program8-course3-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program8-course3-step5 #stepContent></program8-course3-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program8-course3-step6 #stepContent></program8-course3-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program8-course3-step7 #stepContent></program8-course3-step7>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스4 -->
+  <ng-container *ngIf='course == 4'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program8-course4-step1 #stepContent></program8-course4-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program8-course4-step2 #stepContent></program8-course4-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program8-course4-step3 #stepContent></program8-course4-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program8-course4-step4 #stepContent></program8-course4-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program8-course4-step5 #stepContent></program8-course4-step5>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+</ion-content>
+
+<ng-container *ngIf='course == 2 && step == 2; else elseBlock'>
+  <ion-footer>
+    <div class='page flex flex-row justify-between mb-5'>
+      <ion-button color='primary' class='grow' (click)='next()'>
+        다음에 할게요
+      </ion-button>
+      <ion-button color='primary' class='grow' (click)='gotoPlan()'>
+        훈련계획 세우기
+      </ion-button>
+    </div>
+  </ion-footer>
+</ng-container>
+
+<ng-template #elseBlock>
+  <smd-program-footer [text]='getButtonText()' (next)='next()' [disabled]='stepContent?.nextDisabled?.()'>
+  </smd-program-footer>
+</ng-template>

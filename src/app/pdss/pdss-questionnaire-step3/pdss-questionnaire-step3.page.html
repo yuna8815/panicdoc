@@ -1,0 +1,21 @@
+<smd-header1 title='공황평가(PDSS)' back='/pdss-questionnaire-step2'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <h2 class='mt-12'>
+      “최근 1개월” 동안 공황발작을 1회 이상 경험 하셨나요?
+    </h2>
+    <ion-row class='flex flex-row mt-4'>
+      <smd-button-answer #yesno></smd-button-answer>
+    </ion-row>
+
+    <h2 class='mt-12'>
+      경험하셨다면, “최근 1개월 동안” 몇 번의 공황 발작이 있었나요?
+    </h2>
+    <smd-number-spinner class='mt-4' [(value)]='count' [disabled]='!yesno.answer'></smd-number-spinner>
+
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='다음 (3/11)' (next)='next()' [disabled]='yesno.answer && count == 0'>
+</smd-program-footer>

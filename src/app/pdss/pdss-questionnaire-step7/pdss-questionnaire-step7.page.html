@@ -1,0 +1,19 @@
+<smd-header1 title='공황평가(PDSS)' back='/pdss-questionnaire-step6'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <h2 class='mt-8'>
+      지난 주에 공황이 또 언제 일어날지, 공황발작으로 인해 어떤 지장을 받을지에 대해 얼마나 불안하고 걱정하셨나요?
+    </h2>
+    <h2 class='mt-4 mb-8 text-gray-500'>
+      다가올 공황에 대한 불안, 또는 신체적, 정신적 건강문제, 사회적으로 당황스러운 상황이 생길까봐 걱정하고 불안했던 것을 말합니다.
+    </h2>
+
+    <smd-item-list [items]='items' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+    </smd-item-list>
+
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='다음 (7/11)' (next)='next()' [disabled]='!valid'>
+</smd-program-footer>

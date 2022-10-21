@@ -1,0 +1,12 @@
+<ion-grid class='page flex flex-col'>
+  <h2 class='mb-4'>
+    주로 <span class='smd-underline'>어떤 상황</span>에서 공황이 일어났나요?
+  </h2>
+  <div class='text-gray-500'>해당 되는 경우를 모두 선택해 주세요.</div>
+
+  <div class='flex flex-row flex-wrap mt-4'>
+    <smd-chip class='mr-2 mb-2' *ngFor='let ft of factorKinds' [text]='ft' [(checked)]='factors[ft]'>
+    </smd-chip>
+  </div>
+
+</ion-grid>

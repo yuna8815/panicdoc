@@ -1,0 +1,54 @@
+<ion-grid class='page flex flex-col'>
+
+  <ng-container *ngIf='context.program5.course4.step5answer?.name == "쇼핑센터에서 쓰러져 응급실로 옮겨진다"; else elseBlock'>
+    <div class='panel white shadow text-center'>
+      쇼핑센터에서 쓰러져 응급실로 옮겨진다
+    </div>
+
+    <div class='mt-8'>
+      위와 같이 생각하셨군요.<br />
+      하지만 공황발작으로 기절하는 경우는 거의 없습니다.<br />
+      <br /><br />
+      공황장애에서 흔한 인지왜곡은 재앙화 사고입니다. <br />
+      현실에서 일어날 확률이 희박한 극단적인 생각을  굳게 믿어버리는 것이 재앙화 사고입니다.<br />
+      이때  ‘정말 사실인가?’부터 스스로 판단해 보세요.
+    </div>
+  </ng-container>
+
+  <!-- 쇼핑센터에서 쓰러져 응급실로 옮겨진다 외의 항복을 선택한 경우  -->
+  <ng-template #elseBlock>
+    <ion-text>
+      <div>
+        <div>
+          우리가 파국적, 재앙적으로 생각하는 일들은
+          <br />
+          거의 일어나지 않습니다.
+          <br />
+        </div>
+
+        <div class='mt-4'>
+          실제 공황발작이 왔을 때도 지금과 같이 긍정적이고 합리적인 생각을 해 봅시다.
+          <br /><br />
+          인지치료 방법 중 긍정적 자기말하기(positive self talk)가 있습니다. 아래와 같이 문장을 만들어 공황발작에서 소리내어 말해보세요. 그리고 공황발작에 효과가 있음을 스스로 느껴보세요.
+        </div>
+      </div>
+    </ion-text>
+
+    <div class='mt-10'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="-20 -50 270 300">
+        <g id="그룹_55143" data-name="그룹 55143" transform="translate(-80.251 -406)">
+          <path id="패스_35657" data-name="패스 35657" d="M151.649,55.316c32.032.087,66.323,12.814,66.236,44.846-.066,24.521-24.261,37.107-45.786,44.053,4.543,10.087,14.281,15.494,14.281,15.494-13.313,0-21.038-7.658-26.152-12.853a72.284,72.284,0,0,1-9.405.592c-32.032-.087-62.281-14.882-62.195-46.915s30.99-45.3,63.022-45.218" transform="translate(120.996 432.955)" fill="#dde7ef"/>
+          <path id="패스_35655" data-name="패스 35655" d="M70.5,87.363c35.95-.072,74.5,13.317,74.568,47.456.052,26.133-27.039,39.672-51.16,47.184,5.151,10.726,16.107,16.438,16.107,16.438-13.687,0-23.65-8.053-29.416-13.564a85.109,85.109,0,0,1-10.554.68C34.09,185.628.068,170.014,0,135.875S34.546,87.435,70.5,87.363" transform="matrix(1, -0.017, 0.017, 1, 95.885, 451.662)" fill="#eeebf8"/>
+          <path id="패스_35656" data-name="패스 35656" d="M74.588,0c36.523-.072,75.687,14.255,75.76,50.777.055,27.958-27.464,42.439-51.969,50.473,5.234,11.475,23.536,26.052,23.536,26.052-14.716-2.715-29.507-11.758-37.057-22.978a82.324,82.324,0,0,1-10.722.725c-36.523.072-71.089-16.636-71.161-53.157S38.065.072,74.588,0" transform="translate(77.277 406)" fill="#ddefe8"/>
+          <rect id="사각형_20737" data-name="사각형 20737" width="245.662" height="234.744" transform="translate(86.793 423.096)" fill="none"/>
+          <text id="많이_불안하지만_곧_괜찮아질_거야_" data-name="많이 불안하지만,
+          곧 괜찮아질 거야!" transform="translate(103 453.779)" font-size="15" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="0" y="0">많이 불안하지만,</tspan><tspan x="0" y="20">곧 괜찮아질 거야!</tspan></text>
+          <text id="최악의_상황은_절대_아니야." data-name="최악의 상황은
+          절대 아니야." transform="translate(274.43 531.523)" font-size="15" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="-40.71" y="0">최악의 상황은</tspan><tspan x="-36.21" y="20">절대 아니야.</tspan></text>
+          <text id="위험하지_않은_거_잘_알잖아." data-name="위험하지 않은 거
+          잘 알잖아." transform="translate(166.623 581.664)" font-size="15" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="-49.02" y="0">위험하지 않은 거</tspan><tspan x="-29.73" y="20">잘 알잖아.</tspan></text>
+        </g>
+      </svg>
+    </div>
+  </ng-template>
+</ion-grid>

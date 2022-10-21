@@ -1,0 +1,21 @@
+<div class='flex flex-row justify-center'>
+  <div class='rected-word orange'>
+    {{ word1 }}
+    <span *ngIf='note1' class='note orange' [innerHtml]='note1'></span>
+  </div>
+</div>
+<div class='flex flex-row justify-center items-center mt-5'>
+  <img class='arrow-left mr-16' src='assets/icon/arrow5.svg' />
+  <div class='inline-block w-[8em]'></div>
+</div>
+<div class='flex flex-row justify-center items-center mt-7'>
+  <div class='rected-word sky'>
+    {{ word2 }}
+    <span *ngIf='note2' class='note sky' [innerHtml]='note2'></span>
+  </div>
+  <img class='arrow-bottom ml-4 mr-4' src='assets/icon/arrow4.svg' />
+  <div class='rected-word pink'>
+    {{ word3 }}
+    <span *ngIf='note3' class='note pink' [innerHtml]='note3'></span>
+  </div>
+</div>

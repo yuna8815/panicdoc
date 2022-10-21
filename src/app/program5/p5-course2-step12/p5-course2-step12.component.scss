@@ -1,0 +1,30 @@
+@import '../../../theme/variables';
+
+.chat {
+  position: relative;
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 0.5em;
+  &:before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    border-radius: 0.5em;
+    width: 2em;
+    height: 2em;
+    z-index: -1;
+  }
+  &:not(.doc):before {
+    background-color: #eee;
+    right: -0.1em;
+    transform: rotate(-60deg) skewX(45deg);
+  }
+  &.doc {
+    background-color: $color-primary-tint;
+    &:before {
+      background-color: $color-primary-tint;
+      left: -0.1em;
+      transform: rotate(-0deg) skewX(45deg);
+    }
+  }
+}

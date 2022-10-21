@@ -1,0 +1,91 @@
+<!--
+  이완훈련하기 페이지
+-->
+<img class='back' src='assets/img/relax_woman.png' />
+
+<ion-grid class='page flex flex-col h-full'>
+  <div class='flex flex-row justify-between items-center'>
+    <ion-button fill='clear' class='text-white' (click)='back()'>
+      <ion-icon name='chevron-back-outline'></ion-icon>
+      이완훈련 하기
+    </ion-button>
+
+    <ion-button #volumeButton fill='clear' class='text-white' (click)='onVolume()'>
+      <ion-icon name='volume-medium'></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class='flex flex-row justify-center'>
+    <ion-button fill='clear' class='play text-white mt-80' (click)='playOrResume()'>
+      <ion-icon [name]='!playing ? "play-circle" : "pause-circle"'></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class='absolute bottom-0 w-[90%]'>
+    <ion-range>
+      <span slot='start' class='text-white'>00:00</span>
+      <span slot='end' class='text-white'>00:00</span>
+    </ion-range>
+
+    <ion-button class='w-full mb-12' (click)='back()'>이완훈련 완료</ion-button>
+  </div>
+</ion-grid>
+
+<!-- 가이드 오버레이 -->
+<ng-container *ngIf='guideStep'>
+  <svg width='100%' height='100vh' (click)='guideNext()'
+    class='absolute top-0 left-0 z-50'>
+    <defs>
+      <mask id='highlightMask' x='0' y='0' width='100%' height='100vh'>
+        <rect width='100%' height='100vh' fill='white' />
+        <circle *ngIf='guideStep == 2'
+          [attr.cx]='volumeButtonCx' [attr.cy]='volumeButtonCy' r='20' fill='black'
+        />
+      </mask>
+    </defs>
+
+    <rect x='0' y='0' width='100%' height='100vh' fill='rgba(0, 0, 0, .7)' mask='url(#highlightMask)' />
+  </svg>
+  <div *ngIf='guideStep == 1' class='w-full text-white text-center absolute-center z-50'>
+    소리를 들으며 PanicDoc과 이완훈련을 진행해보세요.<br />
+    <br />
+    내레이션과 배경음악의 도움을 받아<br />
+    나의 호흡에 집중하고 근육을 이완해보세요.
+  </div>
+  <div *ngIf='guideStep == 2' class='text-white absolute right-[5rem] top-[3rem] z-50'>
+    <div class='flex justify-center'>
+      <img *ngIf='guideStep == 2' class='w-[3rem]' src='assets/icon/arrow7.svg' />
+    </div>
+    <b>볼륨 설정</b><br />
+    내레이션과 배경음악<br />
+    사운드 크기 조정
+  </div>
+</ng-container>
+
+<!-- 볼륨조절 모달 -->
+<ion-modal #volumeModal (didDismiss)='closeVolume()' [showBackdrop]='false'>
+  <ng-template>
+    <div class='flex flex-col p-4'>
+      <div class='flex flex-row justify-center items-center'>
+        <h2>볼륨설정</h2>
+        <ion-button fill='clear' class='text-black absolute right-2' (click)='closeVolume()'>
+          <ion-icon class='' name='close'></ion-icon>
+        </ion-button>
+      </div>
+
+      <hr class='mt-8 mb-8' />
+
+      <span class='text-gray-500'>내래이션</span>
+      <div class='flex flex-row items-center'>
+        <ion-icon name='volume-medium' class='color-primary' size='large'></ion-icon>
+        <ion-range></ion-range>
+      </div>
+
+      <span class='text-gray-500 mt-4'>배경음악</span>
+      <div class='flex flex-row items-center mb-8'>
+        <ion-icon name='volume-medium' class='color-primary' size='large'></ion-icon>
+        <ion-range></ion-range>
+      </div>
+    </div>
+  </ng-template>
+</ion-modal>

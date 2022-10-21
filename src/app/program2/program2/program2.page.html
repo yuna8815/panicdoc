@@ -1,0 +1,87 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <!-- 코스1 -->
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program2-course1-step1></program2-course1-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program2-course1-step2></program2-course1-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program2-course1-step3></program2-course1-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program2-course1-step4></program2-course1-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program2-course1-step5></program2-course1-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program2-course1-step6></program2-course1-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program2-course1-step7></program2-course1-step7>
+      </ng-container>
+      <ng-container *ngSwitchCase='8'>
+        <program2-course1-step8></program2-course1-step8>
+      </ng-container>
+      <ng-container *ngSwitchCase='9'>
+        <program2-course1-step9></program2-course1-step9>
+      </ng-container>
+      <ng-container *ngSwitchCase='10'>
+        <program2-course1-step10></program2-course1-step10>
+      </ng-container>
+      <ng-container *ngSwitchCase='11'>
+        <program2-course1-step11></program2-course1-step11>
+      </ng-container>
+      <ng-container *ngSwitchCase='12'>
+        <program2-course1-step12></program2-course1-step12>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program2-course2-step1></program2-course2-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program2-course2-step2></program2-course2-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program2-course2-step3></program2-course2-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program2-course2-step4></program2-course2-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program2-course2-step5></program2-course2-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program2-course2-step6></program2-course2-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program2-course2-step7></program2-course2-step7>
+      </ng-container>
+      <ng-container *ngSwitchCase='8'>
+        <program2-course2-step8></program2-course2-step8>
+      </ng-container>
+      <ng-container *ngSwitchCase='9'>
+        <program2-course2-step9></program2-course2-step9>
+      </ng-container>
+      <ng-container *ngSwitchCase='10'>
+        <program2-course2-step10></program2-course2-step10>
+      </ng-container>
+      <ng-container *ngSwitchCase='11'>
+        <program2-course2-step11></program2-course2-step11>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+</ion-content>
+
+<smd-program-footer text='{{ step == StepsPerCourse[course - 1] ? "완료" : "다음" }}({{ step }}/{{ total }})' (next)='next()'>
+</smd-program-footer>

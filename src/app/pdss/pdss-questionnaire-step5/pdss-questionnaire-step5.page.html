@@ -1,0 +1,19 @@
+<smd-header1 title='공황평가(PDSS)' back='/pdss-questionnaire-step4'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <h2 class='mt-8'>
+      다음 문항을 잘 읽고, 지난 주에 경험한 것과 가장 비슷한 내용을 선택해주세요.
+    </h2>
+    <hr class='mt-4 mb-4' />
+    <h2 class='mb-8'>
+      지난 주 공황발작 또는 공황증상을 얼마나 자주 경험하셨나요?
+    </h2>
+
+    <smd-item-list [items]='items' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+    </smd-item-list>
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='다음 (5/11)' (next)='next()' [disabled]='!valid'>
+</smd-program-footer>

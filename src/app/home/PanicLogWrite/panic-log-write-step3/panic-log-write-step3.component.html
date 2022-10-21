@@ -1,0 +1,9 @@
+<ion-grid class='page flex flex-col'>
+  <h2>공황 중 <span class='smd-underline'>증상</span>에 모두 체크하십시오.</h2>
+  <div class='text-gray-500'>해당 되는 경우를 모두 선택해 주세요.</div>
+
+  <ion-row class='mt-4'>
+    <smd-chip class='mr-2 mb-2' *ngFor='let st of symptoms' [text]='st' [(checked)]='checked[st]'></smd-chip>
+  </ion-row>
+
+</ion-grid>

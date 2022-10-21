@@ -1,0 +1,130 @@
+<smd-header1 title='위젯 갤러리' back='/'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page flex flex-col'>
+    <h2>타이포그라피</h2>
+    <span class='smd-underline'>언더라인</span><br />
+    <span class='color-primary'>CI색</span><br />
+    <span class='font-bold'>볼드</span>
+
+    <h2 class='mt-8'>버튼</h2>
+    <div>
+      <ion-button color='primary'>버튼</ion-button>
+      <ion-button color='primary' shape='round'>Round</ion-button>
+      <ion-button color='primary' fill='outline'>Outline</ion-button>
+      <ion-button color='primary' fill='clear'>Clear</ion-button>
+    </div>
+
+    <h2 class='mt-8'>텍스트 입력</h2>
+    <div>
+      <ion-input></ion-input>
+    </div>
+
+    <h2 class='mt-8'>코스 카드</h2>
+    <smd-course-card
+      name='완료 코스카드 제목'
+      icon='icon3'
+      [duration]='5'
+      status='complete'
+    ></smd-course-card>
+    <smd-course-card
+      name='진행 코스카드 제목'
+      icon='icon3'
+      [duration]='5'
+      class='mt-2'
+    ></smd-course-card>
+
+    <h2 class='mt-8'>인용구 카드</h2>
+    <smd-quotation-message-card word='단어1' text='인용구1'>
+    </smd-quotation-message-card>
+
+    <h2 class='mt-8'>다이어그램</h2>
+    <div class=''>
+      <div class='circled-word w-[110px] h-[110px] green'>단어</div>
+      <div class='circled-word w-[200px] h-[200px] orange'>단어</div>
+      <div class='circled-word w-[80px] h-[80px] dotted'>단어</div>
+    </div>
+
+    <h2 class='mt-8'>원 다이어그램</h2>
+    <smd-circle-diagram></smd-circle-diagram>
+
+    <h2 class='mt-8'>삼단 사고흐름 다이어그램</h2>
+    <smd3-thought-flow-diagram word1='단어1' word2='단어2' word3='단어3'></smd3-thought-flow-diagram>
+
+    <h2 class='mt-8'>점수선택</h2>
+    <smd-score-select text='점수를 골라주세요'></smd-score-select>
+
+    <h2 class='mt-8'>smd-card</h2>
+    <smd-card>
+      <div class='flex flex-col'>
+        <span>라인1</span>
+        <span>라인2</span>
+      </div>
+    </smd-card>
+    <div class='mt-4'></div>
+    <smd-card>
+      <div class='flex flex-col items-center'>
+        <span>제목</span>
+        <div>
+          <div class='rected-word green w-[114px] h-10'>단어1</div>
+          <div class='rected-word sky ml-4 w-[82px] h-10'>단어2</div>
+        </div>
+      </div>
+    </smd-card>
+
+    <h2 class='mt-8'>칩</h2>
+    <div>
+      <smd-chip [checked]='false'>칩1</smd-chip>&nbsp;
+      <smd-chip [checked]='true'>칩2</smd-chip>
+      <smd-chip [checkable]='false'>칩3</smd-chip>
+    </div>
+
+    <h2 class='mt-8'>패널</h2>
+    <div class='panel'>
+      <b>패널1</b><br />
+      라인1<br />
+      라인2<br />
+    </div>
+    <div class='panel orange mt-2'>
+      패널2
+      <ul>
+        <li class='mt-2'>
+          항목1
+        </li>
+        <li class='mt-2'>
+          항목2
+        </li>
+      </ul>
+    </div>
+    <div class='panel sky mt-2'>
+      패널3
+      <ol start='1'>
+        <li class='mt-2'>
+          항목1
+        </li>
+        <li class='mt-2'>
+          항목2 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트 긴 텍스트
+        </li>
+      </ol>
+    </div>
+    <div class='panel pink mt-2'>
+      <b>패널</b><br />
+      라인1<br />
+      라인2<br />
+    </div>
+
+    <h2 class='mt-8'>라디오 리스트</h2>
+    <smd-item-list [items]='items'></smd-item-list>
+
+    <h2 class='mt-8'>메시지</h2>
+    <div>
+      <ion-button (click)='showAlert()'>확인</ion-button>
+      <ion-button (click)='showConfirm()'>응답</ion-button>
+    </div>
+
+    <h2 class='mt-8'>리오더</h2>
+    <smd-reorder [items]='["사과", "바나나", "감", "배"]'>
+    </smd-reorder>
+  </ion-grid>
+
+</ion-content>

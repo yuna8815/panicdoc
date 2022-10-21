@@ -1,0 +1,17 @@
+
+ion-modal {
+  --border-radius: 6px;
+  --width: fit-content;
+  --min-width: 300px;
+  --height: fit-content;
+
+  span.title {
+    font-family: 'Pretendard-Bold';
+    font-size: 20px;
+  }
+  .message {
+    color: dimgray;
+    text-align: center;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,24 @@
+<ion-grid class='page flex flex-col'>
+
+    <ng-container *ngIf='context.p5.course2.step3answer_allNo'>
+    <h2>네 맞습니다.</h2>
+    <div class='mt-6'>
+      공황으로 죽거나 최악의 결과가 오지는 않습니다.<br />
+      <br />
+      지금까지 한 달 이상 우리는 공황에 대해 학습하고 훈련해왔습니다. 그리고 이를 토대로 불안과 공황을 이겨낼 수 있는 발판을 마련했습니다.<br />
+      <br />
+      하지만, 배운 것을 활용하기 위해서는 반복적인 연습이 필요합니다. 앞으로도 PanicDoc과 함께 공황을 이겨내기 위해 나아갑시다.<br />
+    </div>
+  </ng-container>
+  <ng-container *ngIf='!context.p5.course2.step3answer_allNo'>
+    <h2>아직도 공황에 대한<br />두려운 생각을 갖고 있군요.</h2>
+    <div class='mt-6'>
+      지금까지 많은 어려움을 경험해왔기 때문에 공황에 대한 생각이 쉽게 변하지는 않을 수 있습니다.<br />
+      <br />
+      하지만 지금까지의 공황을 떠올려보고 앞으로의 공황을 관찰해본다면 공황은 시간이 지나면 사라지고 안전하다는 것을 알 수 있습니다.
+    </div>
+  </ng-container>
+
+  <img class='mt-24 mb-8' src='assets/img/placeholder.svg' />
+
+</ion-grid>

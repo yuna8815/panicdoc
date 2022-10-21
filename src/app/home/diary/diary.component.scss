@@ -1,0 +1,18 @@
+@import '../../../theme/variables';
+
+.day-card {
+  display: inline-block;
+  background-color: $color-primary-tint;
+  border-radius: 1em;
+  width: 8rem;
+
+  .score-wrap {
+    display: inline-block;
+    height: 4.75rem;
+    padding-top: 0.7rem;
+  }
+  .button-wrap {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+}

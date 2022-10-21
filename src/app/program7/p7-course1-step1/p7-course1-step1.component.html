@@ -1,0 +1,16 @@
+<ion-grid class='page flex flex-col'>
+  <h2>노출훈련을 진행하는 것이<br />왜 어려웠는지 알 수 있을까요?</h2>
+  <div class='text-gray-500'>
+    노출훈련은 CBT 진행에 마지막이 되는 중요한 훈련입니다.
+  </div>
+
+  <div class='mt-3'>
+    {{ auth.name }}님은 지난 2주간
+    <span class='smd-underline'>증상 노출훈련 0회 / 일상활동 노출훈련 0회</span>를
+    진행했습니다.
+  </div>
+
+  <smd-item-list [items]='items' [(selection)]='context.p7.course1.step1answer' [divider]='true'>
+  </smd-item-list>
+
+</ion-grid>

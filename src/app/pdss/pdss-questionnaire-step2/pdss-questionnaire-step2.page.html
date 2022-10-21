@@ -1,0 +1,44 @@
+<smd-header1 title='공황평가(PDSS)' back='/pdss-questionnaire-step1'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <ion-row>
+      <ion-text>지금까지 공황발작을 1회 이상 경험하셨나요?</ion-text>
+    </ion-row>
+    <ion-row class='flex flex-row'>
+      <smd-button-answer></smd-button-answer>
+    </ion-row>
+
+    <ion-row class='mt-4'>
+      <ion-text>최초 공황발작은 언제인가요?</ion-text>
+    </ion-row>
+    <ion-input [value]='firstSeizureDate | date:TimeFormat_yyyyMMdd' (click)='pickFirstSeizureDate()'></ion-input>
+
+    <ion-row class='mt-4'>
+      <ion-text>최근에 경험한 공황발작은 언제입니까?</ion-text>
+    </ion-row>
+    <ion-input [value]='recentSeizureDate | date:TimeFormat_yyyyMMdd_e' (click)='pickRecentSeizureDate()'></ion-input>
+  </ion-grid>
+
+  <ion-modal [initialBreakpoint]='firstOrRecentSeizure ? h1 : h2'>
+    <ng-template>
+      <div class='w-full h-screen flex flex-col items-center bg-white rounded-lg'>
+        <h2 class='mt-4'>날짜 선택</h2>
+
+        <hr class='w-full mt-4 mb-4' />
+
+        <ion-datetime *ngIf='firstOrRecentSeizure' presentation='month-year' (ionChange)='onDateChange($event)'>
+        </ion-datetime>
+        <ion-datetime *ngIf='!firstOrRecentSeizure' presentation='date' (ionChange)='onDateChange($event)'>
+        </ion-datetime>
+        <ion-button color='primary' class='w-[90%]' (click)='selectDate()'>
+          날짜 선택
+        </ion-button>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
+
+<smd-program-footer text='다음 (2/11)' (next)='next()'>
+</smd-program-footer>

@@ -1,0 +1,51 @@
+<ion-grid class='page flex flex-col'>
+  <h1>가능성에 대한<br />과대평가에 도전하기</h1>
+
+  <div class='mt-4 mb-6'>
+    다음의 예시와 같이 나의 과대평가를 찾아보고,<br />
+    두려운 생각을 어떻게 수정할 수 있을지 생각해볼까요?
+  </div>
+
+  <smd-quotation-message-card word='과대<br />평가' text='다음에 공황발작이 일어난다면 나는 정신을<br />잃을 것이다.'>
+  </smd-quotation-message-card>
+
+  <b class='mt-6'>판단근거를 찾아봅시다.</b>
+
+  <ul class='ml-4'>
+    <li>전에 내가 실제로 완전히 정신을 잃고 기절했던 적이 있었는가?</li>
+    <li>실제로 기절할 확률은 얼마인가?</li>
+    <li>발생 가능성은 0 ~ 100점 중 얼마인가?</li>
+  </ul>
+
+  <div class='flex flex-row justify-center my-8'>
+    <img *ngFor='let i of [0, 1, 2]' src='assets/icon/arrow2.svg' />
+  </div>
+
+  <smd-quotation-message-card word='과대<br />평가' text='심장이 빠르게 뛰는 것은 심장마비가 온다는<br />신호일 것이다.'>
+  </smd-quotation-message-card>
+
+  <b class='mt-6'>판단근거를 찾아봅시다.</b>
+
+  <ul class='ml-4'>
+    <li>전에 심장마비가 일어났던 적이 있었는가?</li>
+    <li>실제로 심장마비가 올 확률은 얼마나 되는가?</li>
+    <li>이전에 이와 비슷한 두근거림을 겪은 적이 몇 번이나 있었는가? 그 때마다 심장마비가 왔는가?</li>
+    <li>심장마비가 올 것이라는 근거는 무엇인가?</li>
+  </ul>
+
+  <div class='flex flex-row justify-center my-8'>
+    <img *ngFor='let i of [0, 1, 2]' src='assets/icon/arrow2.svg' />
+  </div>
+
+  <smd-card>
+    <div class='text-center'>
+      생각은 사실이 아니라 추측일 뿐입니다.
+    </div>
+  </smd-card>
+
+  <div class='text-center mt-6 mb-8'>
+    합리적인 판단근거를 통해<br />
+    과대평가하는 생각의 오류를 수정할 수 있습니다.
+  </div>
+
+</ion-grid>

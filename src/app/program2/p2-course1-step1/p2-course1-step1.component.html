@@ -1,0 +1,17 @@
+<ion-grid class='page flex flex-col'>
+  <div>
+    <ion-text>
+      <h2>
+        혹시 감정일기를 작성하지<br />
+        못한 이유를 알려줄 수 있을까요?
+      </h2>
+      <div class='mt-1 text-gray-500'>
+        {{ auth.name }}님은 지난 2주간 3회의 감정일기를 작성했습니다.
+      </div>
+    </ion-text>
+    <div class='mt-10'>
+      <smd-item-list [items]='items' [(selection)]='context.p2_1.course1.step1answer' [divider]='true'>
+      </smd-item-list>
+    </div>
+  </div>
+</ion-grid>

@@ -1,0 +1,19 @@
+<smd-header1 title='공황평가(APPQ)' back='/appq-intro'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+
+    <div class='questions mt-10'>
+      <ng-container *ngFor='let t of questions; let i = index'>
+        <smd-score-select [text]='t' (selectedChange)='questionsValue[t] = $event'
+          [disabled]='i > 0 && !questionsValue[questions[i - 1]]'>
+        </smd-score-select>
+        <hr class='mt-8 mb-8' />
+      </ng-container>
+    </div>
+
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='완료' (next)='next()' [disabled]='!valid'>
+</smd-program-footer>

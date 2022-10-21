@@ -1,0 +1,13 @@
+<h2>
+  {{ text }}
+</h2>
+<div class=''>
+  <ion-range [ticks]='true' [snaps]='true' [min]='0' [max]='4' [(ngModel)]='value'></ion-range>
+</div>
+<div class='w-full flex flex-row justify-between pl-4 pr-4 mt-[-1rem] text-gray-500'>
+  <div class='text-center'>0<br />전혀</div>
+  <div class='text-center'>25</div>
+  <div class='text-center'>50<br />중간</div>
+  <div class='text-center'>75</div>
+  <div class='text-center'>100<br />최상</div>
+</div>

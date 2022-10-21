@@ -1,0 +1,408 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import "./fonts.scss";
+
+@import "./theme/variables";
+
+@tailwind base;
+@tailwind utilities;
+
+html {
+  font-size: 13px;
+  font-family: 'Pretendard-Medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+:root {
+  --ion-font-family: 'Pretendard-Medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+// smd 여백
+$smd-margin: 20px;
+.page {
+  padding-left: $smd-margin !important;
+  padding-right: $smd-margin !important;
+}
+.smd-mr { // smd 여백을 margin으로 설정할 필요가 생겨서 만듦.
+  margin-right: $smd-margin !important;
+}
+
+// 헤더 그림자 제거
+// #CREDIT: https://forum.ionicframework.com/t/how-to-remove-shadows-from-navbar/62818/9
+ion-header::after {
+  background-image: none !important;
+}
+
+// 타이포그라피
+.text-bold {
+  font-family: 'Pretendard-Bold';
+}
+.text-semibold {
+  font-family: 'Pretendard-SemiBold';
+}
+.text-medium {
+  font-family: 'Pretendard-Medium';
+}
+.text-regular {
+  font-family: 'Pretendard-Regular';
+}
+.color-primary {
+  color: $color-primary;
+}
+.color-bg-primary {
+  background-color: $color-primary;
+}
+.color-primary-dark {
+  color: $color-primary-dark;
+}
+
+// 기본 컨트롤
+// 텍스트 인풋
+ion-input {
+  background-color: #f2f2f2 !important;
+  border-radius: 4px;
+  input {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+ion-textarea {
+  background-color: #f2f2f2 !important;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+
+ion-button {
+  // ion-button 쉐도우 전부 제거
+  --box-shadow: 0 0 #0000;
+
+  // 대문자 변환 끔
+  text-transform: none;
+}
+
+span.progress-badge {
+  height: 34;
+  padding: 10px 15px;
+  border-radius: 22px;
+  border: 1.5px solid #ccc;
+  &.black {
+    background-color: black;
+    color: white;
+  }
+  &.gray {
+    background-color: #e8e8e8;
+    color: black;
+  }
+  &.green {
+    background-color: #49b578;
+    color: white;
+  }
+  &.white {
+    background-color: white;
+    color: black;
+  }
+}
+
+// 프로그레스바 스타일
+progress::-moz-progress-bar {
+  background-color: $color-primary;
+}
+
+// webkit
+progress::-webkit-progress-bar {
+  background-color: $color-primary-tint;
+}
+progress::-webkit-progress-value {
+  background-color: $color-primary;
+}
+progress {
+  background-color: $color-primary-tint;
+  height: 2px;
+}
+
+// 토스트
+ion-toast {
+  text-align: center;
+  color: white;
+}
+.toast-y-up100px {
+  transform: translateY(-100px) !important;
+}
+
+// 리스트 bullet컬러변경
+ul {
+  list-style: none;
+  li {
+    color: gray;
+    &::before {
+      content: '\2022';
+      color: $color-primary;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}
+
+// 패널
+div.panel {
+  padding: 1.0rem;
+  border-radius: 0.5rem;
+  background-color: $color-primary-tint;
+  color: black;
+
+  .score {
+    color: $color-primary;
+  }
+
+  // 흰색 배경 - 예시: 공황평가(APPQ) 결과
+  &.white {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+  }
+  &.orange {
+    background-color: #fee8b1;
+  }
+  &.purple {
+    background-color: #eeebf8;
+  }
+  &.sky {
+    background-color: #dde7ef;
+  }
+  &.pink {
+    background-color: #f2d1da;
+  }
+  &.gray1 {
+    background-color: #F2F1F1;
+  }
+  &.sub_green {
+    background-color: #ddefe8;
+  }
+
+  &.shadow {
+    box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+  }
+
+  &.li-lh-normal {
+    li + li {
+      margin-top: 1em;
+    }
+  }
+
+  // 패널 내부 제목
+  .title {
+    margin-left: 1rem;
+    margin-bottom: 0.75rem;
+    text-indent: -1em;
+    font-family: 'Pretendard-SemiBold';
+    &._1::before {
+      content: '1.';
+      font-weight: bold;
+    }
+    &._2::before {
+      content: '2.';
+      font-weight: bold;
+    }
+    &._3::before {
+      content: '3.';
+      font-weight: bold;
+    }
+    &._4::before {
+      content: '4.';
+      font-weight: bold;
+    }
+  }
+  div.inner-section {
+    font-size: 15px;
+    color: gray;
+  }
+
+  // 리스트 bullet컬러변경
+  ul {
+    li {
+      margin-left: 20px;
+    }
+  }
+  ol {
+    list-style: decimal;
+    li {
+      margin-left: 20px;
+      // &::before {
+      //   content: counter(li);
+      //   color: $color-primary;
+      //   font-weight: bold;
+      //   display: inline-block;
+      //   width: 1em;
+      //   margin-left: -1em
+      // }
+    }
+  }
+}
+
+// 사각 단어
+div.rected-word {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  &.green {
+    background-color: $color-primary-tint;
+  }
+  &.orange {
+    background-color: #fee8b1;
+  }
+  &.sky {
+    background-color: #dde7ef;
+  }
+  &.pink {
+    background-color: #f2d1da;
+  }
+
+}
+
+// 원 단어
+div.circled-word {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 9999px;
+
+  &.dotted {
+    border: gray 1px dashed;
+  }
+  &.green {
+    background-color: $color-primary-tint;
+  }
+  &.orange {
+    background-color: #fee8b1;
+  }
+  &.sky {
+    background-color: #dde7ef;
+  }
+  &.pink {
+    background-color: #f2d1da;
+  }
+}
+
+// 폰트
+h1 {
+  font-family: 'Pretendard-SemiBold';
+  font-size: 25px;
+  font-weight: 500;
+}
+h2 {
+  font-family: 'Pretendard-SemiBold';
+  font-size: 18px;
+  font-weight: 500;
+}
+
+// 밑줄
+span.smd-underline {
+  text-decoration-line: underline;
+  text-decoration-thickness: 50%;
+  text-underline-offset: -0.4rem;
+  text-decoration-color: #FFDF95;
+  font-weight: bold;
+}
+
+
+// 전역적으로 쓰이나 특수
+img.arrow.gray {
+  filter: grayscale(100%) brightness(150.4%);
+}
+
+//
+div.divider {
+  border-bottom: 1px solid gainsboro;
+}
+
+div.hgradient {
+  background: linear-gradient($color-primary, white);
+}
+
+ion-select.smd {
+  background-color: #eee;
+  border-radius: 0.5em;
+  color: black;
+}
+
+ion-datetime {
+  --background: white;
+}
+
+div.smd-exclamation {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.2rem;
+  border: 0.15rem solid white;
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Pretendard-Medium';
+  color: white;
+  border-radius: 9999px;
+  box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+  &:before {
+    content: '!';
+  }
+  &.new:before {
+    content: 'N';
+  }
+}
+
+.fill-available {
+  width: -webkit-fill-available;
+}
+@-moz-document url-prefix() {
+  .fill-available {
+    width: -moz-available;
+  }
+}
+
+.pie-text {
+  position: absolute;
+  text-align: center;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

@@ -1,0 +1,20 @@
+<ion-grid class='page flex flex-col'>
+  <h2 class='mt-8'>
+    공황발작이 일어난 <span class='smd-underline'>장소</span>는 어디인가요?
+  </h2>
+  <ion-input class='mt-4' placeholder='장소를 입력해주세요.'></ion-input>
+
+  <h2 class='mt-8'>
+    <span class='smd-underline'>촉발요인</span>이 어떻게 되나요?
+  </h2>
+  <div class='flex flex-row flex-wrap mt-4'>
+    <smd-chip class='mr-2 mb-2' *ngFor='let factor of panicFactors' [text]='factor' [(checked)]='checked[factor]'>
+    </smd-chip>
+  </div>
+
+  <h2 class='mt-8'>
+    공황을 <span class='smd-underline'>예상</span>하였나요?
+  </h2>
+  <smd-button-answer class='mt-4 mb-20'></smd-button-answer>
+
+</ion-grid>

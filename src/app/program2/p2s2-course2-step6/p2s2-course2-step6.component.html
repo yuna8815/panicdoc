@@ -1,0 +1,21 @@
+<ion-grid class='page flex flex-col'>
+  <h1>
+    재앙화 사고
+  </h1>
+  <smd-card class='mt-4'>
+    <div class='text-center'>
+      {{ context.p2_2.course2.step3answer?.name }}
+    </div>
+  </smd-card>
+
+  <div class='mt-8'>
+    나를 불안하게 하는 생각을 자세히 관찰하고,<br />
+    다른 방식으로 생각해 볼 수 있을지 살펴볼까요?
+  </div>
+  <ion-textarea class='pl-4' [rows]='6' placeholder='텍스트를 입력해 주세요.'
+    [(ngModel)]='context.p2_2.course2.step6answer'>
+  </ion-textarea>
+
+  <smd-tip-box class='mt-6'></smd-tip-box>
+
+</ion-grid>

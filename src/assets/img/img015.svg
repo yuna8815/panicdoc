@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305" height="146" viewBox="0 0 305 146">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <filter id="타원_1411" x="235.5" y="41.5" width="35" height="35" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="img10" transform="translate(-35 -406)">
+    <g id="그룹_54331" data-name="그룹 54331" transform="translate(26 176)">
+      <rect id="사각형_3086" data-name="사각형 3086" width="132" height="42" rx="5" transform="translate(9 230)" fill="#f2f1f1"/>
+      <text id="지하철을_이용할_때" data-name="지하철을 이용할 때" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-48.1" y="0">지하철을 이용할 때</tspan></text>
+    </g>
+    <g id="그룹_54332" data-name="그룹 54332" transform="translate(2 228)">
+      <rect id="사각형_3086-2" data-name="사각형 3086" width="84" height="42" rx="5" transform="translate(33 230)" fill="#f2f1f1"/>
+      <text id="운전할_때" data-name="운전할 때" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-24.05" y="0">운전할 때</tspan></text>
+    </g>
+    <g id="그룹_54333" data-name="그룹 54333" transform="translate(162 176)">
+      <rect id="사각형_3086-3" data-name="사각형 3086" width="120" height="42" rx="5" transform="translate(15 230)" fill="#f2f1f1"/>
+      <text id="버스를_이용할_때" data-name="버스를 이용할 때" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-42.484" y="0">버스를 이용할 때</tspan></text>
+    </g>
+    <g id="그룹_54334" data-name="그룹 54334" transform="translate(133 228)">
+      <rect id="사각형_3086-4" data-name="사각형 3086" width="158" height="42" rx="5" transform="translate(-4 230)" fill="#ddefe8"/>
+      <text id="터널이나_다리를_건널_때" data-name="터널이나 다리를 건널 때" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="-60.918" y="0">터널이나 다리를 건널 때</tspan></text>
+    </g>
+    <g id="그룹_54335" data-name="그룹 54335" transform="translate(82 280)">
+      <rect id="사각형_3086-5" data-name="사각형 3086" width="244" height="42" rx="5" transform="translate(-47 230)" fill="#f2f1f1"/>
+      <text id="쇼핑몰_마트_등_실내_사람_많은_곳에_갈_때" data-name="쇼핑몰, 마트 등 실내 사람 많은 곳에 갈 때" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-104.286" y="0">쇼핑몰, 마트 등 실내 사람 많은 곳에 갈 때</tspan></text>
+    </g>
+    <rect id="사각형_20518" data-name="사각형 20518" width="305" height="30" transform="translate(35 522)" fill="url(#linear-gradient)"/>
+    <g id="그룹_54321" data-name="그룹 54321" transform="translate(27.898 139.898)">
+      <g id="그룹_53911" data-name="그룹 53911" transform="translate(248.676 343.846)">
+        <g id="그룹_53912" data-name="그룹 53912" transform="translate(0 0)">
+          <path id="패스_34250" data-name="패스 34250" d="M23.958,7.269,21.725,5.037a2.8,2.8,0,0,1-.885-1.779,2.436,2.436,0,0,1,.8-1.895,2.564,2.564,0,0,1,3.8-.041L35.828,11.71a13.579,13.579,0,0,1,2.192,2.917,32.04,32.04,0,0,0,4.437,6.388,18.249,18.249,0,0,0,2.189,2.039l.022.015a2.2,2.2,0,0,1,.688,2.383A16.718,16.718,0,0,1,40.8,32.378c-3.152,3.152-5.653,4.065-7.086,4.3a2.206,2.206,0,0,1-1.957-.575l-.009-.009a11.117,11.117,0,0,0-2.07-1.514,10.814,10.814,0,0,0-5.341-1.845c-2.567-.4-6.248-3.221-8.44-3.756l-9.181-.731a2.555,2.555,0,0,1-2.437-3.123,2.735,2.735,0,0,1,2.809-2.433l9.378-.216L1.285,7.3A2.674,2.674,0,0,1,5,3.451L16.388,14.84l0,0-4.7-4.692a2.675,2.675,0,1,1,3.784-3.784l4.7,4.692L16.66,7.538a2.675,2.675,0,1,1,3.783-3.784l1.282,1.282Z" transform="translate(-0.5 -0.5)" fill="#f39a96" stroke="#d46064" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+      </g>
+      <rect id="사각형_20358" data-name="사각형 20358" width="50" height="50" transform="translate(246.102 337.102)" fill="none"/>
+    </g>
+    <g id="on-20px" transform="translate(278 453)">
+      <g transform="matrix(1, 0, 0, 1, -243, -47)" filter="url(#타원_1411)">
+        <circle id="타원_1411-2" data-name="타원 1411" cx="10" cy="10" r="10" transform="translate(243 47)" fill="#fff"/>
+      </g>
+      <circle id="타원_1295" data-name="타원 1295" cx="8" cy="8" r="8" transform="translate(2 2)" fill="#49b578"/>
+      <g id="완료_체크" transform="translate(4 4)">
+        <path id="패스_20561" data-name="패스 20561" d="M16.527,8.673l3.082,3.14,5.422-5.594" transform="translate(-14.78 -3.016)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <rect id="사각형_15841" data-name="사각형 15841" width="12" height="12" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

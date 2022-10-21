@@ -1,0 +1,16 @@
+ion-reorder-group {
+
+  ion-item {
+    --inner-border-width: 0;
+    --border-style: solid;
+    --border-color: gainsboro;
+    --border-width: 1px;
+    --border-radius: 8px;
+    --padding-top: 0.5em;
+    --padding-bottom: 0.5em;
+
+    ion-label {
+      font-size: 13px;
+    }
+  }
+}

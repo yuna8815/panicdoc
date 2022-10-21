@@ -1,0 +1,43 @@
+<!-- 공황기록 -->
+<div class='px-[20px]'>
+  <h2>
+    공황장애가 있었다면 <span class='smd-underline'>즉시 기록하기!</span>
+  </h2>
+  <div class='text-gray-500'>
+    관리하는 습관은 완치를 앞당기는 지름길
+  </div>
+
+  <ion-button class='w-full mt-4' (click)='gotoWrite()'>
+    <img class='absolute left-0' src='/assets/icon/footer_diary.svg'>
+    공황기록 작성하기
+  </ion-button>
+
+  <smd-chip-select></smd-chip-select>
+
+  <div class='mt-6' *ngFor='let day of itemsPerDay'>
+    {{ day.date | date:TimeFormat_MMdd_e }}
+    <div class='panic-attack-card' *ngFor='let item of day.items'>
+      <smd-card>
+        <div class='inner'>
+          {{ item.time | date:'a HH:mm' }} 발생
+          <div>
+            <ion-button class='text-blue-600' size='small' fill='clear'>상세보기</ion-button>
+            <ion-button id='details-{{item.time}}' class='text-gray-300' size='small' fill='clear'>
+              <ion-icon name='ellipsis-vertical'></ion-icon>
+            </ion-button>
+            <ion-popover trigger='details-{{item.time}}' triggerAction='click'>
+              <ng-template>
+                <ion-content [scrollY]='false' class='flex flex-row justify-center'>
+                  <ion-buttons class='flex flex-col divide-y'>
+                    <ion-button (click)='editItem(item)'>수정하기</ion-button>
+                    <ion-button (click)='deleteItem(item)'>삭제하기</ion-button>
+                  </ion-buttons>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </div>
+        </div>
+      </smd-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class='decrease flex flex-col justify-center' [class]='{ disabled: disabled }' (click)='decrease()'>
+  <span>
+    -
+  </span>
+</div>
+<div class='display flex flex-col justify-center' [class]='{ disabled: disabled }'>
+  {{ value | number:'2.0-2' }}회
+</div>
+<div class='increase flex flex-col justify-center' [class]='{ disabled: disabled }' (click)='increase()'>
+  <span>
+    +
+  </span>
+</div>

@@ -1,0 +1,26 @@
+<ion-grid class='page flex flex-col'>
+  <h2 class='mt-6'>
+    자동사고를 다시 생각해봅시다.
+  </h2>
+
+  <smd-card class='mt-4'>
+    <div>
+      <div class='rected-word sky p-2 w-28'>생각</div>
+      <span class='ml-3'>
+        심장이 마비될 것 같다
+      </span>
+    </div>
+  </smd-card>
+
+  <ion-text>
+    <div class='mt-10'>
+      위와 같이 생각한 일이 실제로 일어났던 것은 몇 번인가요?
+    </div>
+  </ion-text>
+
+  <div class='mt-6'>
+    <smd-item-list [items]='items' [divider]='true' [(selection)]='context.program4.course2.step10answer'>
+    </smd-item-list>
+  </div>
+
+</ion-grid>

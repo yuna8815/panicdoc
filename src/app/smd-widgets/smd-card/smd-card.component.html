@@ -1,0 +1,7 @@
+
+<div class='card' [class]='{ titled: !!title, "border-colorized": colorizeBorder }'>
+  <div *ngIf='title' class='title'>{{ title }}</div>
+  <div class='content'>
+    <ng-content></ng-content>
+  </div>
+</div>

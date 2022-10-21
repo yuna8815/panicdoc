@@ -1,0 +1,23 @@
+<ion-grid class='page flex flex-col'>
+	<ion-text>
+    <div>
+      지금까지의
+      <span class='smd-underline'>경험에 비추었을 때</span>,
+      <br />
+      실제론 어떤 일이 일어날 것 같나요?
+    </div>
+    <div>
+      일어날 확률이 높은 순으로 순차적으로 놓아보세요.
+    </div>
+	</ion-text>
+  <!-- #DUPE: -->
+  <div class='flex flex-row items-stretch mt-10'>
+    <div class='flex flex-col items-center mr-2 pb-2'>
+      <span class='text-gray-500'>높음</span>
+      <div class='hgradient grow w-1 ml-4 mr-4'></div>
+      <span class='text-gray-500'>낮음</span>
+    </div>
+    <smd-reorder class='' [items]='items'>
+    </smd-reorder>
+  </div>
+</ion-grid>

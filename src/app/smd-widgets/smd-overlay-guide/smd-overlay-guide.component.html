@@ -1,0 +1,15 @@
+<ng-container *ngIf='showGuide'>
+
+  <!-- 닫기 버튼 -->
+  <ion-button class='close' fill='clear' (click)='closeGuide()'>
+    <ion-icon name='close'></ion-icon>
+  </ion-button>
+
+  <ion-backdrop>
+  </ion-backdrop>
+
+  <div class='over-backdrop-wrap'>
+    <ng-content></ng-content>
+  </div>
+
+</ng-container>

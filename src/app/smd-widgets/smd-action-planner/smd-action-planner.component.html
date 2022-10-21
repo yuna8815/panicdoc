@@ -1,0 +1,50 @@
+<smd-card title='운전하기' class='mt-6' [class]='{ darken: fixed }'>
+  <div class='flex flex-row items-center cursor-pointer' (click)='!fixed && selectActions(1)'>
+    <span class='color-primary'>1단계</span>
+    &nbsp;<span [class]='{ "text-gray-400": !step1 }' >{{ step1 || '선택해주세요.' }}</span>
+    <div class='grow'></div>
+    <ion-icon name='chevron-forward-outline' size='small' class='text-gray-200'></ion-icon>
+  </div>
+
+  <ion-button *ngIf='write' class='w-full mt-4 mb-4' (click)='!fixed && writeAction()'>
+    <img class='absolute left-0' src='/assets/icon/footer_diary.svg'>
+    훈련 기록하기
+  </ion-button>
+
+  <div class='flex flex-row items-center cursor-pointer mt-4' (click)='!fixed && selectActions(2)'>
+    <span class='color-primary'>2단계</span>
+    &nbsp;<span [class]='{ "text-gray-400": !step2 }' >{{ step2 || '선택해주세요.' }}</span>
+    <div class='grow'></div>
+    <ion-icon name='chevron-forward-outline' size='small' class='text-gray-200'></ion-icon>
+  </div>
+
+  <div class='flex flex-row items-center cursor-pointer mt-4 mb-2' (click)='!fixed && selectActions(3)'>
+    <span class='color-primary'>3단계</span>
+    &nbsp;<span [class]='{ "text-gray-400": !step3 }' >{{ step3 || '선택해주세요.' }}</span>
+    <div class='grow'></div>
+    <ion-icon name='chevron-forward-outline' size='small' class='text-gray-200'></ion-icon>
+  </div>
+
+</smd-card>
+
+<div *ngIf='fixed' class='absolute text-center text-white absolute-center'>
+  이미 훈련기록을 입력한 것은<br />
+  수정 할 수 없습니다.
+</div>
+
+<ion-modal #modal trigger='open-modal' [initialBreakpoint]='bp'>
+  <ng-template>
+    <div class='w-full h-screen flex flex-col bg-white rounded-lg'>
+      <h2 class='mt-4 place-self-center'>{{ stepSelecting }}단계</h2>
+      <hr class='w-full mt-4 mb-4' />
+      <div class='flex flex-row flex-wrap'>
+        <smd-chip class='ml-3 mt-3' *ngFor='let action of actions' [text]='action' [(checked)]='checked[action]'>
+        </smd-chip>
+      </div>
+      <div class='page w-full absolute' [style.top.px]='h'>
+        <ion-button class='w-full' (click)='selectAction()'>선택하기</ion-button>
+      </div>
+    </div>
+  </ng-template>
+</ion-modal>
+

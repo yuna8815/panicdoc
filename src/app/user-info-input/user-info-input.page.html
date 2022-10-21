@@ -1,0 +1,41 @@
+<smd-header1 [title]='step == 1 ? "맞춤형 치료를 위한 정보 입력" : "앱 사용을 위한 나의 정보 추가"' back='/home?program={{ home }}' (close)='back()'>
+</smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+
+    <ng-container *ngIf='step == 1'>
+      <h2 class='mb-4'>
+        주로 <span class='smd-underline'>어떤 상황</span>에서 공황이 일어났나요?<br />
+        해당되는 경우를 모두 선택해주세요.
+      </h2>
+
+      <div class='flex flex-row flex-wrap mt-4'>
+        <smd-chip class='mr-2 mb-2' *ngFor='let st of situations' [text]='st' [(checked)]='checked[st]'>
+        </smd-chip>
+      </div>
+
+      <hr class='mt-8 mb-8' />
+
+      <h2>
+        최근 1주일간 공황발작이 몇 회 발생했나요?
+      </h2>
+
+      <smd-number-spinner class='mt-4 mb-8' [(value)]='count'></smd-number-spinner>
+    </ng-container>
+
+    <ng-container *ngIf='step == 2'>
+      <h2 class='mb-4'>
+        기타(직접 입력)
+      </h2>
+      <ion-textarea class='mt-4 mb-8 p-2' placeholder='텍스트를 입력해주세요.' [rows]='6'
+        [(ngModel)]='situationText'>
+      </ion-textarea>
+    </ng-container>
+
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer [text]='checked[messages.Etc] || step == 2 ? "작성 완료" : "완료"'
+  (next)='next()' [disabled]='checkedCount == 0'>
+</smd-program-footer>

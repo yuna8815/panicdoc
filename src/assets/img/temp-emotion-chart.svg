@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="345" height="240" viewBox="0 0 345 240">
+  <g id="그룹_55204" data-name="그룹 55204" transform="translate(-15 -1032)">
+    <g id="bg">
+      <path id="패스_35679" data-name="패스 35679" d="M5,0H340a5,5,0,0,1,5,5V200H0V5A5,5,0,0,1,5,0Z" transform="translate(15 1032)" fill="#f2f1f1"/>
+      <path id="사각형_20740" data-name="사각형 20740" d="M0,0H345a0,0,0,0,1,0,0V35a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V0A0,0,0,0,1,0,0Z" transform="translate(15 1232)" fill="#f2f1f1"/>
+    </g>
+    <g id="line">
+      <path id="패스_35671" data-name="패스 35671" d="M0,0H295V1H0Z" transform="translate(55 1232)"/>
+      <rect id="사각형_20742" data-name="사각형 20742" width="305" height="1" transform="translate(55 1190)" fill="#e8e8e8"/>
+      <rect id="사각형_20746" data-name="사각형 20746" width="305" height="1" transform="translate(55 1167)" fill="#e8e8e8"/>
+      <rect id="사각형_20747" data-name="사각형 20747" width="305" height="1" transform="translate(55 1123)" fill="#e8e8e8"/>
+      <rect id="사각형_20750" data-name="사각형 20750" width="305" height="1" transform="translate(55 1081)" fill="#e8e8e8"/>
+      <rect id="사각형_20743" data-name="사각형 20743" width="305" height="1" transform="translate(55 1211)" fill="#e8e8e8"/>
+      <rect id="사각형_20748" data-name="사각형 20748" width="305" height="1" transform="translate(55 1146)" fill="#e8e8e8"/>
+      <rect id="사각형_20749" data-name="사각형 20749" width="305" height="1" transform="translate(55 1103)" fill="#e8e8e8"/>
+      <rect id="사각형_20751" data-name="사각형 20751" width="305" height="1" transform="translate(55 1059)" fill="#e8e8e8"/>
+    </g>
+    <g id="_0_8" data-name="0~8">
+      <text id="_2" data-name="2" transform="translate(27 1183)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.564" y="11">2</tspan></text>
+      <text id="_0" data-name="0" transform="translate(27 1226)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.696" y="11">0</tspan></text>
+      <text id="_1" data-name="1" transform="translate(27 1204)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-2.688" y="11">1</tspan></text>
+      <text id="_3" data-name="3" transform="translate(27 1161)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.744" y="11">3</tspan></text>
+      <text id="_5" data-name="5" transform="translate(27 1117)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.636" y="11">5</tspan></text>
+      <text id="_7" data-name="7" transform="translate(27 1074)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.36" y="11">7</tspan></text>
+      <text id="_6" data-name="6" transform="translate(27 1096)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.744" y="11">6</tspan></text>
+      <text id="_4" data-name="4" transform="translate(27 1139)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.804" y="11">4</tspan></text>
+      <text id="_8" data-name="8" transform="translate(27 1052)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em" opacity="0.5"><tspan x="-3.7" y="11">8</tspan></text>
+    </g>
+    <g id="day">
+      <text id="화" transform="translate(112 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">화</tspan></text>
+      <text id="목" transform="translate(199 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">목</tspan></text>
+      <text id="수" transform="translate(155 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">수</tspan></text>
+      <text id="토" transform="translate(286 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">토</tspan></text>
+      <text id="금" transform="translate(242 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">금</tspan></text>
+      <text id="일" transform="translate(329 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">일</tspan></text>
+      <text id="월" transform="translate(68 1256)" font-size="12" font-family="Pretendard-Medium, Pretendard" font-weight="500" letter-spacing="-0.02em"><tspan x="-5.184" y="0">월</tspan></text>
+    </g>
+    <g id="그룹_55291" data-name="그룹 55291">
+      <path id="패스_35689" data-name="패스 35689" d="M112,1103h87" transform="translate(0 1)" fill="none" stroke="#e6c2c9" stroke-width="2" stroke-dasharray="2"/>
+      <path id="패스_35690" data-name="패스 35690" d="M112,1103l87,20.751" transform="translate(0 22)" fill="none" stroke="#eadbba" stroke-width="2" stroke-dasharray="2"/>
+      <path id="패스_35691" data-name="패스 35691" d="M112,1103l87,41.079" transform="translate(0 22)" fill="none" stroke="#b6abdb" stroke-width="2" stroke-dasharray="2"/>
+    </g>
+    <g id="그룹_55288" data-name="그룹 55288" transform="translate(0 833)">
+      <path id="패스_35684" data-name="패스 35684" d="M66,726.9h44" transform="translate(2 -436.395)" fill="none" stroke="#8066d6" stroke-width="2"/>
+      <path id="패스_35687" data-name="패스 35687" d="M197,770.513l43,23.049,44-44.592,43,44.592" transform="translate(2 -436)" fill="none" stroke="#8066d6" stroke-width="2"/>
+    </g>
+    <g id="그룹_55289" data-name="그룹 55289" transform="translate(0 833)">
+      <path id="패스_35682" data-name="패스 35682" d="M66,685l44,22.176" transform="translate(2 -436)" fill="none" stroke="#ff456b" stroke-width="2"/>
+      <path id="패스_35688" data-name="패스 35688" d="M197,707.176,240,726.9h87" transform="translate(2 -436)" fill="none" stroke="#ff456b" stroke-width="2"/>
+    </g>
+    <g id="그룹_55290" data-name="그룹 55290" transform="translate(0 833)">
+      <path id="패스_35683" data-name="패스 35683" d="M66,707l44,20.319" transform="translate(2 -436)" fill="none" stroke="#ffdf95" stroke-width="2"/>
+      <path id="패스_35685" data-name="패스 35685" d="M199,1146h43l44-64.573,43,86.45" transform="translate(0 -833)" fill="none" stroke="#ffdf95" stroke-width="2"/>
+    </g>
+    <g id="그룹_55285" data-name="그룹 55285" transform="translate(2 397)">
+      <g id="타원_1561" data-name="타원 1561" transform="translate(61 702)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1562" data-name="타원 1562" transform="translate(105 722)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1563" data-name="타원 1563" transform="translate(192 744)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1564" data-name="타원 1564" transform="translate(235 744)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1565" data-name="타원 1565" transform="translate(279 680)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1583" data-name="타원 1583" transform="translate(322 765)" fill="#fff" stroke="#ffdf95" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+    </g>
+    <g id="그룹_55287" data-name="그룹 55287" transform="translate(2 397)">
+      <g id="패스_35661" data-name="패스 35661" transform="translate(279 744)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+      <g id="패스_35673" data-name="패스 35673" transform="translate(322 788)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+      <g id="패스_35662" data-name="패스 35662" transform="translate(235 788)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+      <g id="패스_35664" data-name="패스 35664" transform="translate(105 722)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+      <g id="패스_35663" data-name="패스 35663" transform="translate(192 765)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+      <g id="패스_35665" data-name="패스 35665" transform="translate(61 722)" fill="#fff">
+        <path d="M 5 9 C 2.794389963150024 9 1 7.205609798431396 1 5 C 1 2.794389963150024 2.794389963150024 1 5 1 C 7.205609798431396 1 9 2.794389963150024 9 5 C 9 7.205609798431396 7.205609798431396 9 5 9 Z" stroke="none"/>
+        <path d="M 5 2 C 3.345789909362793 2 2 3.345789909362793 2 5 C 2 6.654210090637207 3.345789909362793 8 5 8 C 6.654210090637207 8 8 6.654210090637207 8 5 C 8 3.345789909362793 6.654210090637207 2 5 2 M 5 0 C 7.761420249938965 0 10 2.238580226898193 10 5 C 10 7.761420249938965 7.761420249938965 10 5 10 C 2.238580226898193 10 0 7.761420249938965 0 5 C 0 2.238580226898193 2.238580226898193 0 5 0 Z" stroke="none" fill="#8066d6"/>
+      </g>
+    </g>
+    <g id="그룹_55286" data-name="그룹 55286" transform="translate(2 397)">
+      <g id="타원_1566" data-name="타원 1566" transform="translate(61 680)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1567" data-name="타원 1567" transform="translate(192 702)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1580" data-name="타원 1580" transform="translate(105 702)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1568" data-name="타원 1568" transform="translate(235 722)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1569" data-name="타원 1569" transform="translate(279 722)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+      <g id="타원_1584" data-name="타원 1584" transform="translate(322 722)" fill="#fff" stroke="#ff456b" stroke-width="2">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

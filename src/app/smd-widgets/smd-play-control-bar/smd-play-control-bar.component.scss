@@ -1,0 +1,29 @@
+@import '../../../theme/variables';
+
+:host {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: inset 0px -15px 50px -20px #EEEEEE;
+}
+
+span {
+  font-size: 11px;
+  color: #707070;
+
+  &.current {
+    margin-left: 10px;
+  }
+  &.total {
+    margin-left: 10px;
+  }
+}
+
+progress, input[type=range] {
+  flex-grow: 1;
+  margin-left: 10px;
+}

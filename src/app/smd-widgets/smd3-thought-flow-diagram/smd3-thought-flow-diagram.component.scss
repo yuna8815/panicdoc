@@ -1,0 +1,24 @@
+:host {
+}
+
+div.rected-word {
+  position: relative;
+  width: 10em;
+  height: 36px;
+}
+
+.note {
+  position: absolute;
+  font-weight: bold;
+  top: 3em;
+  &.orange {
+    color: darken(#fee8b1, 30%);
+  }
+  &.sky {
+    color: darken(#dde7ef, 30%);
+  }
+  &.pink {
+    color: darken(#f2d1da, 30%);
+  }
+}
+

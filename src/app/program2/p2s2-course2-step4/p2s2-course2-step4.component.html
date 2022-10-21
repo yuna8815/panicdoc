@@ -1,0 +1,26 @@
+<ion-grid class='page flex flex-col'>
+  <h1>
+    가능성에 대한 과대평가
+  </h1>
+  <smd-card class='mt-4'>
+    <div class='text-center'>
+      {{ context.p2_2.course2.step3answer?.name }}
+    </div>
+  </smd-card>
+
+
+  <h2 class='relative mt-8'>
+    정말 실제로 위와 같은 상황이<br />
+    일어날 <span class='smd-underline'>확률</span>은 얼마나 될까요?<span class='absolute right-4'>{{ context.p2_2.course2.step4answer }}%</span>
+  </h2>
+  <div class=''>
+    <ion-range [ticks]='false' [snaps]='false' [min]='0' [max]='100' [(ngModel)]='context.p2_2.course2.step4answer'></ion-range>
+  </div>
+  <div class='w-full flex flex-row justify-between pl-4 pr-4 mt-[-1rem] text-gray-500'>
+    <div class='text-center'>0<br />전혀</div>
+    <div class='text-center'>25<br />낮은확률</div>
+    <div class='text-center'>50<br />중간</div>
+    <div class='text-center'>75<br />높은확률</div>
+    <div class='text-center'>100<br />반드시<br />일어남</div>
+  </div>
+</ion-grid>

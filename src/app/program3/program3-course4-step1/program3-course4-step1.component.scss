@@ -1,0 +1,36 @@
+@import '../../../theme/variables';
+
+img.back {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+ion-grid {
+
+  ion-button.play {
+    ion-icon {
+      font-size: 3em;
+    }
+  }
+
+  ion-range {
+    --knob-size: 1rem;
+    --bar-background: #ffffff80;
+  }
+}
+
+ion-modal {
+  --border-radius: 6px;
+  --width: fit-content;
+  --min-width: 300px;
+  --height: fit-content;
+
+  ion-range {
+    --knob-background: #47b578; // #TODO: 왜 scss variable 안먹는지 모르겠음
+    --knob-size: 1rem;
+    --bar-background: #DDEFE8;
+  }
+}

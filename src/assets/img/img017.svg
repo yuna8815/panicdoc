@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="318" height="562" viewBox="0 0 318 562">
+  <defs>
+    <filter id="타원_1411" x="131.5" y="41.5" width="35" height="35" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_1411-2" x="235.5" y="457.5" width="35" height="35" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="img12" transform="translate(-36 -254)">
+    <g id="그룹_55230" data-name="그룹 55230" transform="translate(20 24)">
+      <rect id="사각형_3086" data-name="사각형 3086" width="118" height="42" rx="5" transform="translate(16 230)" fill="#f2f1f1"/>
+      <text id="심장의_두근거림" data-name="심장의 두근거림" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-40.898" y="0">심장의 두근거림</tspan></text>
+    </g>
+    <g id="그룹_55231" data-name="그룹 55231" transform="translate(125 24)">
+      <rect id="사각형_3086-2" data-name="사각형 3086" width="72" height="42" rx="5" transform="translate(39 230)" fill="#f2f1f1"/>
+      <text id="땀_흘림" data-name="땀 흘림" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-18.434" y="0">땀 흘림</tspan></text>
+    </g>
+    <g id="그룹_55232" data-name="그룹 55232" transform="translate(38 76)">
+      <rect id="사각형_3086-3" data-name="사각형 3086" width="154" height="42" rx="5" transform="translate(-2 230)" fill="#ddefe8"/>
+      <text id="몸이_떨리거나_후들거림" data-name="몸이 떨리거나 후들거림" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="-59.332" y="0">몸이 떨리거나 후들거림</tspan></text>
+    </g>
+    <rect id="사각형_20772" data-name="사각형 20772" width="136" height="42" rx="5" transform="translate(36 410)" fill="#f2f1f1"/>
+    <text id="질식할_것_같은_느낌" data-name="질식할 것 같은 느낌" transform="translate(104 436)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-49.686" y="0">질식할 것 같은 느낌</tspan></text>
+    <rect id="사각형_20773" data-name="사각형 20773" width="212" height="42" rx="5" transform="translate(36 462)" fill="#f2f1f1"/>
+    <text id="토할_것_같은_느낌_혹은_복부_불편감" data-name="토할 것 같은 느낌 혹은 복부 불편감" transform="translate(142 488)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-88.14" y="0">토할 것 같은 느낌 혹은 복부 불편감</tspan></text>
+    <g id="그룹_55233" data-name="그룹 55233" transform="translate(95 284)">
+      <rect id="사각형_3086-4" data-name="사각형 3086" width="268" height="42" rx="5" transform="translate(-59 230)" fill="#f2f1f1"/>
+      <text id="어지러움_불안정감_멍한_느낌_쓰러질_것_같음" data-name="어지러움, 불안정감, 멍한 느낌, 쓰러질 것 같음" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-115.83" y="0">어지러움, 불안정감, 멍한 느낌, 쓰러질 것 같음</tspan></text>
+    </g>
+    <rect id="사각형_20774" data-name="사각형 20774" width="260" height="42" rx="5" transform="translate(36 566)" fill="#f2f1f1"/>
+    <text id="비현실감_또는_이인증_나에게서_분리된_느낌_" data-name="비현실감 또는 이인증(나에게서 분리된 느낌)" transform="translate(166 592)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-112.086" y="0">비현실감 또는 이인증(나에게서 분리된 느낌)</tspan></text>
+    <rect id="사각형_20775" data-name="사각형 20775" width="234" height="42" rx="5" transform="translate(36 618)" fill="#f2f1f1"/>
+    <text id="감각_이상_둔해지거나_따끔거리는_느낌_" data-name="감각 이상(둔해지거나 따끔거리는 느낌)" transform="translate(153 644)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-99.268" y="0">감각 이상(둔해지거나 따끔거리는 느낌)</tspan></text>
+    <rect id="사각형_20776" data-name="사각형 20776" width="154" height="42" rx="5" transform="translate(36 670)" fill="#f2f1f1"/>
+    <text id="춥거나_화끈거리는_느낌" data-name="춥거나 화끈거리는 느낌" transform="translate(113 696)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-59.332" y="0">춥거나 화끈거리는 느낌</tspan></text>
+    <rect id="사각형_20777" data-name="사각형 20777" width="124" height="42" rx="5" transform="translate(36 774)" fill="#f2f1f1"/>
+    <text id="죽을_것_같은_공포" data-name="죽을 것 같은 공포" transform="translate(98 800)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-44.07" y="0">죽을 것 같은 공포</tspan></text>
+    <g id="그룹_55234" data-name="그룹 55234" transform="translate(90 492)">
+      <rect id="사각형_3086-5" data-name="사각형 3086" width="258" height="42" rx="5" transform="translate(-54 230)" fill="#ddefe8"/>
+      <text id="스스로_통제할_수_없거나_미칠것_같은_두려움" data-name="스스로 통제할 수 없거나 미칠것 같은 두려움" transform="translate(75 256)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500"><tspan x="-110.604" y="0">스스로 통제할 수 없거나 미칠것 같은 두려움</tspan></text>
+    </g>
+    <rect id="사각형_20778" data-name="사각형 20778" width="172" height="42" rx="5" transform="translate(182 410)" fill="#f2f1f1"/>
+    <text id="흉부_통증_또는_가슴_불편감" data-name="흉부 통증 또는 가슴 불편감" transform="translate(268 436)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-68.12" y="0">흉부 통증 또는 가슴 불편감</tspan></text>
+    <rect id="사각형_20779" data-name="사각형 20779" width="210" height="42" rx="5" transform="translate(36 358)" fill="#f2f1f1"/>
+    <text id="숨가쁜_느낌_또는_숨이_막히는_느낌" data-name="숨가쁜 느낌 또는 숨이 막히는 느낌" transform="translate(141 384)" font-size="13" font-family="Pretendard-Medium, Pretendard" font-weight="500" opacity="0.5"><tspan x="-86.554" y="0">숨가쁜 느낌 또는 숨이 막히는 느낌</tspan></text>
+    <g id="그룹_54349" data-name="그룹 54349" transform="translate(-96.102 -11.102)">
+      <g id="그룹_53911" data-name="그룹 53911" transform="translate(248.676 343.846)">
+        <g id="그룹_53912" data-name="그룹 53912" transform="translate(0 0)">
+          <path id="패스_34250" data-name="패스 34250" d="M23.958,7.269,21.725,5.037a2.8,2.8,0,0,1-.885-1.779,2.436,2.436,0,0,1,.8-1.895,2.564,2.564,0,0,1,3.8-.041L35.828,11.71a13.579,13.579,0,0,1,2.192,2.917,32.04,32.04,0,0,0,4.437,6.388,18.249,18.249,0,0,0,2.189,2.039l.022.015a2.2,2.2,0,0,1,.688,2.383A16.718,16.718,0,0,1,40.8,32.378c-3.152,3.152-5.653,4.065-7.086,4.3a2.206,2.206,0,0,1-1.957-.575l-.009-.009a11.117,11.117,0,0,0-2.07-1.514,10.814,10.814,0,0,0-5.341-1.845c-2.567-.4-6.248-3.221-8.44-3.756l-9.181-.731a2.555,2.555,0,0,1-2.437-3.123,2.735,2.735,0,0,1,2.809-2.433l9.378-.216L1.285,7.3A2.674,2.674,0,0,1,5,3.451L16.388,14.84l0,0-4.7-4.692a2.675,2.675,0,1,1,3.784-3.784l4.7,4.692L16.66,7.538a2.675,2.675,0,1,1,3.783-3.784l1.282,1.282Z" transform="translate(-0.5 -0.5)" fill="#f39a96" stroke="#d46064" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+      </g>
+      <rect id="사각형_20358" data-name="사각형 20358" width="50" height="50" transform="translate(246.102 337.102)" fill="none"/>
+    </g>
+    <g id="on-20px" transform="translate(175 301)">
+      <g transform="matrix(1, 0, 0, 1, -139, -47)" filter="url(#타원_1411)">
+        <circle id="타원_1411-3" data-name="타원 1411" cx="10" cy="10" r="10" transform="translate(139 47)" fill="#fff"/>
+      </g>
+      <circle id="타원_1295" data-name="타원 1295" cx="8" cy="8" r="8" transform="translate(2 2)" fill="#49b578"/>
+      <g id="완료_체크" transform="translate(4 4)">
+        <path id="패스_20561" data-name="패스 20561" d="M16.527,8.673l3.082,3.14,5.422-5.594" transform="translate(-14.78 -3.016)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <rect id="사각형_15841" data-name="사각형 15841" width="12" height="12" fill="none"/>
+      </g>
+    </g>
+    <g id="on-20px-2" data-name="on-20px" transform="translate(279 717)">
+      <g transform="matrix(1, 0, 0, 1, -243, -463)" filter="url(#타원_1411-2)">
+        <circle id="타원_1411-4" data-name="타원 1411" cx="10" cy="10" r="10" transform="translate(243 463)" fill="#fff"/>
+      </g>
+      <circle id="타원_1295-2" data-name="타원 1295" cx="8" cy="8" r="8" transform="translate(2 2)" fill="#49b578"/>
+      <g id="완료_체크-2" data-name="완료_체크" transform="translate(4 4)">
+        <path id="패스_20561-2" data-name="패스 20561" d="M16.527,8.673l3.082,3.14,5.422-5.594" transform="translate(-14.78 -3.016)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
+        <rect id="사각형_15841-2" data-name="사각형 15841" width="12" height="12" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

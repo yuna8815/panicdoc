@@ -1,0 +1,11 @@
+<ion-reorder-group (ionItemReorder)='doReorder($event)' [disabled]='false'>
+
+  <ion-item *ngFor='let s of items; let i = index' class='mb-2'>
+    <span class='color-primary mr-4'>{{ i + 1 }}</span>
+    <ion-label [innerHtml]='s'>
+    </ion-label>
+    <ion-reorder slot='end'>
+    </ion-reorder>
+  </ion-item>
+
+</ion-reorder-group>

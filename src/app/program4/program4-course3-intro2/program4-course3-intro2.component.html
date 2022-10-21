@@ -1,0 +1,25 @@
+<ion-grid class='page flex flex-col'>
+  <h1>나의 최근 공황</h1>
+  <div class='text-gray-500'>{{ auth.name }}님의 공황기록지에 입력한 공황발작 기록입니다.</div>
+
+  <div class='mt-8'>
+    <smd-panic-log-card-view [item]='item'>
+    </smd-panic-log-card-view>
+  </div>
+
+  <div class='flex flex-row w-full gap-2 mt-2'>
+    <ion-button color='light' class='basis-12 grow'>
+      새로 작성하기
+    </ion-button>
+    <ion-button color='light' class='basis-12 grow'>
+      수정하기
+    </ion-button>
+  </div>
+
+  <div class='panel mt-10'>
+    <ul>
+      <li>입력한 내용 이외에 최근에 겪은 공황이 있다면 공황기록을 입력해주세요.</li>
+      <li>빠뜨린 곳이 있으면 다시 상세하게 입력해주세요.</li>
+    </ul>
+  </div>
+</ion-grid>

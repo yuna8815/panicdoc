@@ -1,0 +1,14 @@
+@import '../../../theme/variables';
+
+ion-modal {
+  &::part(content) {
+    background-color: transparent;
+  }
+}
+
+ion-datetime {
+  --background: white;
+  --background-rgb: white;
+  --ion-color-step-150: #DDEFE8;
+  color: #aaa;
+}

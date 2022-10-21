@@ -1,0 +1,27 @@
+<smd-header1 [title]='title' [back]='back' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <ng-container [ngSwitch]='step'>
+    <ng-container *ngSwitchCase='0'>
+      <panic-log-write-step0 #stepContent></panic-log-write-step0>
+    </ng-container>
+    <ng-container *ngSwitchCase='1'>
+      <panic-log-write-step1 #stepContent></panic-log-write-step1>
+    </ng-container>
+    <ng-container *ngSwitchCase='2'>
+      <panic-log-write-step2 #stepContent></panic-log-write-step2>
+    </ng-container>
+    <ng-container *ngSwitchCase='3'>
+      <panic-log-write-step3 #stepContent></panic-log-write-step3>
+    </ng-container>
+    <ng-container *ngSwitchCase='4'>
+      <panic-log-write-step4 #stepContent></panic-log-write-step4>
+    </ng-container>
+    <ng-container *ngSwitchCase='5'>
+      <panic-log-write-step5 #stepContent></panic-log-write-step5>
+    </ng-container>
+  </ng-container>
+</ion-content>
+
+<smd-program-footer [text]='stepContent?.getButtonText?.() || "다음"' (next)='next()'>
+</smd-program-footer>

@@ -1,0 +1,28 @@
+:host {
+  display: contents;
+}
+
+ion-toolbar {
+  --background: white;
+}
+
+ion-content {
+  > * {
+    padding-left: 1rem;
+  }
+}
+
+ion-button {
+  padding: 0;
+
+  &.menu-item {
+    height: 1.6rem;
+  }
+}
+
+ion-footer {
+  padding-left: 1rem;
+  ion-button {
+    --padding-start: 2px;
+  }
+}

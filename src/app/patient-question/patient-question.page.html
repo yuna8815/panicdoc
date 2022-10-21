@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-grid class='page flex flex-col'>
+    <img class='mt-8' src='assets/img/placeholder.svg' />
+
+    <h2 class='mt-6'>
+      먼저 공황장애에 대해 평가하고 시작하겠습니다
+    </h2>
+
+    <smd-card class='text-center mt-4'>
+      <div class='color-primary'>
+        PDSS
+      </div>
+      Panic Disorder Severity Scale
+    </smd-card>
+
+    <smd-card class='text-center mt-4'>
+      <div class='color-primary'>
+        APPQ
+      </div>
+      Albany Panic and Phobia Questionnaire
+    </smd-card>
+
+    <ion-row class='mt-6'>
+      PDSS는 공황장애의 경중도를 평가하며<br />
+      APPQ는 공황을 일으키는 불안 요소별 두려움 정도를 측정합니다.
+    </ion-row>
+
+    <ion-row class='text-gray-500 mt-4'>
+      치료가 완료되는 마지막 주에도 해당 검사를 진행하여 공황상태의 변화를 살펴보도록 하겠습니다.
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='PDSS검사 시작하기' (next)='next()'>
+</smd-program-footer>

@@ -1,0 +1,31 @@
+<ion-grid class='page flex flex-col'>
+  <div>
+    <ion-text>
+      <div>
+        편한 곳에 착석하여 다음 기록표를 작성해주세요.
+      </div>
+      <div class='mt-1 mb-10 text-gray-500'>
+        자리에 앉아 쉬면서 신체증상에 대한 인지왜곡을 바르게 잡아보세요. 이완훈련에서 배운 대로 최대한 이완합시다
+      </div>
+    </ion-text>
+
+    <div class='mt-10 mb-10'>
+      <smd-score-select text='나의 공포감은 어느 정도인가요?'></smd-score-select>
+    </div>
+
+    <h2>
+      실제 공황과 얼마나 비슷한가요? {{ similarity * 25 }}%
+    </h2>
+    <div class=''>
+      <ion-range [ticks]='true' [snaps]='true' [min]='0' [max]='4' [(ngModel)]='similarity'></ion-range>
+    </div>
+    <div class='w-full flex flex-row justify-between pl-4 pr-4 mt-[-1rem] text-gray-500'>
+      <div class='text-center'>0<br />전혀</div>
+      <div class='text-center'>25</div>
+      <div class='text-center'>50<br />중간</div>
+      <div class='text-center'>75</div>
+      <div class='text-center'>100<br />최상</div>
+    </div>
+
+  </div>
+</ion-grid>

@@ -1,0 +1,7 @@
+{
+  "name": "PanicDoc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

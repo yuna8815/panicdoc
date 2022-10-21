@@ -1,0 +1,24 @@
+<div class='flex flex-row items-center mt-4 gap-8'>
+  <div class='flex flex-row items-center'>
+    <div class='dot rounded-full color-bg-reddish mr-1'></div>
+    {{ lineChartData.datasets[0].label }}
+  </div>
+  <div class='flex flex-row items-center'>
+    <div class='dot rounded-full color-bg-yellow mr-1'></div>
+    {{ lineChartData.datasets[1].label }}
+  </div>
+  <div class='flex flex-row items-center'>
+    <div class='dot rounded-full color-bg-purple mr-1'></div>
+    {{ lineChartData.datasets[2].label }}
+  </div>
+</div>
+
+<!-- <img src='assets/img/temp-emotion-chart.svg' /> -->
+
+<canvas baseChart width='335' height='300'
+  type='line'
+  [data]='lineChartData'
+  [options]='lineChartOptions'
+  [plugins]='plugins'
+  [legend]='false'>
+</canvas>

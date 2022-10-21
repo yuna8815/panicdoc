@@ -1,0 +1,7 @@
+
+<ion-grid class='page flex flex-col'>
+  <h2>증상들을 모두 선택해주세요.</h2>
+  <ion-row class='mt-4'>
+    <smd-chip class='mr-2 mb-2' *ngFor='let st of symptoms' [text]='st' [(checked)]='checked[st]'></smd-chip>
+  </ion-row>
+</ion-grid>

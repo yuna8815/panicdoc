@@ -1,0 +1,40 @@
+<ion-grid class='page flex flex-col'>
+  <div>
+    <smd-card>
+      <div class='text-center' [innerHTML]='context.program5.course3.step6answer[0]'>
+      </div>
+    </smd-card>
+    <div class='mt-4'>
+      <div class='text-gray-500 mt-10 mb-4'>
+        위 항목은 {{ auth.name }}님이 실제로 일어날 확률이 가장 높다고 선택한 항목입니다.
+      </div>
+
+      <div *ngIf='context.program5.course3.step6answer[0] == DistortionEvent3Options[0] ||
+        context.program5.course3.step6answer[0] == DistortionEvent3Options[2]'>
+        어떻게 느끼셨나요?
+        <br />
+        우리가 불안할 때는 사소한 일을 크게 생각하거나 어떤 상황을 끔찍하게 생각하는 재앙화 사고를 가지고 있을 가능성이 높습니다.
+        <br /><br />
+        잠깐 다시 생각해 보면
+        <br />
+        대개는 그렇게 끔찍한 일이나 최악의 상황은 일어나지 않는다는 것을 알 수 있습니다.
+        <br /><br />
+        다른 사람의 생각이나 판단이 내 걱정보다는 합리적일 수도 있습니다.
+        <br /><br />
+        공황증상에 갑자기 맞닥뜨리게 되었을 때, 내 상황과 상태에 대해 좀 더 합리적으로 생각합시다.
+      </div>
+
+      <div *ngIf='context.program5.course3.step6answer[0] == DistortionEvent3Options[1] ||
+        context.program5.course3.step6answer[0] == DistortionEvent3Options[3]'>
+        이런 상황이 두려우시군요.<br />
+        때로는 실제 주변 사람들이 내 상황에 대해 잘 모르거나 공감하지 못해 상처받는 상황이 생길 수도 있습니다.<br />
+        <br />
+        하지만 괜찮습니다.<br />
+        <br />
+        공황장애는 불치병이나 난치병이 아니며 적절한 치료를 통해 극복할 수 있는 질환입니다. 다음에 이런 상황을 설명하거나 만회할 수 있는 기회가 있을 것입니다.<br />
+        <br />
+        중요한 것은, 나 스스로가 이 질환을 극복하기 위해 지금 열심히 노력하고 있다는 점입니다.<br />
+      </div>
+    </div>
+  </div>
+</ion-grid>

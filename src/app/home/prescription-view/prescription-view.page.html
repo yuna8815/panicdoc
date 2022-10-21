@@ -1,0 +1,84 @@
+<smd-header1 title='주간처방' (close)='backToDiary()'></smd-header1>
+
+<ion-content>
+  <ng-container *ngIf='step == "1"'>
+    <ion-grid class='page flex flex-col'>
+      <h2>한 주간 나의 감정 도표</h2>
+
+      <smd-weekly-score-chart></smd-weekly-score-chart>
+
+      <div class='flex flex-col divide-y'>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            😖 한 주간 불안함 평균
+          </div>
+          <span class='color-reddish text-[1.2rem]'>3</span>
+        </div>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            😥 한 주간 우울함 평균
+          </div>
+          <span class='color-yellow text-[1.2rem]'>3</span>
+        </div>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            😵 한 주간 통제력 상실에 대한 걱정 평균
+          </div>
+          <span class='color-purple text-[1.2rem]'>3</span>
+        </div>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            😨 한 주간 통제력 상실에 대한 걱정 평균
+          </div>
+          <span class='color-primary text-[1.2rem]'>3</span>
+        </div>
+
+      </div>
+    </ion-grid>
+
+    <hr class='h-[0.5rem] border-0 bg-gray-100' />
+    <ion-grid class='page flex flex-col'>
+
+      <h2 class='mt-8'>나의 훈련</h2>
+      <div class='flex flex-col divide-y'>
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            이완훈련
+          </div>
+          <span class='color-primary text-[1.2rem]'>3</span>
+        </div>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            증상 노출훈련
+          </div>
+          <span class='color-primary text-[1.2rem]'>3</span>
+        </div>
+
+        <div class='flex flex-row justify-between py-8'>
+          <div class='flex flex-row items-center text-[1.2rem]'>
+            일상생활 노출훈련
+          </div>
+          <span class='color-primary text-[1.2rem]'>3</span>
+        </div>
+      </div>
+    </ion-grid>
+
+  </ng-container>
+
+  <!-- 주간처방 텍스트 -->
+  <ng-container *ngIf='step == "2"'>
+    <ion-grid class='page flex flex-col'>
+      <app-prescription-details1 *ngIf='prescriptionDetail == 1'></app-prescription-details1>
+      <app-prescription-details2 *ngIf='prescriptionDetail == 2'></app-prescription-details2>
+    </ion-grid>
+  </ng-container>
+
+</ion-content>
+
+<smd-program-footer [text]='"다음"' (next)='next()'>
+</smd-program-footer>

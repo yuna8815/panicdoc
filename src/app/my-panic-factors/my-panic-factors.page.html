@@ -1,0 +1,25 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <my-panic-factors-step1 #stepContent></my-panic-factors-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <my-panic-factors-step2 #stepContent></my-panic-factors-step2>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <my-test-results></my-test-results>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ion-content>
+
+<smd-program-footer [text]='getButtonText()' (click)='next()'>
+</smd-program-footer>

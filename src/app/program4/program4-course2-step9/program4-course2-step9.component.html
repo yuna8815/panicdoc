@@ -1,0 +1,36 @@
+<ion-grid class='page flex flex-col'>
+  <h2>
+    감정과 생각을 구분해보세요.
+  </h2>
+  <div class='mt-6'>
+    불안, 분노, 슬픔, 흥분 등은 사실 생각이 아니라 감정이며, 감정은 본질적으로 위험하지 않습니다.
+  </div>
+
+  <smd-card class='mt-4'>
+    <div>
+      <div class='rected-word pink p-2 w-28'>감정</div>
+      <span class='ml-3'>
+        {{ context.program4.course2.step7answer?.name }}
+      </span>
+    </div>
+    <div class='mt-4'>
+      <div class='rected-word sky p-2 w-28'>생각</div>
+      <span class='ml-3'>
+        {{ context.program4.course2.step8answer?.name }}
+      </span>
+    </div>
+  </smd-card>
+
+  <ion-text class='mt-6'>
+    마음속에 스쳐 지나가는 생각을 자동사고라고 합니다.
+    <br /><br />
+
+    예를 들면 “나는 불안해”라는 감정에 앞서<br />
+    “심장이 마비될 것 같다”라는 생각을 할 수 있습니다.
+    <br /><br />
+
+    이때에 위와 같은 생각이 자동사고입니다. <br />
+    이 자동사고는 사고의 오류로 생겨난 것입니다.
+    <br /><br />
+  </ion-text>
+</ion-grid>

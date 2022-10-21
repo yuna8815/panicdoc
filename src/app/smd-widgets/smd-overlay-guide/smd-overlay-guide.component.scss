@@ -1,0 +1,25 @@
+// 백드롭
+ion-backdrop {
+  opacity: 0.8;
+}
+
+// 백드롭 위에 올라오는 요소
+.over-backdrop-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+ion-button.close {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 0px;
+  color: white;
+}
+

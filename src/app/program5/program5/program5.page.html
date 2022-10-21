@@ -1,0 +1,110 @@
+<smd-header1 [title]='Courses[course - 1]' [back]='back()' (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <!-- 코스1 -->
+  <ng-container *ngIf='course == 1'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program5-course1-step1 #stepContent></program5-course1-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program5-course1-step2 #stepContent></program5-course1-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program5-course1-step3 #stepContent></program5-course1-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program5-course1-step4 #stepContent></program5-course1-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program5-course1-step5 #stepContent></program5-course1-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program5-course1-step6 #stepContent></program5-course1-step6>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스2 -->
+  <ng-container *ngIf='course == 2'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='0'>
+        <program5-course2-step0 #stepContent></program5-course2-step0>
+      </ng-container>
+      <ng-container *ngSwitchCase='1'>
+        <program5-course2-step1 #stepContent></program5-course2-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program5-course2-step2 #stepContent></program5-course2-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program5-course2-step3 #stepContent></program5-course2-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program5-course2-step4 #stepContent></program5-course2-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program5-course2-step5 #stepContent></program5-course2-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program5-course2-step6 #stepContent></program5-course2-step6>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스3 -->
+  <ng-container *ngIf='course == 3'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program5-course3-step1 #stepContent></program5-course3-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program5-course3-step2 #stepContent></program5-course3-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program5-course3-step3 #stepContent></program5-course3-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program5-course3-step4 #stepContent></program5-course3-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program5-course3-step5 #stepContent></program5-course3-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program5-course3-step6 #stepContent></program5-course3-step6>
+      </ng-container>
+      <ng-container *ngSwitchCase='7'>
+        <program5-course3-step7 #stepContent></program5-course3-step7>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- 코스4 -->
+  <ng-container *ngIf='course == 4'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='1'>
+        <program5-course4-step1 #stepContent></program5-course4-step1>
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <program5-course4-step2 #stepContent></program5-course4-step2>
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <program5-course4-step3 #stepContent></program5-course4-step3>
+      </ng-container>
+      <ng-container *ngSwitchCase='4'>
+        <program5-course4-step4 #stepContent></program5-course4-step4>
+      </ng-container>
+      <ng-container *ngSwitchCase='5'>
+        <program5-course4-step5 #stepContent></program5-course4-step5>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+        <program5-course4-step6 #stepContent></program5-course4-step6>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+</ion-content>
+
+<smd-program-footer [text]='getButtonText()' (next)='next()' [disabled]='stepContent?.nextDisabled?.()'
+  [clickOnDisabled]='stepContent?.clickOnDisabled'>
+</smd-program-footer>

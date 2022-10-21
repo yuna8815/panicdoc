@@ -1,0 +1,30 @@
+.dot {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.color-reddish {
+  color: #FF456B;
+}
+.color-yellow {
+  color: #FFDF95;
+}
+.color-purple {
+  color: #8066D6;
+}
+.color-bg-reddish {
+  background-color: #FF456B;
+}
+.color-bg-yellow {
+  background-color: #FFDF95;
+}
+.color-bg-purple {
+  background-color: #8066D6;
+}
+
+canvas {
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 10px;
+}

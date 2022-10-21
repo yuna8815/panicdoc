@@ -1,0 +1,41 @@
+<ion-grid class='flex flex-col px-0'>
+
+  <img class='mt-4' src='assets/img/woman_walk.png' />
+
+  <div class='text-center mt-8'>
+    <span class='color-bg-primary text-white rounded-2xl py-1 px-2'>운동방법</span>
+    <h1 class='mt-4'>
+      {{ context.program6.course3.step1answer?.name }}
+    </h1>
+  </div>
+
+  <div class='text-center text-5xl'>
+    {{ toHHmmss(elapsed) }}
+  </div>
+  <div class='text-center'>
+    <ion-button fill='outline' shape='round' class='text-black rounded-2xl py-1 px-2 mt-6' style='--border-color: #ccc'
+      (click)='front()'>
+      <ion-icon slot='start' name='refresh-outline'></ion-icon>운동 다시선택
+    </ion-button>
+  </div>
+</ion-grid>
+
+<ion-button *ngIf='!started' color='primary' class='w-full absolute bottom-4 px-4' (click)='start()'>
+  시작하기
+</ion-button>
+
+<ion-button *ngIf='started && !paused' color='primary' class='w-full absolute bottom-4 px-4' (click)='pause()'>
+  정지
+</ion-button>
+
+<div *ngIf='started && paused' class='absolute bottom-4'>
+  <ion-button color='primary' class='w-full px-4' (click)='pause()'>
+    운동 이어서하기
+  </ion-button>
+  <ion-button color='primary' class='w-full px-4' (click)='finish()'>
+    운동 완료하기
+  </ion-button>
+  <ion-button color='light' class='w-full px-4' (click)='giveup()'>
+    훈련 포기하기
+  </ion-button>
+</div>

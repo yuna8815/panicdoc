@@ -1,0 +1,8 @@
+
+<div class='chip' [class]='{ checked, circle: variant == "circle" }' [style.width]='width'
+  (click)='onClicked()'>
+  {{ text }}
+  <ng-content *ngIf='!text'></ng-content>
+  <ion-icon *ngIf='checkable && checked && variant != "circle"' name='checkmark-circle'>
+  </ion-icon>
+</div>

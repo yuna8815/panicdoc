@@ -1,0 +1,19 @@
+<ion-grid class='page flex flex-col'>
+  <h1>
+    {{ auth.name }}님이 입력한<br />
+    <span class='smd-underline'>공황 촉발 요인</span>은 아래와 같습니다.
+  </h1>
+
+  <ion-row class='mt-4'>
+    <ion-text>
+      노출훈련 계획을 완료한 이후로는<br />
+      공황 촉발 요인을 수정할 수 없습니다.
+    </ion-text>
+  </ion-row>
+
+  <ion-row class='mt-4'>
+    <smd-chip [checkable]='false'>운전할 때</smd-chip>&nbsp;
+    <smd-chip [checkable]='false'>터널이나 다리를 건널 때</smd-chip>
+    <smd-chip [checkable]='false' class='mt-2'>심한 스트레스를 받았을 때</smd-chip>
+  </ion-row>
+</ion-grid>

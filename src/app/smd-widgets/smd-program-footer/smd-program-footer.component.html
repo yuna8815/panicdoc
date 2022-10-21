@@ -1,0 +1,25 @@
+<ion-footer [class]='{ transparentBackground }'>
+
+  <smd-play-control-bar *ngIf='showPlayControl'>
+  </smd-play-control-bar>
+
+  <div *ngIf='top' class='buttons-wrap mb-1'>
+    <ion-button class='w-full' (click)='top?.()'>
+      {{ topButtonText }}
+    </ion-button>
+  </div>
+
+  <div class='flex flex-row justify-between buttons-wrap mb-5'>
+
+    <ion-button *ngIf='front' class='front grow' (click)='front?.()'>
+      {{ frontButtonText }}
+    </ion-button>
+
+    <ion-button class='grow' color='primary'
+      [fill]='!disabled ? fill : (clickOnDisabled ? "outline" : fill)'
+      (click)='disabled ? clickOnDisabled?.() : next.emit()' [disabled]='!clickOnDisabled && disabled'
+      [innerHtml]='text'>
+    </ion-button>
+
+  </div>
+</ion-footer>
