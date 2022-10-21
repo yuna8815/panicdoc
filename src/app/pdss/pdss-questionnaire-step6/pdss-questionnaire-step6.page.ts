@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { IonModal, ToastController } from '@ionic/angular';
 import { messages } from 'src/messages';
 import { NameValue } from 'src/collection';
-import { SmdItemListItem } from '../../smd-widgets/smd-item-list/smd-item-list.component';
+import { SmdItemListItem } from 'src/app/00.component/smd-item-list/smd-item-list.component';
 
 @Component({
   selector: 'app-pdss-questionnaire-step6',

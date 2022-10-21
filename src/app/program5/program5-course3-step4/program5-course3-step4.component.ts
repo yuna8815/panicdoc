@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
+import { SmdReorderComponent } from 'src/app/00.component/smd-reorder/smd-reorder.component';
 import { GlobalContextService } from 'src/app/global-context.service';
-import { SmdReorderComponent } from 'src/app/smd-widgets/smd-reorder/smd-reorder.component';
 import { StepBase } from 'src/app/step-base';
 
 export const DistortionEvent2Options = [

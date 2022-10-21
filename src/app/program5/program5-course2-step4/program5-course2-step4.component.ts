@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
+import { SmdReorderComponent } from 'src/app/00.component/smd-reorder/smd-reorder.component';
 import { GlobalContextService } from 'src/app/global-context.service';
-import { SmdReorderComponent } from 'src/app/smd-widgets/smd-reorder/smd-reorder.component';
 
 export const DistortionEventOptions = [
   '갓길에 차를 세워 놓고<br />불안이 사라질 때까지 기다린다',

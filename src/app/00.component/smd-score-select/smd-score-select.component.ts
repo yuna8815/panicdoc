@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { SmdItemListItem } from 'src/app/smd-widgets/smd-item-list/smd-item-list.component';
 import { GradeLabels1 } from 'src/smd-common';
+import { SmdItemListItem } from '../smd-item-list/smd-item-list.component';
 import { SmdRadioComponent } from '../smd-radio/smd-radio.component';
 
 @Component({

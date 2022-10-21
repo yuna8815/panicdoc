@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SmdModalService } from 'src/app/smd-widgets/smd-modal.service';
+import { SmdModalService } from 'src/app/00.component/smd-modal.service';
 import { NameValue } from 'src/collection';
 import { messages } from 'src/messages';
 

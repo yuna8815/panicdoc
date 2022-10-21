@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
+import { SmdButtonAnswerComponent } from 'src/app/00.component/smd-button-answer/smd-button-answer.component';
 import { AuthService } from 'src/app/auth.service';
 import { GlobalContextService } from 'src/app/global-context.service';
-import { SmdButtonAnswerComponent } from 'src/app/smd-widgets/smd-button-answer/smd-button-answer.component';
 
 @Component({
   selector: 'p5-course2-step3',

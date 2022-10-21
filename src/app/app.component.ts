@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
-import { SmdModalService } from './smd-widgets/smd-modal.service';
+import { SmdModalService } from './00.component/smd-modal.service';
 
 @Component({
   selector: 'app-root',

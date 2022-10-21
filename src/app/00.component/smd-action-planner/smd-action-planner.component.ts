@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
-import { SmdModalService } from 'src/app/smd-widgets/smd-modal.service';
 import { messages } from 'src/messages';
+import { SmdModalService } from '../smd-modal.service';
 
 @Component({
   selector: 'smd-action-planner',

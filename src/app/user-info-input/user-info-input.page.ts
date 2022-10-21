@@ -4,7 +4,7 @@ import { ToastController } from '@ionic/angular';
 import * as _ from 'lodash';
 import { messages } from 'src/messages';
 import { PanicFactors } from 'src/smd-common';
-import { SmdModalService } from '../smd-widgets/smd-modal.service';
+import { SmdModalService } from '../00.component/smd-modal.service';
 
 @Component({
   selector: 'app-user-info-input',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SmdModalService } from 'src/app/00.component/smd-modal.service';
 import { GlobalContextService } from 'src/app/global-context.service';
-import { SmdModalService } from 'src/app/smd-widgets/smd-modal.service';
 import { StepBase } from 'src/app/step-base';
 import { NameValue } from 'src/collection';
 import { messages } from 'src/messages';

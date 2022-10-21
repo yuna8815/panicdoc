@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IonButton, IonModal } from '@ionic/angular';
-import { SmdModalService } from 'src/app/smd-widgets/smd-modal.service';
+import { SmdModalService } from 'src/app/00.component/smd-modal.service';
 import { StepBase } from 'src/app/step-base';
 
 @Component({
