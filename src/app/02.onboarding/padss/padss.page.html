@@ -1,0 +1,206 @@
+<smd-header1 title='공황평가(PDSS)' back='/patient-question'></smd-header1>
+<!-- <ion-header>
+  <ion-toolbar class='header-toolbar mb-2'>
+    <div class='flex flex-row items-center text-black'>
+      <ion-icon name='chevron-back-outline' class='ml-4 mr-2'></ion-icon>
+      <span class='title'>공황평가(PDSS)</span>
+    </div>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-slides>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h1>공황평가(PDSS)</h1>
+    
+        <div class='mt-4'>
+          다음의 질문들은<br />
+          공황발작이나 공황증상과 관련된 것들입니다.
+        </div>
+    
+        <div class='panel mt-6'>
+          이 설문지에서 공황발작이란 다음에 열거된 증상들 중 4개 이상이 동반되는 갑작스러운 공포나 불편감을 말합니다.
+        </div>
+        <div class='panel mt-4'>
+          갑작스럽게 일어난다는 것은 공황증상이 “10분 이내에 최고조”에 달하는 것을 의미합니다.
+        </div>
+        <div class='panel mt-4'>
+          공황발작과 같은 증상은 있지만 3개 이하의 증상을 가질 경우는 공황증상이라고 합니다.
+        </div>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mb-4'>공황발작 시 10분 이내에 최고조로 경험했던<br /> 증상들을 선택해주세요.</h2>
+        <ion-row>
+          <smd-chip class='mr-2 mb-2' *ngFor='let st of symptoms' [text]='st' [(checked)]='checked[st]'></smd-chip>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <ion-row>
+          <ion-text>지금까지 공황발작을 1회 이상 경험하셨나요?</ion-text>
+        </ion-row>
+        <ion-row class='flex flex-row'>
+          <smd-button-answer></smd-button-answer>
+        </ion-row>
+    
+        <ion-row class='mt-4'>
+          <ion-text>최초 공황발작은 언제인가요?</ion-text>
+        </ion-row>
+        <ion-input [value]='firstSeizureDate | date:TimeFormat_yyyyMMdd' (click)='pickFirstSeizureDate()'></ion-input>
+    
+        <ion-row class='mt-4'>
+          <ion-text>최근에 경험한 공황발작은 언제입니까?</ion-text>
+        </ion-row>
+        <ion-input [value]='recentSeizureDate | date:TimeFormat_yyyyMMdd_e' (click)='pickRecentSeizureDate()'></ion-input>
+      </ion-grid>
+    
+      <ion-modal [initialBreakpoint]='firstOrRecentSeizure ? h1 : h2'>
+        <ng-template>
+          <div class='w-full h-screen flex flex-col items-center bg-white rounded-lg'>
+            <h2 class='mt-4'>날짜 선택</h2>
+    
+            <hr class='w-full mt-4 mb-4' />
+    
+            <ion-datetime *ngIf='firstOrRecentSeizure' presentation='month-year' (ionChange)='onDateChange($event)'>
+            </ion-datetime>
+            <ion-datetime *ngIf='!firstOrRecentSeizure' presentation='date' (ionChange)='onDateChange($event)'>
+            </ion-datetime>
+            <ion-button color='primary' class='w-[90%]' (click)='selectDate()'>
+              날짜 선택
+            </ion-button>
+          </div>
+        </ng-template>
+      </ion-modal>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-12'>
+          “최근 1개월” 동안 공황발작을 1회 이상 경험 하셨나요?
+        </h2>
+        <ion-row class='flex flex-row mt-4'>
+          <smd-button-answer #yesno></smd-button-answer>
+        </ion-row>
+    
+        <h2 class='mt-12'>
+          경험하셨다면, “최근 1개월 동안” 몇 번의 공황 발작이 있었나요?
+        </h2>
+        <smd-number-spinner class='mt-4' [(value)]='count' [disabled]='!yesno.answer'></smd-number-spinner>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2>
+          공황발작이 시작된 후 평균 몇 분 이내에 증상이 최고조에 이르나요?
+        </h2>
+
+        <div class='mt-4'>
+          <smd-item-list [items]='items' [(selection)]='selection' [divider]='true'>
+          </smd-item-list>
+        </div>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8'>
+          다음 문항을 잘 읽고, 지난 주에 경험한 것과 가장 비슷한 내용을 선택해주세요.
+        </h2>
+        <hr class='mt-4 mb-4' />
+        <h2 class='mb-8'>
+          지난 주 공황발작 또는 공황증상을 얼마나 자주 경험하셨나요?
+        </h2>
+    
+        <smd-item-list [items]='items2' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8'>
+          만약 지난 주에 공황발작이 있었다면, 발작 시 얼마나 고통스러웠나요?
+        </h2>
+        <h2 class='mt-4 mb-4 text-gray-500'>
+          만약 한 번 이상의 공황발작을 경험했다면, 평균으로 평가해주세요.
+        </h2>
+        <h2 class='mb-4 text-gray-500'>
+          공황발작은 없었지만 공황증상들만 경험했다면, 그 증상에 대하여 평가해주세요.
+        </h2>
+    
+        <smd-item-list [items]='items3' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+    
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8'>
+          지난 주에 공황이 또 언제 일어날지, 공황발작으로 인해 어떤 지장을 받을지에 대해 얼마나 불안하고 걱정하셨나요?
+        </h2>
+        <h2 class='mt-4 mb-8 text-gray-500'>
+          다가올 공황에 대한 불안, 또는 신체적, 정신적 건강문제, 사회적으로 당황스러운 상황이 생길까봐 걱정하고 불안했던 것을 말합니다.
+        </h2>
+    
+        <smd-item-list [items]='items4' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+    
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8 mb-8'>
+          지난 주에 공황발작이 올 것 같은 공포 때문에 어떤 장소나 상황(대중교통, 극장, 군중 속, 터널, 다리, 쇼핑몰, 혼자 있을 때 등)을 회피했거나, 두려워 피하고 싶은 적이 있나요?<br />
+          만약 어느 한 경우라도 그렇다면 그 공포와 회피의 정도를 평가해주세요.
+        </h2>
+
+        <smd-item-list [items]='items5' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8 mb-8'>
+          지난 주에 공황발작 시 경험한 것과 비슷한 신체증상을 일으키거나, 혹은 공황발작이 생길까 두려워 일상활동(운동, 샤워나 목욕하기, 커피 마시기, 공포영화 보기, 성관계 등)을 회피했거나, 두려움을 느낀 적이 있나요?
+          <br /><br />
+          지난 주에 있었던 신체증상에 대한 공포와 회피를 평가해 주십시오.
+        </h2>
+    
+        <smd-item-list [items]='items6' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+    
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8 mb-8'>
+          지난 주에 공황증상, 공황발작, 발작과 관련된 걱정 때문에 일상활동을 두려워하여 집안 일을 하거나 직장에서 업무를 수행할 때 얼마나 방해를 받았나요?
+        </h2>
+    
+        <smd-item-list [items]='items7' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+    
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <h2 class='mt-8 mb-8'>
+          지난 주에 공황증상, 공황발작, 발작과 관련된 걱정 때문에 일상활동을 두려워하여 집안 일을 하거나 직장에서 업무를 수행할 때 얼마나 방해를 받았나요?
+        </h2>
+        <h2 class='mt-4 mb-8 text-gray-500'>
+          사람들과 어울리는 데에 얼마나 영향을 받았는지 평가합니다.
+        </h2>
+    
+        <smd-item-list [items]='items8' [(selection)]='selection' [divider]='true' [marginSize]='4' [innerMarginSize]='4'>
+        </smd-item-list>
+    
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>
+
+<smd-program-footer text='시작' (next)='next()'>
+</smd-program-footer>

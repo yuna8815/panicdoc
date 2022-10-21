@@ -7,96 +7,48 @@ const routes: Routes = [
     redirectTo: 'fly',
     pathMatch: 'full',
   },
-  {
-    path: 'splash',
-    loadChildren: () => import('./onboarding/splash/splash.module').then( m => m.SplashPageModule)
-  },
-  {
-    path: 'patient-login',
-    loadChildren: () => import('./onboarding/patient-login/patient-login.module').then( m => m.PatientLoginPageModule)
-  },
-  {
-    path: 'loading',
-    loadChildren: () => import('./onboarding/loading/loading.module').then( m => m.LoadingPageModule)
-  },
-  {
-    path: 'intro',
-    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
-  },
-  {
-    path: 'patient-question',
-    loadChildren: () => import('./patient-question/patient-question.module').then( m => m.PatientQuestionPageModule)
-  },
-  {
-    path: 'user-info-input',
-    loadChildren: () => import('./user-info-input/user-info-input.module').then( m => m.UserInfoInputPageModule)
-  },
-  // PDSS
-  {
-    path: 'pdss-questionnaire',
-    loadChildren: () => import('./pdss/pdss-questionnaire/pdss-questionnaire.module').then( m => m.PdssQuestionnairePageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step1',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step1/pdss-questionnaire-step1.module').then( m => m.PdssQuestionnaireStep1PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step2',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step2/pdss-questionnaire-step2.module').then( m => m.PdssQuestionnaireStep2PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step3',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step3/pdss-questionnaire-step3.module').then( m => m.PdssQuestionnaireStep3PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step4',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step4/pdss-questionnaire-step4.module').then( m => m.PdssQuestionnaireStep4PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step5',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step5/pdss-questionnaire-step5.module').then( m => m.PdssQuestionnaireStep5PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step6',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step6/pdss-questionnaire-step6.module').then( m => m.PdssQuestionnaireStep6PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step7',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step7/pdss-questionnaire-step7.module').then( m => m.PdssQuestionnaireStep7PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step8',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step8/pdss-questionnaire-step8.module').then( m => m.PdssQuestionnaireStep8PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step9',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step9/pdss-questionnaire-step9.module').then( m => m.PdssQuestionnaireStep9PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step10',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step10/pdss-questionnaire-step10.module').then( m => m.PdssQuestionnaireStep10PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-step11',
-    loadChildren: () => import('./pdss/pdss-questionnaire-step11/pdss-questionnaire-step11.module').then( m => m.PdssQuestionnaireStep11PageModule)
-  },
-  {
-    path: 'pdss-questionnaire-result',
-    loadChildren: () => import('./pdss/pdss-questionnaire-result/pdss-questionnaire-result.module').then( m => m.PdssQuestionnaireResultPageModule)
-  },
-  // APPQ
-  {
-    path: 'appq-intro',
-    loadChildren: () => import('./appq/appq-intro/appq-intro.module').then( m => m.AppqIntroPageModule)
-  },
-  {
-    path: 'appq-step1',
-    loadChildren: () => import('./appq/appq-step1/appq-step1.module').then( m => m.AppqStep1PageModule)
-  },
-  {
-    path: 'appq-step2',
-    loadChildren: () => import('./appq/appq-step2/appq-step2.module').then( m => m.AppqStep2PageModule)
-  },
+  // {
+  //   path: 'login',
+  //   children: [
+      {
+        path: 'splash',
+        loadChildren: () => import('./01.login/splash/splash.module').then( m => m.SplashPageModule)
+      },
+      {
+        path: 'patient-login',
+        loadChildren: () => import('./01.login/patient-login/patient-login.module').then( m => m.PatientLoginPageModule)
+      },
+      {
+        path: 'loading',
+        loadChildren: () => import('./01.login/loading/loading.module').then( m => m.LoadingPageModule)
+      },
+  //   ]
+  // },
+  // {
+  //   path: 'onboarding',
+  //   children: [
+      {
+        path: 'intro',
+        loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
+      },
+      {
+        path: 'patient-question',
+        loadChildren: () => import('./02.onboarding/patient-question/patient-question.module').then( m => m.PatientQuestionPageModule)
+      },
+      {
+        path: 'padss',
+        loadChildren: () => import('./02.onboarding/padss/padss.module').then( m => m.PadssPageModule)
+      },
+      {
+        path: 'appq',
+        loadChildren: () => import('./02.onboarding/appq/appq.module').then( m => m.AppqPageModule)
+      },
+      {
+        path: 'user-info-input',
+        loadChildren: () => import('./02.onboarding/user-info-input/user-info-input.module').then( m => m.UserInfoInputPageModule)
+      },
+  //   ]
+  // },
   // 홈
   {
     path: 'home',

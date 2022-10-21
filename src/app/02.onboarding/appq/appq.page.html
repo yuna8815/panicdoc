@@ -1,0 +1,76 @@
+<smd-header1 title='공황평가(APPQ)' back='/pdss-questionnaire-step7'></smd-header1>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <ion-row class='mt-10'>
+          <h1>공황평가(APPQ)</h1>
+        </ion-row>
+        <ion-row>
+          <ion-text>다음은 “두려움을 느낄 수 있는 상황들”입니다.</ion-text>
+        </ion-row>
+    
+        <div class='panel mt-10'>
+          다음의 상황들이 실제로 다음 주에 일어날 것이라고 상상해 보세요.
+        </div>
+    
+        <div class='panel mt-5'>
+          다음 상황을 실제로 경험할 경우, 얼마나 두려울지를 “0(전혀 두렵지 않다)” ~ “8(극도로 두려울 것이다)”까지 숫자를 선택해주세요.
+        </div>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <div class='questions mt-10'>
+          <ng-container *ngFor='let t of questions; let i = index'>
+            <smd-score-select [text]='t' (selectedChange)='questionsValue[t] = $event'
+              [disabled]='i > 0 && !questionsValue[questions[i - 1]]'>
+            </smd-score-select>
+            <hr class='mt-8 mb-8' />
+          </ng-container>
+        </div>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page grow'>
+        <ion-row class='mt-10'>
+          <h1>공황평가(APPQ) 결과</h1>
+        </ion-row>
+        <ion-row class='mt-5'>
+          <ion-text>
+            APPQ를 기반으로한 결과는 아래와 같습니다.<br/>
+            <br/>
+            공포와 두려움은 공황증상에 영향을 줍니다. 앞으로 PanicDoc과 함께 나아지는 모습을 기대해봅시다.
+            <br/>
+            마지막으로 앱 사용을 위한 항목을 입력해주세요.
+          </ion-text>
+        </ion-row>
+    
+        <div class='panel white mt-10 flex justify-between'>
+          광장공포
+          <span class='score'>
+            00 / 72
+          </span>
+        </div>
+    
+        <div class='panel white mt-10 flex justify-between'>
+          사회공포
+          <span class='score'>
+            00 / 80
+          </span>
+        </div>
+    
+        <div class='panel white mt-10 flex justify-between'>
+          신체감각
+          <span class='score'>
+            00 / 64
+          </span>
+        </div>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<smd-program-footer text='시작' (next)='next()'>
+</smd-program-footer>
