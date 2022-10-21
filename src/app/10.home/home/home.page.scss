@@ -1,5 +1,3 @@
-@import '../../theme/variables';
-
 :host {
   background-color: #F9F9F9;
 }
@@ -65,11 +63,11 @@ ion-footer {
           filter: none;
         }
         span {
-          color: $color-primary;
+          color: var(--ion-color-primary);
         }
-        color: $color-primary;
+        color: var(--ion-color-primary);
         .diary-wrap {
-          background-color: $color-primary;
+          background-color: var(--ion-color-primary);
         }
       }
     }

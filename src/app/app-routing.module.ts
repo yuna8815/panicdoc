@@ -29,7 +29,7 @@ const routes: Routes = [
   //   children: [
       {
         path: 'intro',
-        loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
+        loadChildren: () => import('./02.onboarding/intro/intro.module').then( m => m.IntroPageModule)
       },
       {
         path: 'patient-question',
@@ -52,7 +52,24 @@ const routes: Routes = [
   // 홈
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./10.home/home/home.module').then( m => m.HomePageModule)
+  },
+  
+  {
+    path: 'diary-write',
+    loadChildren: () => import('./home/diary-write/diary-write.module').then( m => m.DiaryWritePageModule)
+  },
+  {
+    path: 'prescription-view',
+    loadChildren: () => import('./home/prescription-view/prescription-view.module').then( m => m.PrescriptionViewPageModule)
+  },
+  {
+    path: 'panic-log-write',
+    loadChildren: () => import('./home/panic-log-write/panic-log-write.module').then( m => m.PanicLogWritePageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./home/settings/settings.module').then( m => m.SettingsPageModule)
   },
   // 프로그램1
   {

@@ -1,9 +1,9 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router, RoutesRecognized } from '@angular/router';
 import { IonButton, IonMenu } from '@ionic/angular';
-import { SmdCourseCardComponent } from '../00.component/smd-course-card/smd-course-card.component';
-import { AuthService } from '../auth.service';
-import { GlobalContextService } from '../global-context.service';
+import { SmdCourseCardComponent } from 'src/app/00.component/smd-course-card/smd-course-card.component';
+import { AuthService } from 'src/app/auth.service';
+import { GlobalContextService } from 'src/app/global-context.service';
 import { CourseData, RelaxTraining } from './courses';
 
 @Component({
