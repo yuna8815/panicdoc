@@ -80,16 +80,16 @@ export class TabsPage implements OnInit {
 
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
-        if (data.url == '/home/diary') {
+        if (data.url == '/tabs/diary') {
           this.headerIcon = 'write.svg';
           this.headerText = '감정일기'
-        } else if (data.url == '/home/programs') {
+        } else if (data.url == '/tabs/programs') {
           this.headerIcon = 'programs.svg';
           this.headerText = '프로그램'
-        } else if (data.url == '/home/paniclogs') {
+        } else if (data.url == '/tabs/paniclogs') {
           this.headerIcon = 'head_panic.svg';
           this.headerText = '공황기록'
-        } else if (data.url == '/home/weekly_prescription') {
+        } else if (data.url == '/tabs/report') {
           this.headerIcon = 'chart.svg';
           this.headerText = '주간처방'
         } else {
