@@ -1,0 +1,24 @@
+ion-footer {
+  box-shadow: 0px 0px 15px rgb(200, 200, 200);
+  background-color: #F9F9F9;
+}
+
+img {
+  position: absolute;
+  bottom: 0;
+}
+
+.progress-wrap {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  top: 11px;
+  progress {
+    width: 150px;
+    height: 3px;
+    background-color: gainsboro;
+  }
+}

@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     // redirectTo: 'fly',
-    redirectTo: 'tabs/home?program=1',
+    // redirectTo: '/tabs/home?program=1',
+    redirectTo: '/program/program1/course1',
     pathMatch: 'full',
   },
   // {
@@ -55,10 +56,10 @@ const routes: Routes = [
     loadChildren: () => import('./00.tabs/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   // 홈
-  {
-    path: 'home',
-    loadChildren: () => import('./10.home/home/home.module').then( m => m.HomePageModule)
-  },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./10.home/home/home.module').then( m => m.HomePageModule)
+  // },
   // {
   //   path: 'diary',
   //   children:[
@@ -81,6 +82,24 @@ const routes: Routes = [
     loadChildren: () => import('./60.settings/settings/settings.module').then( m => m.SettingsPageModule)
   },
   // 프로그램1
+  {
+    path: 'program',
+    children: [
+      {
+        path: 'program1',
+        children: [
+          {
+            path: 'course1',
+            loadChildren: () => import('./20.program/program1/course1/course1.module').then( m => m.Course1PageModule)
+          },
+          {
+            path: 'course2',
+            loadChildren: () => import('./20.program/program1/course2/course2.module').then( m => m.Course2PageModule)
+          },
+        ]
+      }
+    ]
+  },
   {
     path: 'program1',
     loadChildren: () => import('./20.program/program1/program1/program1.module').then( m => m.Program1PageModule)

@@ -13,13 +13,13 @@ const CoursesWeek1: ProgramDef = {
   courses: [
     {
       icon: 'icon3', name: '공황장애 이해하기',
-      duration: 5, status: 'complete',
-      link: 'program1/course1',
+      duration: 5, status: 'ready',
+      link: 'program/program1/course1',
     },
     {
       icon: 'icon5', name: 'Quiz : 공황장애 바로 알기',
       duration: 10, status: 'ready',
-      link: 'program1-course2-quiz/0',
+      link: 'program/program1/course2',
     },
   ]
 };

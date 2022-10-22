@@ -1,0 +1,274 @@
+<smd-header1 title='Quiz : 공황장애 바로 알기' (back)='back()' (close)='backHome()'></smd-header1>
+
+<div class='progress-wrap' *ngIf='step >= 1'>
+  <span class='color-primary'>
+    {{ (step / 2) | number:'2.0-0' }}
+  </span>
+  <progress class='ml-2 mr-2' [value]='(step / 2)' [max]='10'></progress>
+  <span class='text-gray-400'>10</span>
+</div>
+
+<ion-content>
+  <div class='flex flex-col ml-6 mr-6'>
+    <ng-container [ngSwitch]='step'>
+      <ng-container *ngSwitchCase='0'>
+        <div>
+          <h1 class='self-start'>Quiz : 공황장애 바로알기</h1>
+          <br />
+
+          <div>
+            지금부터 퀴즈를 통하여<br />
+            공황에 대해  자세하게 알아보도록 하겠습니다.<br />
+            모두 10개의 질문이 준비되어 있습니다.
+          </div>
+
+        </div>
+
+      </ng-container>
+
+      <ng-container *ngSwitchCase='1'>
+
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 1</span>
+        </div>
+        <h1 class='mt-6 text-center'>공황장애로 죽을 수 있나요?</h1>
+
+
+      </ng-container>
+      <ng-container *ngSwitchCase='2'>
+        <div>
+          <div class='mt-10 text-center'>
+            <span class='progress-badge gray'>정답확인</span>
+          </div>
+
+          <div class='mt-6'>
+            <h2 class='text-gray-300 text-center'>공황장애로 죽을 수 있나요?</h2>
+          </div>
+
+          <h1>공황이 원인이 되어 죽진 않습니다.</h1>
+          <div class='mt-6'>
+            공황발작이 발생하면 호흡곤란, 가슴 두근거림, 어지러움, 가슴 답답함 등의 증상이 발생합니다. 증상이 심하면 졸도할 것 같거나, 질식할 것 같은 공포심이 발생하기도 합니다. 과호흡이 계속되면 전해질 불균형으로 인해 손발이 일시적으로 마비되는 것 같은 느낌이 들 수 있습니다.
+            <br /><br />
+            하지만 공황발작으로 심각한  문제가 발생하거나 사망에 이르게 되는 경우는 없습니다.
+          </div>
+        </div>
+
+      </ng-container>
+      <ng-container *ngSwitchCase='3'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 2</span>
+        </div>
+
+        <h1 class='mt-6 text-center'>공황장애는 완치될 수 있나요?</h1>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='4'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>공황장애는 완치될 수 있나요?</h2>
+          <h1 class='mt-2'>네! 공황장애는<br />완치될 수 있습니다.</h1>
+        </div>
+
+        <div class='mt-6'>
+          공황장애는 정신질환 중 비교적 치료와 예후가 좋은 편에 속합니다. 범불안장애나 사회공포증과 같은 다른 불안장애보다 나은 경과를 보입니다. 특히 광장공포증이 동반되지 않은 경우에는 더 좋습니다. 약 30%의 환자는 수년 내에 재발 없이 완전히 완화되고, 약 35%의 환자는 현저히 호전되지만 호전과 악화를 반복할 수 있습니다.
+          <br /><br />
+          부적절한 치료는 좋지 않은 예후의 중요한 요인입니다. 약물치료만으로는 6개월 내 25 ~ 50%의 환자가 재발하기 때문에 PanicDoc을 같이 사용하는 것이 좋습니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='5'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 3</span>
+
+          <h1 class='mt-6'>대중교통 이용이 어려워요.<br />이것도 공황장애인가요?</h1>
+
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase='6'>
+
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>대중교통 이용이 어려워요.<br />이것도 공황장애인가요?</h2>
+          <h1>공황장애일 수도 있으나<br />광장공포증일 수도 있습니다.</h1>
+        </div>
+        <div class='mt-6'>
+          공황장애 환자들 중 상당수는 공황발작과 같은 증상이 나타났을 경우 빠져나가거나 도움을 청하기 어렵다고 생각되는 장소나 상황을 회피합니다. 그리고 그런 상황에 노출되는 것에 대한 심한 두려움을 갖습니다.
+          <br /><br />
+          이를 광장공포증이라고 합니다. 광장공포증은 공황장애 환자의 절반 이상에서 나타날 정도로 매우 흔하지만 공황발작 없이 광장공포증만 단독으로 진단되는 경우도 있습니다.
+          <br /><br />
+          광장공포증을 불러일으키는 흔한 상황에는 지하철, 버스와 같이 대중교통, 시장, 다리와 같이 열린 공간, 영화관과 같이 밀폐된 공간, 대형마트와 같이 사람이 많은 곳, 집 밖에 혼자 있을 때 등이 있습니다.
+          <br /><br />
+          광장공포증이 동반되는 경우 공황증상이 더 심하고, 약물치료를 더 장기간 받게 되며, 우울증 등 다른 정신과적 증상이 발생할 수 있으므로 치료를 시작할 때 광장공포증이 동반되는지 확인해야 합니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='7'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 4</span>
+          <h1 class='mt-6'>정신과 약을 한 번 먹기 시작하면<br />끊을 수 없다는데요.</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='8'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+
+          <h2 class='text-gray-300 mt-6'>정신과 약을 한 번 먹기 시작하면<br />끊을 수 없다는데요.</h2>
+          <h1>아닙니다. 끊을 수 있습니다.</h1>
+        </div>
+        <div class='mt-6'>
+          공황장애의 약물치료로 흔히 사용되는 약은 세로토닌 계열의 항우울제와 항불안제입니다. 이 중 항우울제는 의존성과 내성이 없기 때문에 끊지 못할까봐 걱정할 필요가 없습니다.
+          <br /><br />
+          항불안제는 흔히 진정, 수면제로 불리는 약으로서 의존성이 있을 뿐 아니라 내성과 금단증상이 있을 수 있습니다. 따라서 치료 초기에는 항불안제를 사용하지만 항우울제의 효과가 나타나기 시작하면 항불안제는 점점 줄이게 됩니다. 대부분의 경우 항불안제는 성공적으로 감량할 수 있습니다.
+          <br /><br />
+          하지만 예기불안이 극심할 때에 오랫동안 항불안제를 사용하게 되면 의존성 및 내성과 같은 부작용이 나타날 수 있습니다. 따라서 이러한 경우 인지행동치료와 같은 비약물적인 치료가 반드시 필요합니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='9'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 5</span>
+          <h1 class='mt-6'>공황장애 환자가<br />운동을 해도 되나요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='10'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>공황장애 환자가<br />운동을 해도 되나요?</h2>
+          <h1>증상의 정도에 따라 다릅니다.</h1>
+        </div>
+        <div mt-6>
+          공황장애 환자들은 불안과 관련된 신체반응에 민감합니다. 운동이나 다른 요인에 의한 심장 두근거림이 공황발작으로 이어지기도 합니다. 왜냐하면 가슴이 두근거리거나 숨이 차거나 속이 더부룩하고 답답한 것을 불안과 구분하지 못할 수도 있기 때문입니다.
+          <br /><br />
+          모든 환자가 운동을 하지 못하는 것은 아닙니다. 하지만 운동으로 인한 두근거림이나 과호흡 증상이 공황발작으로 이어지는 경우 심한 운동은 삼가는 것이 좋습니다.
+          <br /><br />
+          그러나 궁극적으로는 극복해야 합니다. 공황장애 인지행동치료 중 이런 신체반응을 이용한 노출훈련이 있습니다. 노출훈련은 불안증상을 일부러 유발하는 훈련으로 처음에는 계단을 오르거나 제자리 뛰기를 하는 등의 낮은 강도의 운동으로 시작합니다.
+          <br /><br />
+          훈련을 통해 신체증상과 불안은 안전하며 견딜 만하다는 것을 경험한 뒤 점차 운동 강도를 높이는 방식으로 진행됩니다.
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase='11'>
+
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 6</span>
+          <h1 class='mt-6'>기분이 우울해요.<br />공황장애인가요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='12'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>기분이 우울해요.<br />공황장애인가요?</h2>
+          <h1>기분이 우울하다고 해서<br />공황장애는 아닙니다.</h1>
+        </div>
+        <div class='mt-6'>
+          공황장애의 중요한 특징 중 하나는 공존질환이 많다는 것입니다. 우울, 불면, 공포증과 같은 다른 정신질환이 함께 동반되는 경우가 매우 흔하기 때문에 공황장애를 처음 진단받은 경우에는 동반질환에 대한 평가와 치료가 함께 이루어져야 합니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='13'>
+        <div style='text-align: center;' class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 7</span>
+          <h1 class='mt-6'>뇌영상 검사가 필요한가요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='14'>
+        <div class='mt-10' style='text-align: center;'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>뇌영상 검사가 필요한가요?</h2>
+          <h1>공황장애에서 뇌영상 검사는<br />필수가 아닙니다.</h1>
+        </div>
+
+        <div class='mt-6'>
+          공황장애는 자세한 병력 청취와 검사를 통해 진단합니다. 그리고 갑상선항진, 부정맥이나 천식과 같은 내과적인 질환에 의한 증상이 아닌지 감별진단하는 것이 중요합니다.
+          <br /><br />
+          공황장애로 진단받기 전에 감별진단을 위해 혈액 검사, 심전도 검사, 뇌파 검사 등 다양한 검사를 할 수 있습니다.
+          <br /><br />
+          하지만 CT나 MRI와 같은 뇌영상 검사가 공황장애의 진단에 반드시 필요한 것은 아닙니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='15'>
+        <div style='text-align: center;' class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 8</span>
+          <h1 class='mt-6'>공황발작이 있으면<br />다 공황장애인가요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='16'>
+        <div class='mt-10' style='text-align: center;'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>공황발작이 있으면<br />다 공황장애인가요?</h2>
+          <h1>공황발작이 있다고 해서<br />무조건 공황장애는 아닙니다.</h1>
+        </div>
+
+        <div class='mt-6'>
+          공황발작은 전체 인구의 약 30% 정도가 일생에 한 번은 경험할 정도로 비교적 흔한 증상입니다. 심한 스트레스 상황 하에서 흔히 발생할 수 있지만 아무 요인 없이 발생하기도 합니다. 공황발작을 한두 번 경험했다고 해서 모두 공황장애 진단을 받는 것은 아닙니다.
+          <br /><br />
+          공황발작이 다시 생길까봐 지속적으로 걱정을 하게 되고(예기불안), 이로 인해 외출을 꺼리게 되어 일상생활에 지장이 있을 때 비로소 공황장애로 진단을 받게 됩니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='17'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 9</span>
+          <h1 class='mt-6'>커피나 술을 마셔도 되나요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='18'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>커피나 술을 마셔도 되나요?</h2>
+          <h1>증상의 정도에 따라 다릅니다.</h1>
+        </div>
+
+        <div class='mt-6'>
+          커피나 녹차, 콜라 등에 들어 있는 카페인은 대표적으로 공황발작을 유발할 수 있는 각성 물질입니다. 공황장애를 가지고 있는 환자들은 고용량의 카페인 섭취를 삼가야 합니다.
+          <br /><br />
+          그렇다고 커피 한 잔도 마시면 안 되는 것은 아닙니다. 다만 진한 커피를 하루에 여러 잔 마시는 것은 공황발작의 요인이 될 수 있기 때문에 카페인이 많은 음식의 섭취를 줄이는 것이 좋습니다.
+          <br /><br />
+          술을 마신 직후에는 불안 증상이 줄어드는 것을 느낄 수 있습니다. 공황장애를 비롯해 많은 불안장애 환자들이 증상 완화를 위해 술을 즐겨 마시는데, 점차 음주량이 늘게 되고 결국 알코올 의존으로 이어질 수 있습니다.
+          <br /><br />
+          뿐만 아니라 술을 많이 마시고 나면, 다음날 가슴이 두근거리고 식은땀이 나는데 이는 알코올이 체내에서 빠져나가면서 발생하는 금단 증상입니다. 이 증상은 공황발작의 흔한 원인 중의 하나입니다. 따라서 과음도 반드시 피해야 합니다.
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='19'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge black'>QUIZ 10</span>
+          <h1 class='mt-6'>공황장애는 왜 생기나요?<br />유전인가요?</h1>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase='20'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
+          <h2 class='text-gray-300 mt-6'>공황장애는 왜 생기나요?<br />유전인가요?</h2>
+          <h1>공황장애 발병요인으로<br />확정된 것은 없습니다.</h1>
+        </div>
+
+        <div class='mt-6'>
+          생물학적 요인과 심리적 요인 모두가 작용하는 것으로 생각됩니다.
+          <br /><br />
+          우리 뇌에는 공포 조절 회로가 있는데 편도, 전대상 피질, 해마 등의 부위가 여기에 해당합니다. 위협이 되는 자극이 있을 때 이런 공포 조절 회로가 과활성화되는 것이 중요한 원인 중 하나입니다. 노르아드레날린이라는 신경전달물질의 과민성도 중요한 생물학적 원인 중 하나입니다.
+          <br /><br />
+          심리적 원인으로는 신체감각에 대한 불안의 증가, 즉 불안 민감성이 중요한 원인으로 꼽히고 있습니다. 이는 “공포에 대한 공포”라고 할 수 있는데 불안으로 발생하는 신체적, 심리적, 사회적 결과를 지나치게 두려워하는 현상입니다.
+          <br /><br />
+          과거 심한 질병이나 손상을 경험하였거나, 본인이 아닌 부모 등 다른 가족의 영향으로도 이런 현상이 발생할 수 있습니다. 상황에 대한 부정적 결과를 파국적으로 해석하는 인지왜곡도 중요한 심리적 원인으로 알려져 있습니다.
+          <br /><br />
+          공황장애는 유전되지 않습니다. 하지만 유전적인 취약성을 물려받을 가능성은 있습니다. 가족 중에 공황장애 환자가 있는 사람이라면 그렇지 않은 사람에 비해 공황장애 발생 가능성이 더 높습니다. 그러나 공황에 대한 취약성을 타고났다고 해서 반드시 공황으로 연결되지는 않습니다.
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <img *ngIf='imagePerStep[step]' src='assets/img/{{ imagePerStep[step] }}' />
+
+  </div>
+</ion-content>
+
+<smd-program-footer text='{{ step == 0 ? "시작하기" : isQuiz() ? "정답 확인하기" : step == 20 ? "완료" : "다음" }}'
+  [fill]='isQuiz() ? "outline" : "solid"' (next)='next()'>
+</smd-program-footer>
