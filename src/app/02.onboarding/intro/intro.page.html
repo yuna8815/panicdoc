@@ -63,7 +63,7 @@
 
           <div class='divider ml-8 mr-8 mb-4'></div>
 
-          <smd-item-list #promises [items]='items' [radio]='false'></smd-item-list>
+          <div class="px-8 text-left"><smd-item-list #promises [items]='items' [radio]='false'></smd-item-list></div>
 
           <ion-button #okButton color='primary' class='w-[90%] h-[56px]' (click)='ok()' [disabled]='promises.checkedCount != 3'>
             PanicDoc과 약속을 잘 지키겠습니다

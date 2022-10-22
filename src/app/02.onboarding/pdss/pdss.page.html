@@ -1,15 +1,7 @@
-<smd-header1 title='공황평가(PDSS)' back='/patient-question'></smd-header1>
-<!-- <ion-header>
-  <ion-toolbar class='header-toolbar mb-2'>
-    <div class='flex flex-row items-center text-black'>
-      <ion-icon name='chevron-back-outline' class='ml-4 mr-2'></ion-icon>
-      <span class='title'>공황평가(PDSS)</span>
-    </div>
-  </ion-toolbar>
-</ion-header> -->
+<smd-header1 title='공황평가(PDSS)' (back)='back()'></smd-header1>
 
 <ion-content>
-  <ion-slides>
+  <ion-slides #slides [options]="{allowTouchMove: false}">
     <ion-slide class="text-left">
       <ion-grid class='page grow'>
         <h1>공황평가(PDSS)</h1>

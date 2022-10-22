@@ -6,7 +6,7 @@ const routes: Routes = [
     path: '',
     // redirectTo: 'fly',
     // redirectTo: '/tabs/home?program=1',
-    redirectTo: '/program/program1/course1',
+    redirectTo: '/onboarding',
     pathMatch: 'full',
   },
   // {
@@ -26,9 +26,9 @@ const routes: Routes = [
       },
   //   ]
   // },
-  // {
-  //   path: 'onboarding',
-  //   children: [
+  {
+    path: 'onboarding',
+    children: [
       {
         path: 'intro',
         loadChildren: () => import('./02.onboarding/intro/intro.module').then( m => m.IntroPageModule)
@@ -38,8 +38,8 @@ const routes: Routes = [
         loadChildren: () => import('./02.onboarding/patient-question/patient-question.module').then( m => m.PatientQuestionPageModule)
       },
       {
-        path: 'padss',
-        loadChildren: () => import('./02.onboarding/padss/padss.module').then( m => m.PadssPageModule)
+        path: 'pdss',
+        loadChildren: () => import('./02.onboarding/pdss/pdss.module').then( m => m.PdssPageModule)
       },
       {
         path: 'appq',
@@ -49,8 +49,13 @@ const routes: Routes = [
         path: 'user-info-input',
         loadChildren: () => import('./02.onboarding/user-info-input/user-info-input.module').then( m => m.UserInfoInputPageModule)
       },
-  //   ]
-  // },
+      {
+        path: '',
+        redirectTo: '/onboarding/intro',
+        pathMatch: 'full',
+      },
+    ]
+  },
   {
     path: 'tabs',
     loadChildren: () => import('./00.tabs/tabs/tabs.module').then( m => m.TabsPageModule)
@@ -99,18 +104,6 @@ const routes: Routes = [
         ]
       }
     ]
-  },
-  {
-    path: 'program1',
-    loadChildren: () => import('./20.program/program1/program1/program1.module').then( m => m.Program1PageModule)
-  },
-  {
-    path: 'program1-course2-quiz',
-    loadChildren: () => import('./20.program/program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
-  },
-  {
-    path: 'program1-course2-quiz/:step',
-    loadChildren: () => import('./20.program/program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
   },
   // 프로그램2
   {

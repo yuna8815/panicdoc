@@ -1,17 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonModal, ToastController } from '@ionic/angular';
+import { IonModal, IonSlides, ToastController } from '@ionic/angular';
 import { messages } from 'src/messages';
 import { Symptoms, TimeFormat_yyyyMMdd, TimeFormat_yyyyMMdd_e } from 'src/smd-common';
 import * as moment from 'moment';
 import { NameValue } from 'src/collection';
 import { SmdItemListItem } from 'src/app/00.component/smd-item-list/smd-item-list.component';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-padss',
-  templateUrl: './padss.page.html',
-  styleUrls: ['./padss.page.scss'],
+  selector: 'app-pdss',
+  templateUrl: './pdss.page.html',
+  styleUrls: ['./pdss.page.scss'],
 })
-export class PadssPage implements OnInit {
+export class PdssPage implements OnInit {
+
+  @ViewChild(IonModal) modal: IonModal;
+  @ViewChild('slides') slides: IonSlides;
 
   checked = Symptoms.reduce((obj, s) => { obj[s] = false; return obj; }, {});
   symptoms;
@@ -28,6 +32,8 @@ export class PadssPage implements OnInit {
   TimeFormat_yyyyMMdd_e = TimeFormat_yyyyMMdd_e;
 
   count = 0;
+
+  isEnd: boolean;
 
   items: NameValue[] = [
     {
@@ -174,10 +180,9 @@ export class PadssPage implements OnInit {
   ];
   selection;
 
-  @ViewChild(IonModal) modal: IonModal;
-
   constructor(
-    private toastController: ToastController
+    private toastController: ToastController,
+    private router: Router
   ) {
     this.symptoms = Object.keys(this.checked);
   }
@@ -187,8 +192,16 @@ export class PadssPage implements OnInit {
     this.h2 = 480 / document.documentElement.scrollHeight;
   }
 
-  async next() {
-    console.log(Object.values(this.checked));
+  back() {
+    this.slides.slidePrev();
+    // this.router.navigateByUrl('/onboarding/patient-question')
+  }
+  next() {
+    this.slides.slideNext();
+    this.slides.isEnd().then(v => this.isEnd = v)
+    if(this.isEnd) this.router.navigateByUrl('/onboarding/appq')
+  }
+  async toastPresent() {
     if (!Object.values(this.checked).some(v => v)) {
       const toast = await this.toastController.create({
         message: messages.PleaseChooseAtLeastOne,
@@ -200,8 +213,6 @@ export class PadssPage implements OnInit {
       toast.present();
       return;
     }
-
-    // this.router.navigate(['pdss-questionnaire-step2']);
   }
 
   pickFirstSeizureDate() {

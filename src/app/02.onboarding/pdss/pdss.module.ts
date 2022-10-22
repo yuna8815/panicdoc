@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PadssPageRoutingModule } from './padss-routing.module';
+import { PdssPageRoutingModule } from './pdss-routing.module';
 
-import { PadssPage } from './padss.page';
+import { PdssPage } from './pdss.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    PadssPageRoutingModule,
+    PdssPageRoutingModule,
     SharedModule
   ],
-  declarations: [PadssPage]
+  declarations: [PdssPage]
 })
-export class PadssPageModule {}
+export class PdssPageModule {}

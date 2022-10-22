@@ -15,6 +15,6 @@ export class PatientQuestionPage implements OnInit {
   }
 
   next() {
-    this.router.navigate(['/pdss-questionnaire']);
+    this.router.navigate(['/onboarding/pdss']);
   }
 }

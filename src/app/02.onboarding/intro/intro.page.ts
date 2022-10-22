@@ -84,6 +84,6 @@ export class IntroPage implements OnInit {
 
   ok() {
     this.modal.dismiss();
-    this.router.navigate(['/patient-question']);
+    this.router.navigate(['/onboarding/patient-question']);
   }
 }

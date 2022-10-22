@@ -32,6 +32,6 @@ export class LoadingPage implements OnInit {
   }
 
   start() {
-    this.router.navigate(['/intro/1']);
+    this.router.navigate(['/onboarding/intro']);
   }
 }
