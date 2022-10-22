@@ -394,7 +394,20 @@
       </ion-grid>      
     </ion-slide>
   </ion-slides>
+
 </ion-content>
+
+<!-- 오버레이 안내 -->
+<smd-overlay-guide style="z-index: 10">
+  <ion-text class='desc1'>
+    하단 슬라이드를 이용하여 프로그램을 진행할 수 있습니다.<br />
+    <br />
+    재생버튼을 눌러 음성 같이 듣기 기능을 이용하면<br />
+    본문 내용을 음성으로 지원받을 수 있습니다.<br />
+    <br />
+    슬라이드 끝까지 완료해야 프로그램이 완료됩니다.
+  </ion-text>
+</smd-overlay-guide>
 
 <smd-program-footer text='다음({{ step }}/{{ total }})' [showPlayControl]='isVoiceSupported()' (next)='next()'>
 </smd-program-footer>
