@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-course2',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course2.page.scss'],
 })
 export class Course2Page implements OnInit {
+
+  @ViewChild('slides') slides: IonSlides
 
   step = 0;
 
@@ -35,7 +39,7 @@ export class Course2Page implements OnInit {
 
   constructor(
     // private route: ActivatedRoute,
-    // private router: Router
+    private router: Router
   ) {
     // this.route.params.subscribe(params => {
     //   this.step = +(params['step'] || 0);
@@ -46,14 +50,27 @@ export class Course2Page implements OnInit {
     this.step = 0;
   }
 
+  ionViewWillEnter() {
+    this.getActiveIndex()
+  }
+
+  getActiveIndex() {
+    this.slides.getActiveIndex().then(idx => {
+      this.step = idx
+    })
+  }
+
   back() {
-    
+    this.slides.slidePrev()
+    this.getActiveIndex()
   }
   backHome() {
-    // this.router.navigate(['/home'], { queryParams: { program: 1 } });
+    this.router.navigate(['/tabs/home'], { queryParams: { program: 1 } });
   }
 
   next() {
+    this.slides.slideNext()
+    this.getActiveIndex()
     // if (this.step == 20) {
     //   this.router.navigate(['/home'], { queryParams: { program: 1 } });
     // } else {

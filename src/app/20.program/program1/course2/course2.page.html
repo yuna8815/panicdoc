@@ -1,68 +1,66 @@
-<smd-header1 title='Quiz : 공황장애 바로 알기' (back)='back()' (close)='backHome()'></smd-header1>
-
-<div class='progress-wrap' *ngIf='step >= 1'>
-  <span class='color-primary'>
-    {{ (step / 2) | number:'2.0-0' }}
-  </span>
-  <progress class='ml-2 mr-2' [value]='(step / 2)' [max]='10'></progress>
-  <span class='text-gray-400'>10</span>
-</div>
+<smd-header1
+  title='Quiz : 공황장애 바로 알기'
+  (back)='back()'
+  (close)='backHome()'>
+</smd-header1>
 
 <ion-content>
-  <div class='flex flex-col ml-6 mr-6'>
-    <ng-container [ngSwitch]='step'>
-      <ng-container *ngSwitchCase='0'>
+  <ion-header>
+    <div class='progress-wrap' *ngIf='step >= 1'>
+      <span class='color-primary'>{{ (step / 2) | number:'2.0-0' }}</span>
+      <progress class='ml-2 mr-2' [value]='(step / 2)' [max]='10'></progress>
+      <span class='text-gray-400'>10</span>
+    </div>
+  </ion-header>
+  <ion-slides #slides [options]="{allowTouchMove: false}">
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
+        <h1 class='self-start'>Quiz : 공황장애 바로알기</h1>
+        <br />
         <div>
-          <h1 class='self-start'>Quiz : 공황장애 바로알기</h1>
-          <br />
-
-          <div>
-            지금부터 퀴즈를 통하여<br />
-            공황에 대해  자세하게 알아보도록 하겠습니다.<br />
-            모두 10개의 질문이 준비되어 있습니다.
-          </div>
-
+          지금부터 퀴즈를 통하여<br />
+          공황에 대해  자세하게 알아보도록 하겠습니다.<br />
+          모두 10개의 질문이 준비되어 있습니다.
         </div>
-
-      </ng-container>
-
-      <ng-container *ngSwitchCase='1'>
-
+      </div> 
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 1</span>
         </div>
         <h1 class='mt-6 text-center'>공황장애로 죽을 수 있나요?</h1>
-
-
-      </ng-container>
-      <ng-container *ngSwitchCase='2'>
-        <div>
-          <div class='mt-10 text-center'>
-            <span class='progress-badge gray'>정답확인</span>
-          </div>
-
-          <div class='mt-6'>
-            <h2 class='text-gray-300 text-center'>공황장애로 죽을 수 있나요?</h2>
-          </div>
-
-          <h1>공황이 원인이 되어 죽진 않습니다.</h1>
-          <div class='mt-6'>
-            공황발작이 발생하면 호흡곤란, 가슴 두근거림, 어지러움, 가슴 답답함 등의 증상이 발생합니다. 증상이 심하면 졸도할 것 같거나, 질식할 것 같은 공포심이 발생하기도 합니다. 과호흡이 계속되면 전해질 불균형으로 인해 손발이 일시적으로 마비되는 것 같은 느낌이 들 수 있습니다.
-            <br /><br />
-            하지만 공황발작으로 심각한  문제가 발생하거나 사망에 이르게 되는 경우는 없습니다.
-          </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
+        <div class='mt-10 text-center'>
+          <span class='progress-badge gray'>정답확인</span>
         </div>
 
-      </ng-container>
-      <ng-container *ngSwitchCase='3'>
+        <div class='mt-6'>
+          <h2 class='text-gray-300 text-center'>공황장애로 죽을 수 있나요?</h2>
+        </div>
+
+        <h1>공황이 원인이 되어 죽진 않습니다.</h1>
+        <div class='mt-6'>
+          공황발작이 발생하면 호흡곤란, 가슴 두근거림, 어지러움, 가슴 답답함 등의 증상이 발생합니다. 증상이 심하면 졸도할 것 같거나, 질식할 것 같은 공포심이 발생하기도 합니다. 과호흡이 계속되면 전해질 불균형으로 인해 손발이 일시적으로 마비되는 것 같은 느낌이 들 수 있습니다.
+          <br /><br />
+          하지만 공황발작으로 심각한  문제가 발생하거나 사망에 이르게 되는 경우는 없습니다.
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 2</span>
         </div>
 
         <h1 class='mt-6 text-center'>공황장애는 완치될 수 있나요?</h1>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='4'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>공황장애는 완치될 수 있나요?</h2>
@@ -74,18 +72,19 @@
           <br /><br />
           부적절한 치료는 좋지 않은 예후의 중요한 요인입니다. 약물치료만으로는 6개월 내 25 ~ 50%의 환자가 재발하기 때문에 PanicDoc을 같이 사용하는 것이 좋습니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='5'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 3</span>
 
           <h1 class='mt-6'>대중교통 이용이 어려워요.<br />이것도 공황장애인가요?</h1>
-
         </div>
-      </ng-container>
-      <ng-container *ngSwitchCase='6'>
-
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>대중교통 이용이 어려워요.<br />이것도 공황장애인가요?</h2>
@@ -100,16 +99,18 @@
           <br /><br />
           광장공포증이 동반되는 경우 공황증상이 더 심하고, 약물치료를 더 장기간 받게 되며, 우울증 등 다른 정신과적 증상이 발생할 수 있으므로 치료를 시작할 때 광장공포증이 동반되는지 확인해야 합니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='7'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 4</span>
           <h1 class='mt-6'>정신과 약을 한 번 먹기 시작하면<br />끊을 수 없다는데요.</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='8'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
 
@@ -123,16 +124,18 @@
           <br /><br />
           하지만 예기불안이 극심할 때에 오랫동안 항불안제를 사용하게 되면 의존성 및 내성과 같은 부작용이 나타날 수 있습니다. 따라서 이러한 경우 인지행동치료와 같은 비약물적인 치료가 반드시 필요합니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='9'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 5</span>
           <h1 class='mt-6'>공황장애 환자가<br />운동을 해도 되나요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='10'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>공황장애 환자가<br />운동을 해도 되나요?</h2>
@@ -147,16 +150,18 @@
           <br /><br />
           훈련을 통해 신체증상과 불안은 안전하며 견딜 만하다는 것을 경험한 뒤 점차 운동 강도를 높이는 방식으로 진행됩니다.
         </div>
-      </ng-container>
-      <ng-container *ngSwitchCase='11'>
-
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 6</span>
           <h1 class='mt-6'>기분이 우울해요.<br />공황장애인가요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='12'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>기분이 우울해요.<br />공황장애인가요?</h2>
@@ -165,16 +170,18 @@
         <div class='mt-6'>
           공황장애의 중요한 특징 중 하나는 공존질환이 많다는 것입니다. 우울, 불면, 공포증과 같은 다른 정신질환이 함께 동반되는 경우가 매우 흔하기 때문에 공황장애를 처음 진단받은 경우에는 동반질환에 대한 평가와 치료가 함께 이루어져야 합니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='13'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div style='text-align: center;' class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 7</span>
           <h1 class='mt-6'>뇌영상 검사가 필요한가요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='14'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10' style='text-align: center;'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>뇌영상 검사가 필요한가요?</h2>
@@ -188,16 +195,18 @@
           <br /><br />
           하지만 CT나 MRI와 같은 뇌영상 검사가 공황장애의 진단에 반드시 필요한 것은 아닙니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='15'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div style='text-align: center;' class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 8</span>
           <h1 class='mt-6'>공황발작이 있으면<br />다 공황장애인가요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='16'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10' style='text-align: center;'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>공황발작이 있으면<br />다 공황장애인가요?</h2>
@@ -209,16 +218,18 @@
           <br /><br />
           공황발작이 다시 생길까봐 지속적으로 걱정을 하게 되고(예기불안), 이로 인해 외출을 꺼리게 되어 일상생활에 지장이 있을 때 비로소 공황장애로 진단을 받게 됩니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='17'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 9</span>
           <h1 class='mt-6'>커피나 술을 마셔도 되나요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='18'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>커피나 술을 마셔도 되나요?</h2>
@@ -234,16 +245,18 @@
           <br /><br />
           뿐만 아니라 술을 많이 마시고 나면, 다음날 가슴이 두근거리고 식은땀이 나는데 이는 알코올이 체내에서 빠져나가면서 발생하는 금단 증상입니다. 이 증상은 공황발작의 흔한 원인 중의 하나입니다. 따라서 과음도 반드시 피해야 합니다.
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='19'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge black'>QUIZ 10</span>
           <h1 class='mt-6'>공황장애는 왜 생기나요?<br />유전인가요?</h1>
         </div>
-      </ng-container>
-
-      <ng-container *ngSwitchCase='20'>
+      </div>
+    </ion-slide>
+    <ion-slide class="text-left items-start justify-start">
+      <div class='w-full ml-6 mr-6'>
         <div class='mt-10 text-center'>
           <span class='progress-badge gray'>정답확인</span>
           <h2 class='text-gray-300 mt-6'>공황장애는 왜 생기나요?<br />유전인가요?</h2>
@@ -261,14 +274,15 @@
           <br /><br />
           공황장애는 유전되지 않습니다. 하지만 유전적인 취약성을 물려받을 가능성은 있습니다. 가족 중에 공황장애 환자가 있는 사람이라면 그렇지 않은 사람에 비해 공황장애 발생 가능성이 더 높습니다. 그러나 공황에 대한 취약성을 타고났다고 해서 반드시 공황으로 연결되지는 않습니다.
         </div>
-      </ng-container>
-    </ng-container>
+      </div>
+    </ion-slide>
+  </ion-slides>
 
-    <img *ngIf='imagePerStep[step]' src='assets/img/{{ imagePerStep[step] }}' />
-
-  </div>
+  <img *ngIf='imagePerStep[step]' src='assets/img/{{ imagePerStep[step] }}' />
 </ion-content>
 
-<smd-program-footer text='{{ step == 0 ? "시작하기" : isQuiz() ? "정답 확인하기" : step == 20 ? "완료" : "다음" }}'
-  [fill]='isQuiz() ? "outline" : "solid"' (next)='next()'>
+<smd-program-footer
+  text='{{ step == 0 ? "시작하기" : isQuiz() ? "정답 확인하기" : step == 20 ? "완료" : "다음" }}'
+  [fill]='isQuiz() ? "outline" : "solid"'
+  (next)='next()'>
 </smd-program-footer>
