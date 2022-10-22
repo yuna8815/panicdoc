@@ -1,0 +1,252 @@
+<ion-header class='flex flex-row'>
+
+  <img *ngIf='!headerIcon' class='w-[130px]' src='assets/logo.svg' routerLink='/fly' />
+  <div *ngIf='headerIcon' class='flex flex-row items-center'>
+    <img src='assets/icon/{{ headerIcon }}' />
+    <span class='text-[20px]'>{{ headerText }}</span>
+  </div>
+
+  <div class='grow'></div>
+  <ion-button #notificationsButton fill='clear'>
+    <ion-icon
+      slot='icon-only'
+      name='notifications-outline'
+      size='medium'
+    ></ion-icon>
+    <div *ngIf='alarmNew' class='inline-block bg-red-500 absolute right-1 top-2 w-2 h-2 rounded-full'></div>
+  </ion-button>
+  <ion-menu-toggle>
+    <ion-button #menuButton fill='clear' (click)='openMenu()'>
+      <ion-icon slot='icon-only' name='menu-outline' size='medium'></ion-icon>
+    </ion-button>
+  </ion-menu-toggle>
+</ion-header>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+
+  <!-- 
+    첫 진입시 나오는 가이드 모달의 프로그램 위치 파악을 위해
+   -->
+  <div *ngIf="guideStep != 0" class='px-4 mb-16'>
+    <div class='mt-10'>
+      <span class='progress-badge'>{{ week }}주차 / DAY {{ day }}</span>
+    </div>
+    <h1 class='mt-5'>{{ title }}</h1>
+    <h2 class='mt-4' [innerHtml]='description'></h2>
+
+    <ng-container *ngFor='let course of courses'>
+      <smd-course-card  #courseCard
+        [name]='course.name'
+        [icon]='course.icon'
+        [duration]='course.duration'
+        [link]='course.link'
+        [home]='course.home'
+        [count]='course.count'
+        [status]='course.status'
+        class='ml-3'
+      ></smd-course-card>
+    </ng-container>
+  </div>
+</ion-content>
+
+<!-- 가이드 오버레이 -->
+<svg *ngIf='guideStep || releaxTrainingGuide' width='100%' height='3000' (click)='guideStep = 0'>
+  <defs>
+    <mask id='highlightMask' x='0' y='0' width='100%' height='3000'>
+      <rect width='100%' height='3000' fill='white' />
+      <circle *ngIf='guideStep == 1 || guideStep == 4'
+        [attr.cx]='guide1.cx1' [attr.cy]='guide1.cy1' r='20' fill='black'
+      />
+      <circle *ngIf='guideStep == 1 || guideStep == 3'
+        [attr.cx]='guide1.cx2' [attr.cy]='guide1.cy2' r='20' fill='black'
+      />
+      <rect *ngIf='guideStep == 1 || guideStep == 5'
+        [attr.x]='guide1.rects[0].x' [attr.y]='guide1.rects[0].y'
+        [attr.width]='guide1.rects[0].width' [attr.height]='guide1.rects[0].height' fill='black' rx='8' ry='8'
+      />
+      <rect *ngIf='guideStep == 1 || guideStep == 5'
+        [attr.x]='guide1.rects[1].x' [attr.y]='guide1.rects[1].y'
+        [attr.width]='guide1.rects[1].width' [attr.height]='guide1.rects[1].height' fill='black' rx='8' ry='8'
+      />
+      <rect *ngIf='releaxTrainingGuide'
+        [attr.x]='guide2.relaxRect.x' [attr.y]='guide2.relaxRect.y'
+        [attr.width]='guide2.relaxRect.width' [attr.height]='guide2.relaxRect.height' fill='black' rx='8' ry='8'
+      />
+      <rect *ngIf='guideStep == 1'
+        [attr.x]='guide1.footerRect.x' [attr.y]='guide1.footerRect.y'
+        [attr.width]='guide1.footerRect.width' [attr.height]='guide1.footerRect.height' fill='black'
+      />
+      <circle *ngIf='guideStep == 2'
+        [attr.cx]='guide1.menu[0].cx' [attr.cy]='guide1.menu[0].cy' r='25' fill='black'
+      />
+      <circle *ngIf='guideStep == 2'
+        [attr.cx]='guide1.menu[1].cx' [attr.cy]='guide1.menu[1].cy' r='25' fill='black'
+      />
+      <circle *ngIf='guideStep == 1 || guideStep == 2' [attr.cx]='guide1.menu[2].cx'
+        [attr.cy]='guide1.menu[2].cy' r='30' fill='black'
+      />
+      <circle *ngIf='guideStep == 2'
+        [attr.cx]='guide1.menu[3].cx' [attr.cy]='guide1.menu[3].cy' r='25' fill='black'
+      />
+      <circle *ngIf='guideStep == 2'
+        [attr.cx]='guide1.menu[4].cx' [attr.cy]='guide1.menu[4].cy' r='25' fill='black'
+      />
+    </mask>
+  </defs>
+
+  <rect x='0' y='0' width='100%' height='3000' fill='rgba(0, 0, 0, .8)' mask='url(#highlightMask)' />
+</svg>
+<ng-container *ngIf='guideStep || releaxTrainingGuide'>
+  <button class='guide-close' (click)='guideStep = 0; releaxTrainingGuide = false'>
+    <ion-icon slot='icon-only' name='close-outline' size='large'></ion-icon>
+  </button>
+  <div class='guide-desc flex left-8' *ngIf='guideStep == 1'
+    [style.top.px]='guide1.footerRect.y - 45'>
+    <img src='assets/icon/arrow7.svg' class='w-10 mt-2 mr-2' />
+    하단메뉴
+  </div>
+  <div class='guide-desc flex left-8' *ngIf='guideStep == 1'
+    [style.top.px]='guide1.rects[0].y - 45'>
+    <img src='assets/icon/arrow7.svg' class='w-10 mt-2 mr-2' />
+    프로그램
+  </div>
+  <div class='guide-desc' *ngIf='guideStep == 1'
+    [style.top.px]='guide1.cy1 - 5'
+    [style.left.px]='guide1.cx1 - 70'>
+    <div>
+      <img src='assets/icon/arrow7.svg' class='ml-4 w-10' />
+    </div>
+    <span>앱 알람</span>
+  </div>
+  <div class='guide-desc flex flex-col' *ngIf='guideStep == 1'
+    [style.top.px]='guide1.cy2 + 25'
+    [style.left.px]='guide1.cx2 - 50'>
+    <div>
+      <img src='assets/icon/arrow7.svg' class='ml-2 mb-1 w-10' style='transform: rotate(-20deg);' />
+    </div>
+    더보기
+  </div>
+  <div class='guide-desc' *ngIf='guideStep == 3' [style.right.em]='1' [style.top.px]='34'>
+    <div>
+      <img src='assets/icon/arrow7.svg' class='w-10 ml-[5rem]' />
+    </div>
+    <b>더보기</b><br />
+    <div class='text-gray-400'>
+      치료를 진행하면서 필요한<br />
+      메뉴와 나의 훈련 히스토리를<br />
+      확인할 수 있습니다.
+    </div>
+  </div>
+  <div class='guide-desc' *ngIf='guideStep == 4' [style.right.rem]='3' [style.top.px]='34'>
+    <div>
+      <img src='assets/icon/arrow7.svg' class='ml-4 w-10 ml-[3rem]' />
+    </div>
+    <b>앱 알람</b><br />
+    <div class='text-gray-400'>
+      꾸준한 훈련을 위해<br />
+      알람에 따라 진행해주세요.<br />
+      알람을 설정하면 알림을<br />
+      받을 수 있습니다.
+    </div>
+  </div>
+  <div class='guide-desc' *ngIf='guideStep == 5' [style.left.px]='20' [style.top.px]='guide1.rects[1].y + guide1.rects[1].height + 20'>
+    <b>프로그램</b><br />
+    <div class='text-gray-400'>
+      주차별로 준비된 프로그램을 진행합니다.<br />
+      선행 프로그램이 완료된 후 다음 프로그램을 진행할 수 있습니다.<br />
+      프로그램 진행 상태(진행/대기/완료)를 알 수 있습니다.
+    </div>
+  </div>
+  <ng-container *ngIf='guideStep == 2'>
+    <div class='guide-desc flex flex-row'
+      [style.left.px]='guide1.menu[0].cx'
+      [style.bottom.px]='guide1.footerRect.height + 20'>
+      <img src='assets/icon/arrow8.svg'/>
+      <div class='ml-1'>
+        <b class='text-white'>홈</b><br />
+        <span class='text-gray-400'>메인화면</span>
+      </div>
+    </div>
+
+    <div class='guide-desc flex flex-row'
+      [style.left.px]='guide1.menu[1].cx - 42'
+      [style.bottom.px]='guide1.footerRect.height + 20'>
+      <img src='assets/icon/arrow9.svg'/>
+      <div class='ml-[-20px]'>
+        <b class='text-white'>프로그램</b><br />
+        <span class='text-gray-400'>전체 PanicDoc 프로그램을<br />확인할 수 있습니다.</span>
+      </div>
+    </div>
+
+    <div class='guide-desc flex flex-row'
+      [style.left.px]='guide1.menu[2].cx - 74'
+      [style.bottom.px]='guide1.footerRect.height + 47'>
+      <img src='assets/icon/arrow10.svg'/>
+      <div class='ml-[-50px]'>
+        <b class='text-white'>프로그램</b><br />
+        <span class='text-gray-400'>프로그램2 완료 후<br />매일 나의 감정을 기록할 수 있습니다.</span>
+      </div>
+    </div>
+
+    <div class='guide-desc flex flex-row'
+      [style.left.px]='guide1.menu[3].cx - 107'
+      [style.bottom.px]='guide1.footerRect.height + 20'>
+      <img src='assets/icon/arrow11.svg'/>
+      <div class='ml-[-80px]'>
+        <b class='text-white'>프로그램</b><br />
+        <span class='text-gray-400'>프로그램2 완료 후<br />나의 공황을 기록할 수 있습니다.</span>
+      </div>
+    </div>
+    <div class='guide-desc flex flex-row'
+      [style.left.px]='guide1.menu[4].cx - 140'
+      [style.bottom.px]='guide1.footerRect.height + 20'>
+      <img src='assets/icon/arrow12.svg'/>
+      <div class='ml-[-110px]'>
+        <b class='text-white'>프로그램</b><br />
+        <span class='text-gray-400'>프로그램2 완료 후<br />매주 일요일 오후 8시<br />맞춤형 처방을 제공합니다.</span>
+      </div>
+    </div>
+  </ng-container>
+  <button *ngIf='guideStep' class='guide-next' [style.top.px]='guide1.footerRect.y - 55' [class]='{ "bg-black": guideStep != 5, "color-bg-primary": guideStep == 5 }'
+    (click)='guideNext()'>
+    {{ guideStep == 5 ? '시작' : '다음(' + guideStep + '/5)' }}
+  </button>
+  <div *ngIf='releaxTrainingGuide' class='guide-desc text-center absolute-center w-full'>
+    HOME에서 “이완훈련 하기”를 볼 수 있습니다.<br />
+    <br />
+    매일 2회 이상 따라 하며 훈련하세요.<br />
+    나의 훈련과 주간처방에  훈련 횟수가 기록됩니다.<br />
+    <br />
+    공황이 온 상태에서도 이완훈련 하기를 이용하여<br />
+    나의 신체 증상을 이해하고 이완해보세요.<br />
+    많은 도움이 될 것입니다.
+  </div>
+</ng-container>
+
+<ion-footer>
+  <div #footer class='footer flex flex-row justify-around items-end'>
+    <button #menuHome class='flex flex-col items-center' [routerLink]='["/tabs/home"]' [queryParams]='{ program: context.currProgram }' [class]='{ selected: !!week }'>
+      <img src='assets/icon/footer_home.svg' />
+      <span>홈</span>
+    </button>
+    <button #menuProgram class='flex flex-col items-center' routerLink='/tabs/programs' routerLinkActive='selected'>
+      <img src='assets/icon/footer_program.svg' />
+      <span>프로그램</span>
+    </button>
+    <button #menuDiary class='inline-flex flex-col items-center' routerLink='/tabs/diary' routerLinkActive='selected'>
+      <div class='diary-wrap'>
+        <img src='assets/icon/footer_diary.svg' />
+      </div>
+      <span>감정일기</span>
+    </button>
+    <button #menuRecord class='flex flex-col items-center' routerLink='/tabs/paniclogs' routerLinkActive='selected'>
+      <img src='assets/icon/footer_record.svg' />
+      <span>공황기록</span>
+    </button>
+    <button #menuPrescription class='flex flex-col items-center' routerLink='/tabs/report' routerLinkActive='selected'>
+      <img src='assets/icon/footer_prescription.svg' />
+      <span>주간처방</span>
+    </button>
+  </div>
+</ion-footer>

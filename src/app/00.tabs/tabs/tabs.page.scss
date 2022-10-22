@@ -1,0 +1,108 @@
+:host {
+  background-color: #F9F9F9;
+}
+ion-content {
+  --background: #F9F9F9;
+}
+
+ion-header {
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  ion-button {
+    --padding-start: 5px;
+    --padding-end: 5px;
+    color: black;
+  }
+}
+
+// 푸터 메뉴
+ion-footer {
+  box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+  background-color: white;
+
+  .footer {
+    margin-top: 4px;
+    margin-bottom: 1.1rem;
+
+    button {
+      color: #e8e8e8;
+      font-weight: bold;
+      margin-bottom: 15px;
+
+      img {
+        filter: grayscale(100%) brightness(150.4%);
+      }
+      span {
+        font-family: 'Pretendard-SemiBold';
+        font-weight: 100;
+        color: #b5b5b5;
+        font-size: 10px;
+      }
+      .diary-wrap {
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        top: -26px;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        border: 3.5px solid white;
+        background-color: #9f9f9f;
+        box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+        transform: translateY(-4px);
+
+        img {
+          width: 24px;
+        }
+      }
+      &.selected, &:hover {
+        img {
+          filter: none;
+        }
+        span {
+          color: var(--ion-color-primary);
+        }
+        color: var(--ion-color-primary);
+        .diary-wrap {
+          background-color: var(--ion-color-primary);
+        }
+      }
+    }
+  }
+}
+
+svg {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 9999;
+}
+button.guide-close {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 9999;
+  color: white;
+}
+button.guide-next {
+  position: absolute;
+  right: 20px;
+  z-index: 9999;
+  color: white;
+  border-radius: 18px;
+  width: 80px;
+  height: 36px;
+}
+.guide-desc {
+  position: absolute;
+  z-index: 9999;
+  color: white;
+}
+
+ion-button.course-button {
+  --background: white;
+  --color: black;
+  --box-shadow: 0 4px 8px rgba(134, 144, 162, 0.25);
+}

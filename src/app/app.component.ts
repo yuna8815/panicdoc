@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { SmdModalService } from './00.component/smd-modal.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ export class AppComponent implements OnInit {
 
   @ViewChild('modal1', { static: true }) modal1: IonModal;
 
-  constructor(public smdModal: SmdModalService) {
+  constructor(
+    public smdModal: SmdModalService,
+    public auth: AuthService
+  ) {
   }
 
   ngOnInit() {
