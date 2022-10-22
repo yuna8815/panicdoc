@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StepBase } from '../step-base';
+import { StepBase } from 'src/app/step-base';
 
 @Component({
   selector: 'app-my-panic-factors',

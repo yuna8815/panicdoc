@@ -143,7 +143,7 @@ const routes: Routes = [
   // 나의 공황 촉발 요인
   {
     path: 'my-panic-factors',
-    loadChildren: () => import('./my-panic-factors/my-panic-factors.module').then( m => m.MyPanicFactorsPageModule)
+    loadChildren: () => import('./60.settings/my-panic-factors/my-panic-factors.module').then( m => m.MyPanicFactorsPageModule)
   },
   // 개발자
   {

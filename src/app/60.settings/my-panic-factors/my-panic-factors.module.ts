@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { MyPanicFactorsPageRoutingModule } from './my-panic-factors-routing.module';
 
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 import { MyPanicFactorsPage } from './my-panic-factors.page';
 import { MyPanicFactorsStep1Component } from './my-panic-factors-step1/my-panic-factors-step1.component';
