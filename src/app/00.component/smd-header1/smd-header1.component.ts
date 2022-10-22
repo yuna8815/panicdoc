@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'smd-header1',
@@ -9,18 +8,10 @@ import { Router } from '@angular/router';
 export class SmdHeader1Component implements OnInit {
 
   @Input() title = 'TITLE';
-  @Input() back: string | CallableFunction = '/';
+  @Output() back = new EventEmitter();
   @Output() close = new EventEmitter();
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {}
-
-  onBack() {
-    if (typeof this.back == 'string') {
-      this.router.navigateByUrl(this.back);
-    } else {
-      this.back();
-    }
-  }
 }

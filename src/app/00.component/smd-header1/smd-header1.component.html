@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar class='header-toolbar mb-2'>
     <div class='flex flex-row items-center text-black'>
-      <ion-icon *ngIf='!!title' name='chevron-back-outline' class='ml-4 mr-2' (click)='onBack()'></ion-icon>
-      <span class='title' (click)='onBack()'>{{ title }}</span>
+      <ion-icon *ngIf='!!title' name='chevron-back-outline' class='ml-4 mr-2' (click)='back.emit()'></ion-icon>
+      <span class='title'>{{ title }}</span>
       <div class='flex grow'></div>
       <ion-icon *ngIf='this.close.observers.length != 0' name='close' class='mr-4' (click)='close.emit()'></ion-icon>
     </div>

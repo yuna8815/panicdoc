@@ -1,0 +1,10 @@
+ion-slides {
+  height: 100%;
+  ion-slide {
+    height: 100%;
+    ion-grid {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+}

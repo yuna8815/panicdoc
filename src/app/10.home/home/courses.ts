@@ -14,7 +14,7 @@ const CoursesWeek1: ProgramDef = {
     {
       icon: 'icon3', name: '공황장애 이해하기',
       duration: 5, status: 'complete',
-      link: 'program1/course1/1',
+      link: 'program1/course1',
     },
     {
       icon: 'icon5', name: 'Quiz : 공황장애 바로 알기',
