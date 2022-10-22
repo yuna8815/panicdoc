@@ -54,102 +54,96 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./10.home/home/home.module').then( m => m.HomePageModule)
   },
-  
-  {
-    path: 'diary-write',
-    loadChildren: () => import('./home/diary-write/diary-write.module').then( m => m.DiaryWritePageModule)
-  },
+  // {
+  //   path: 'diary',
+  //   children:[
+      {
+        path: 'diary-write',
+        loadChildren: () => import('./30.diary/diary-write/diary-write.module').then( m => m.DiaryWritePageModule)
+      },
+  //   ]
+  // },
   {
     path: 'prescription-view',
-    loadChildren: () => import('./home/prescription-view/prescription-view.module').then( m => m.PrescriptionViewPageModule)
+    loadChildren: () => import('./50.report/prescription-view/prescription-view.module').then( m => m.PrescriptionViewPageModule)
   },
   {
     path: 'panic-log-write',
-    loadChildren: () => import('./home/panic-log-write/panic-log-write.module').then( m => m.PanicLogWritePageModule)
+    loadChildren: () => import('./40.paniclogs/panic-log-write/panic-log-write.module').then( m => m.PanicLogWritePageModule)
   },
   {
     path: 'settings',
-    loadChildren: () => import('./home/settings/settings.module').then( m => m.SettingsPageModule)
+    loadChildren: () => import('./60.settings/settings/settings.module').then( m => m.SettingsPageModule)
   },
   // 프로그램1
   {
     path: 'program1',
-    loadChildren: () => import('./program1/program1/program1.module').then( m => m.Program1PageModule)
+    loadChildren: () => import('./20.program/program1/program1/program1.module').then( m => m.Program1PageModule)
   },
   {
     path: 'program1-course2-quiz',
-    loadChildren: () => import('./program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
+    loadChildren: () => import('./20.program/program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
   },
   {
     path: 'program1-course2-quiz/:step',
-    loadChildren: () => import('./program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
+    loadChildren: () => import('./20.program/program1/program1-course2-quiz/program1-course2-quiz.module').then( m => m.Program1Course2QuizPageModule)
   },
   // 프로그램2
   {
     path: 'program2',
-    loadChildren: () => import('./program2/program2/program2.module').then( m => m.Program2PageModule)
+    loadChildren: () => import('./20.program/program2/program2/program2.module').then( m => m.Program2PageModule)
   },
   // 프로그램3
   {
     path: 'program3',
-    loadChildren: () => import('./program3/program3/program3.module').then( m => m.Program3PageModule)
+    loadChildren: () => import('./20.program/program3/program3/program3.module').then( m => m.Program3PageModule)
   },
   // 프로그램4
   {
     path: 'program4',
-    loadChildren: () => import('./program4/program4/program4.module').then( m => m.Program4PageModule)
+    loadChildren: () => import('./20.program/program4/program4/program4.module').then( m => m.Program4PageModule)
   },
   // 프로그램5
   {
     path: 'program5',
-    loadChildren: () => import('./program5/program5/program5.module').then( m => m.Program5PageModule)
+    loadChildren: () => import('./20.program/program5/program5/program5.module').then( m => m.Program5PageModule)
   },
   // 프로그램6
   {
     path: 'program6',
-    loadChildren: () => import('./program6/program6/program6.module').then( m => m.Program6PageModule)
+    loadChildren: () => import('./20.program/program6/program6/program6.module').then( m => m.Program6PageModule)
   },
   // 프로그램7
   {
     path: 'program7',
-    loadChildren: () => import('./program7/program7/program7.module').then( m => m.Program7PageModule)
+    loadChildren: () => import('./20.program/program7/program7/program7.module').then( m => m.Program7PageModule)
   },
   // 프로그램8
   {
     path: 'program8',
-    loadChildren: () => import('./program8/program8/program8.module').then( m => m.Program8PageModule)
-  },
-  // 프로그램9
-  {
-    path: 'program9',
-    loadChildren: () => import('./program9/program9/program9.module').then( m => m.Program9PageModule)
+    loadChildren: () => import('./20.program/program8/program8/program8.module').then( m => m.Program8PageModule)
   },
   // 보강수업 - P2
   {
     path: 'p2_1',
-    loadChildren: () => import('./program2/p2.module').then( m => m.P2PageModule)
+    loadChildren: () => import('./20.program/program2/p2.module').then( m => m.P2PageModule)
   },
   {
     path: 'p2_2',
-    loadChildren: () => import('./program2/p2s2.module').then( m => m.P2s2PageModule)
+    loadChildren: () => import('./20.program/program2/p2s2.module').then( m => m.P2s2PageModule)
   },
   {
     path: 'p5',
-    loadChildren: () => import('./program5/p5.module').then( m => m.P5PageModule)
+    loadChildren: () => import('./20.program/program5/p5.module').then( m => m.P5PageModule)
   },
   {
     path: 'p7',
-    loadChildren: () => import('./program7/p7.module').then( m => m.P7PageModule)
+    loadChildren: () => import('./20.program/program7/p7.module').then( m => m.P7PageModule)
   },
   // 나의 공황 촉발 요인
   {
     path: 'my-panic-factors',
     loadChildren: () => import('./my-panic-factors/my-panic-factors.module').then( m => m.MyPanicFactorsPageModule)
-  },
-  // 감정일기
-  {
-    path: 'emotion-diary',
-    loadChildren: () => import('./emotion-diary/emotion-diary.module').then( m => m.EmotionDiaryPageModule)
   },
   // 개발자
   {
@@ -163,15 +157,15 @@ const routes: Routes = [
   // 훈련기록
   {
     path: 'training-records/relax-records',
-    loadChildren: () => import('./training-records/relax-records/relax-records.module').then( m => m.RelaxRecordsPageModule)
+    loadChildren: () => import('./60.settings/training-records/relax-records/relax-records.module').then( m => m.RelaxRecordsPageModule)
   },
   {
     path: 'training-records/exposure-records',
-    loadChildren: () => import('./training-records/exposure-records/exposure-records.module').then( m => m.ExposureRecordsPageModule)
+    loadChildren: () => import('./60.settings/training-records/exposure-records/exposure-records.module').then( m => m.ExposureRecordsPageModule)
   },
   {
     path: 'training-records/daily-exposure-records',
-    loadChildren: () => import('./training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
+    loadChildren: () => import('./60.settings/training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
   },
 ];
 
