@@ -18,7 +18,7 @@ export class TabsPage implements OnInit {
   title = 'TITLE';
   description = '';
   courses = [];
-  guideStep = 1;
+  guideStep = 0;
   releaxTrainingGuide = false
   headerIcon;
   headerText;

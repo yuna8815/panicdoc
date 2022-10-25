@@ -5,21 +5,22 @@ ion-menu {
   ion-toolbar {
     --background: white;
   }
-
   ion-content {
     > * {
       padding-left: 1rem;
     }
-  }
-
-  ion-button {
-    padding: 0;
-
-    &.menu-item {
-      height: 1.6rem;
+    ion-menu-toggle {
+      display: block;
+    }
+    ion-item {
+      --min-height: 36px;
+      --padding-start: 0;
+      ion-label {
+        margin: 0;
+        font-size: 15px;
+      }
     }
   }
-
   ion-footer {
     padding-left: 1rem;
     ion-button {
