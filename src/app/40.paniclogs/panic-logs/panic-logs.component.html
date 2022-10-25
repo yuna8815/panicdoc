@@ -1,20 +1,18 @@
-<!-- 공황기록 -->
-<div class='px-[20px]'>
-  <h2>
-    공황장애가 있었다면 <span class='smd-underline'>즉시 기록하기!</span>
-  </h2>
-  <div class='text-gray-500'>
-    관리하는 습관은 완치를 앞당기는 지름길
+<ion-header>
+  <div class='px-[20px]'>
+    <h2>공황장애가 있었다면 <span class='smd-underline'>즉시 기록하기!</span></h2>
+    <div class='text-gray-500'>관리하는 습관은 완치를 앞당기는 지름길</div>
+
+    <ion-button class='w-full mt-4' (click)='gotoWrite()'>
+      <img class='absolute left-0' src='/assets/icon/footer_diary.svg'>
+      공황기록 작성하기
+    </ion-button>
+
+    <smd-chip-select></smd-chip-select>
   </div>
-
-  <ion-button class='w-full mt-4' (click)='gotoWrite()'>
-    <img class='absolute left-0' src='/assets/icon/footer_diary.svg'>
-    공황기록 작성하기
-  </ion-button>
-
-  <smd-chip-select></smd-chip-select>
-
-  <div class='mt-6' *ngFor='let day of itemsPerDay'>
+</ion-header>
+<ion-content>
+  <div class='mt-6 px-[20px]' *ngFor='let day of itemsPerDay'>
     {{ day.date | date:TimeFormat_MMdd_e }}
     <div class='panic-attack-card' *ngFor='let item of day.items'>
       <smd-card>
@@ -40,4 +38,4 @@
       </smd-card>
     </div>
   </div>
-</div>
+</ion-content>

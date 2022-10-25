@@ -28,7 +28,7 @@
     <div>
       &nbsp;&nbsp;● <a routerLink='/user-info-input'>사용자 정보 입력</a>
     </div>
-    <div *ngFor='let week of [1, 2, 3, 4, 5, 6, 7, 8, 9]' class='mt-3'>
+    <div *ngFor='let week of [1, 2, 3, 4, 5, 6, 7, 8]' class='mt-3'>
       <a routerLink='/tabs/home' [queryParams]='{ program: week }'>
         ● {{ week }} 주차
       </a>
@@ -40,16 +40,16 @@
       </ng-container>
     </div>
     <div class='mt-3'>
-      ● <a routerLink='/home' [queryParams]='{ program: "p2_1" }'>보강수업 - P2-1</a>
+      ● <a routerLink='/tabs/home' [queryParams]='{ program: "p2_1" }'>보강수업 - P2-1</a>
     </div>
     <div class='mt-3'>
-      ● <a routerLink='/home' [queryParams]='{ program: "p2_2" }'>보강수업 - P2-2</a>
+      ● <a routerLink='/tabs/home' [queryParams]='{ program: "p2_2" }'>보강수업 - P2-2</a>
     </div>
     <div class='mt-3'>
-      ● <a routerLink='/home' [queryParams]='{ program: "p5" }'>보강수업 - P5</a>
+      ● <a routerLink='/tabs/home' [queryParams]='{ program: "p5" }'>보강수업 - P5</a>
     </div>
     <div class='mt-3'>
-      ● <a routerLink='/home' [queryParams]='{ program: "p7" }'>보강수업 - P7</a>
+      ● <a routerLink='/tabs/home' [queryParams]='{ program: "p7" }'>보강수업 - P7</a>
     </div>
     <div class='mt-3'>
       ● <a routerLink='/widgets-demo'>위젯 데모</a>

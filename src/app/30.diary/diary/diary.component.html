@@ -1,49 +1,41 @@
-<div class='px-[20px]'>
-  <h1>
-    감정일기는 <span class='smd-underline'>매일 기록해주세요.</span>
-  </h1>
-  <div class='text-gray-500'>
-    한 주간 최소 3회를 작성해야 원활한 치료가 가능합니다.
+<ion-header>
+  <div class='px-[20px]'>
+    <h1>
+      감정일기는 <span class='smd-underline'>매일 기록해주세요.</span>
+    </h1>
+    <div class='text-gray-500'>
+      한 주간 최소 3회를 작성해야 원활한 치료가 가능합니다.
+    </div>
+    <smd-chip-select (selected)='onWeekSelected($event)'></smd-chip-select>
   </div>
-  <smd-chip-select (selected)='onWeekSelected($event)'></smd-chip-select>
-
-  <div class='flex flex-row flex-wrap justify-between gap-1 mt-4'>
+</ion-header>
+<ion-content>
+  <div class='flex flex-row flex-wrap justify-between gap-1 mt-4 px-[20px]'>
     <div class='day-card' *ngFor='let item of diaryItems' [class]='{ "bg-white": !item.scores }'>
       <div class='p-3'>
         <div class='text-center relative'>
           {{ item.date | date:'M/d' }}
           <ion-icon *ngIf='item.scores' name='chevron-forward-outline' class='absolute top-1 right-0 text-gray-400'></ion-icon>
         </div>
-        <div class='text-center text-gray-400'>
-          월요일
-        </div>
+        <div class='text-center text-gray-400'>월요일</div>
 
         <!-- 작성한 경우 -->
         <div *ngIf='item.scores' class='score-wrap flex flex-row gap-1'>
           <div class='text-center'>
-            <div class='text-[1.5em]'>
-              😖
-            </div>
+            <div class='text-[1.5em]'>😖</div>
             {{ item.scores.anxiety }}
           </div>
           <div class='text-center'>
-            <div class='text-[1.5em]'>
-              😥
-            </div>
+            <div class='text-[1.5em]'>😥</div>
             {{ item.scores.sadness }}
           </div>
           <div class='text-center'>
-            <div class='text-[1.5em]'>
-              😵
-            </div>
+            <div class='text-[1.5em]'>😵</div>
             {{ item.scores.control }}
           </div>
         </div>
 
-        <div *ngIf='!item.scores' class='score-wrap flex flex-col justify-center items-center'>
-          미작성
-        </div>
-
+        <div *ngIf='!item.scores' class='score-wrap flex flex-col justify-center items-center'>미작성</div>
       </div>
       <div class='button-wrap flex flex-row justify-center items-center color-primary-dark py-2'
         style='border-top: 1px solid gainsboro'
@@ -58,4 +50,4 @@
       </div>
     </div>
   </div>
-</div>
+</ion-content>

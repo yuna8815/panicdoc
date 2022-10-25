@@ -1,33 +1,36 @@
-<div class='px-4 mb-16'>
-  <div class='mt-10'>
-    <span class='progress-badge'>{{ week }}주차 / DAY {{ day }}</span>
-  </div>
-  <h1 class='mt-5'>{{ title }}</h1>
-  <h2 class='mt-4' [innerHtml]='description'></h2>
 
-  <ng-container *ngFor='let course of courses'>
-    <div *ngIf='course == "trainings" || course == "trainings2"; else courseCard'
-      class='flex w-full mt-3 gap-2'>
-      <ng-container *ngIf='course == "trainings"'>
-        <ion-button class='course-button h-16 grow'>복식호흡 배우기</ion-button>
-        <ion-button class='course-button h-16 grow'>점진적 근육이완 배우기</ion-button>
-      </ng-container>
-      <ng-container *ngIf='course == "trainings2"'>
-        <ion-button class='course-button h-16 grow'>증상 노출훈련</ion-button>
-        <ion-button class='course-button h-16 grow'>일상활동 노출</ion-button>
-      </ng-container>
+<ion-content>
+  <div class='px-4 mb-16'>
+    <div class='mt-10'>
+      <span class='progress-badge'>{{ week }}주차 / DAY {{ day }}</span>
     </div>
-    <ng-template #courseCard>
-      <smd-course-card
-        [name]='course.name'
-        [icon]='course.icon'
-        [duration]='course.duration'
-        [link]='course.link'
-        [home]='course.home'
-        [count]='course.count'
-        [status]='course.status'
-        class='ml-3'
-      ></smd-course-card>
-    </ng-template>
-  </ng-container>
-</div>
+    <h1 class='mt-5'>{{ title }}</h1>
+    <h2 class='mt-4' [innerHtml]='description'></h2>
+  
+    <ng-container *ngFor='let course of courses'>
+      <div *ngIf='course == "trainings" || course == "trainings2"; else courseCard'
+        class='flex w-full mt-3 gap-2'>
+        <ng-container *ngIf='course == "trainings"'>
+          <ion-button class='course-button h-16 grow'>복식호흡 배우기</ion-button>
+          <ion-button class='course-button h-16 grow'>점진적 근육이완 배우기</ion-button>
+        </ng-container>
+        <ng-container *ngIf='course == "trainings2"'>
+          <ion-button class='course-button h-16 grow'>증상 노출훈련</ion-button>
+          <ion-button class='course-button h-16 grow'>일상활동 노출</ion-button>
+        </ng-container>
+      </div>
+      <ng-template #courseCard>
+        <smd-course-card
+          [name]='course.name'
+          [icon]='course.icon'
+          [duration]='course.duration'
+          [link]='course.link'
+          [home]='course.home'
+          [count]='course.count'
+          [status]='course.status'
+          class='ml-3'
+        ></smd-course-card>
+      </ng-template>
+    </ng-container>
+  </div>
+</ion-content>
