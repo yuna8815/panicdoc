@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { PdssPage } from './pdss.page';
 
-describe('PadssPage', () => {
+describe('PdssPage', () => {
   let component: PdssPage;
   let fixture: ComponentFixture<PdssPage>;
 

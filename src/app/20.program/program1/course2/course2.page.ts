@@ -36,6 +36,7 @@ export class Course2Page implements OnInit {
     'img012.png',
     null,
   ];
+  isEnd: boolean = false;
 
   constructor(
     // private route: ActivatedRoute,
@@ -69,8 +70,16 @@ export class Course2Page implements OnInit {
   }
 
   next() {
+    if(this.isEnd) {
+      this.backHome();
+      return;
+    }
     this.slides.slideNext()
     this.getActiveIndex()
+    this.slides.isEnd().then(v => {
+      if(v) this.isEnd = true
+      else this.isEnd = false
+    })
     // if (this.step == 20) {
     //   this.router.navigate(['/home'], { queryParams: { program: 1 } });
     // } else {

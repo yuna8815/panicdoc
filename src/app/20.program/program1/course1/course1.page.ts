@@ -11,9 +11,10 @@ export class Course1Page implements OnInit {
 
   @ViewChild('slides') slides: IonSlides;
 
-  course = 1;
   step;
   total;
+  btnMsg: string = '다음';
+  isEnd: boolean = false
 
   constructor(
     public router: Router
@@ -42,12 +43,19 @@ export class Course1Page implements OnInit {
     this.router.navigate(['/tabs/home'], { queryParams: { program: 1 } })
   }
   next() {
+    if(this.isEnd) {
+      this.backHome();
+      return;
+    }
     this.slides.slideNext()
+    this.slides.isEnd().then(v => {
+      if(v) {
+        this.btnMsg = '완료'
+        this.isEnd = true
+      }
+      else this.isEnd = false
+    })
     this.getActiveIndex();
-  }
-
-  isVoiceSupported() {
-    return this.course == 1;
   }
 
 }

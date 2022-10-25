@@ -1,17 +1,16 @@
 <smd-header1
-  title='Quiz : 공황장애 바로 알기'
+  title=' '
   (back)='back()'
   (close)='backHome()'>
 </smd-header1>
 
+<div class='progress-wrap' *ngIf='step >= 1'>
+  <span class='color-primary'>{{ (step / 2) | number:'2.0-0' }}</span>
+  <progress class='ml-2 mr-2' [value]='(step / 2)' [max]='10'></progress>
+  <span class='text-gray-400'>10</span>
+</div>
+
 <ion-content>
-  <ion-header>
-    <div class='progress-wrap' *ngIf='step >= 1'>
-      <span class='color-primary'>{{ (step / 2) | number:'2.0-0' }}</span>
-      <progress class='ml-2 mr-2' [value]='(step / 2)' [max]='10'></progress>
-      <span class='text-gray-400'>10</span>
-    </div>
-  </ion-header>
   <ion-slides #slides [options]="{allowTouchMove: false}">
     <ion-slide class="text-left items-start justify-start">
       <div class='w-full ml-6 mr-6'>

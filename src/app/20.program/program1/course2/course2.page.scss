@@ -15,6 +15,11 @@ ion-slides {
   }
 }
 
+ion-slide > div {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 img {
   position: absolute;
   bottom: 0;
@@ -27,7 +32,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  // top: 11px;
+  top: 18px;
   progress {
     width: 150px;
     height: 3px;
