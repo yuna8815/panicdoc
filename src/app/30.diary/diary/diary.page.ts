@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import * as moment from 'moment';
-import { AuthService } from 'src/app/auth.service';
-import { GlobalContextService } from 'src/app/global-context.service';
 import { EmotionDiaryDef } from 'src/smd-common';
+import * as moment from 'moment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-diary',
-  templateUrl: './diary.component.html',
-  styleUrls: ['./diary.component.scss'],
+  templateUrl: './diary.page.html',
+  styleUrls: ['./diary.page.scss'],
 })
-export class DiaryComponent implements OnInit {
+export class DiaryPage implements OnInit {
 
   dateStart = new Date(2022, 7 - 1, 4);
   diaryItems: EmotionDiaryDef[] = [
@@ -64,13 +62,11 @@ export class DiaryComponent implements OnInit {
 
   moment = moment;
 
-  constructor(public route: ActivatedRoute, private router: Router, public auth: AuthService, public context: GlobalContextService) {
-  }
+  constructor(
+    public router: Router
+  ) { }
 
-  ngOnInit() {}
-
-  onWeekSelected(week: number) {
-
+  ngOnInit() {
   }
 
   dayText(day: number) {
@@ -80,4 +76,5 @@ export class DiaryComponent implements OnInit {
   gotoWrite(item: EmotionDiaryDef) {
     this.router.navigate(['/home/diary-write']);
   }
+
 }

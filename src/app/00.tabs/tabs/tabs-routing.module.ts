@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePage } from 'src/app/10.home/home/home.page';
-import { MyProgramComponent } from 'src/app/20.program/my-program/my-program.component';
-import { DiaryComponent } from 'src/app/30.diary/diary/diary.component';
-import { PanicLogsComponent } from 'src/app/40.paniclogs/panic-logs/panic-logs.component';
-import { WeeklyPrescriptionComponent } from 'src/app/50.report/weekly-prescription/weekly-prescription.component';
 
 import { TabsPage } from './tabs.page';
 
@@ -15,23 +10,23 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        component: HomePage,
+        loadChildren: () => import('src/app/10.home/home/home.module').then( m => m.HomePageModule)
       },
       {
         path: 'programs',
-        component: MyProgramComponent,
+        loadChildren: () => import('src/app/20.program/program/program.module').then( m => m.ProgramPageModule)
       },
       {
         path: 'diary',
-        component: DiaryComponent,
+        loadChildren: () => import('src/app/30.diary/diary/diary.module').then( m => m.DiaryPageModule)
       },
       {
         path: 'paniclogs',
-        component: PanicLogsComponent,
+        loadChildren: () => import('src/app/40.paniclogs/paniclogs/paniclogs.module').then( m => m.PaniclogsPageModule)
       },
       {
         path: 'report',
-        component: WeeklyPrescriptionComponent,
+        loadChildren: () => import('src/app/50.report/report/report.module').then( m => m.ReportPageModule)
       },
     ],
   }

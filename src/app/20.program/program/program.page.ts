@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
-import { GlobalContextService } from 'src/app/global-context.service';
-import { ProgramDef, ProgramSet } from 'src/smd-common';
+import { ProgramDef } from 'src/smd-common';
 
 @Component({
-  selector: 'app-my-program',
-  templateUrl: './my-program.component.html',
-  styleUrls: ['./my-program.component.scss'],
+  selector: 'app-program',
+  templateUrl: './program.page.html',
+  styleUrls: ['./program.page.scss'],
 })
-export class MyProgramComponent implements OnInit {
+export class ProgramPage implements OnInit {
 
   programs: ProgramDef[] = [
     {
@@ -69,8 +67,9 @@ export class MyProgramComponent implements OnInit {
     },
   ];
 
-  constructor(public auth: AuthService, public context: GlobalContextService) { }
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

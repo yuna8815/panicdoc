@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
-import { AuthService } from 'src/app/auth.service';
-import { GlobalContextService } from 'src/app/global-context.service';
 import { PanicLogItem, TimeFormat_MMdd_e } from 'src/smd-common';
 
 @Component({
-  selector: 'panic-logs',
-  templateUrl: './panic-logs.component.html',
-  styleUrls: ['./panic-logs.component.scss'],
+  selector: 'app-paniclogs',
+  templateUrl: './paniclogs.page.html',
+  styleUrls: ['./paniclogs.page.scss'],
 })
-export class PanicLogsComponent implements OnInit {
+export class PaniclogsPage implements OnInit {
 
   itemsPerDay: {
     date: Date;
@@ -39,11 +37,13 @@ export class PanicLogsComponent implements OnInit {
 
   TimeFormat_MMdd_e = TimeFormat_MMdd_e;
 
-  constructor(public route: ActivatedRoute, private router: Router, public auth: AuthService, public context: GlobalContextService,
-    public popoverController: PopoverController) {
-  }
+  constructor(
+    public router: Router,
+    public popoverController: PopoverController
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   gotoWrite() {
     this.router.navigate(['/home/panic-log-write/0']);

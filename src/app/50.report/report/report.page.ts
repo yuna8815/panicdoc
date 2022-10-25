@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from 'src/app/auth.service';
-import { GlobalContextService } from 'src/app/global-context.service';
-import { PrescriptionDef, TimeFormat_MMdd_e, TimeFormat_yyyyMMdd_e } from 'src/smd-common';
-
+import { Router } from '@angular/router';
+import { PrescriptionDef, TimeFormat_MMdd_e } from 'src/smd-common';
 
 @Component({
-  selector: 'app-weekly-prescription',
-  templateUrl: './weekly-prescription.component.html',
-  styleUrls: ['./weekly-prescription.component.scss'],
+  selector: 'app-report',
+  templateUrl: './report.page.html',
+  styleUrls: ['./report.page.scss'],
 })
-export class WeeklyPrescriptionComponent implements OnInit {
+export class ReportPage implements OnInit {
 
   prescriptions: PrescriptionDef[] = [
     {
@@ -41,10 +38,12 @@ export class WeeklyPrescriptionComponent implements OnInit {
 
   TimeFormat_MMdd_e = TimeFormat_MMdd_e;
 
-  constructor(public route: ActivatedRoute, private router: Router, public auth: AuthService, public context: GlobalContextService) {
-  }
+  constructor(
+    public router: Router
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   gotoDetails(prescription: PrescriptionDef) {
     this.router.navigate(['/home/prescription-view']);
