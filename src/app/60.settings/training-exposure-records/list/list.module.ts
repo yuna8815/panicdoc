@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DiaryPageRoutingModule } from './diary-routing.module';
+import { ListPageRoutingModule } from './list-routing.module';
 
-import { DiaryPage } from './diary.page';
+import { ListPage } from './list.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    DiaryPageRoutingModule,
+    ListPageRoutingModule,
     SharedModule
   ],
-  declarations: [DiaryPage]
+  declarations: [ListPage]
 })
-export class DiaryPageModule {}
+export class ListPageModule {}

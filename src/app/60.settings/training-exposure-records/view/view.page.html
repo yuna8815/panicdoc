@@ -1,0 +1,48 @@
+<smd-header1 title='증상 노출훈련' (back)='back()'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page'>
+    <smd-card [colorizeBorder]='true'>
+      <div class='flex flex-col'>
+        <p>
+          <span class='color-primary-dark mr-4'>운동방법</span>머리 숙였다 들기
+        </p>
+        <p>
+          <span class='color-primary-dark mr-4'>운동시작</span>{{ selected.date | date:'yy.MM.dd hh:mm:ss a' }}
+        </p>
+        <p>
+          <span class='color-primary-dark mr-4'>운동유지</span>{{ toHHmmss(selected.duration) }}
+        </p>
+      </div>
+    </smd-card>
+  </ion-grid>
+
+  <hr class='w-full h-1 bg-gray-200 mt-8' />
+
+  <ion-grid class='page'>
+    <div class='mt-8'>
+      <smd-score-select text='나의 공포감은 어느 정도입니까?'
+        [texts]='GradeLabels2'>
+      </smd-score-select>
+    </div>
+
+    <div class='mt-8'>
+      <smd-range text='실제 공황과 얼마나 비슷한가요?'></smd-range>
+    </div>
+
+    <h2 class='mt-8'>공황발작 증상</h2>
+    <div class='flex flex-row flex-wrap mt-4'>
+      <smd-chip class='mr-2 mb-2' *ngFor='let st of selected.symptoms' [text]='st' [checked]='true' [checkable]='false' [disabled]='true'></smd-chip>
+    </div>
+
+    <h2 class='mt-8'>훈련 때 나의 생각</h2>
+    <ion-textarea class='mt-4 px-4' placeholder='텍스트를 입력해 주세요.' [rows]='6'
+      [(ngModel)]='selected.thought' [disabled]='true'>
+    </ion-textarea>
+
+    <h2 class='mt-8'>훈련 때 나의 행동</h2>
+    <ion-textarea class='mt-4 px-4 mb-8' placeholder='텍스트를 입력해 주세요.' [rows]='6'
+      [(ngModel)]='selected.behavior' [disabled]='true'>
+    </ion-textarea>
+  </ion-grid>
+</ion-content>

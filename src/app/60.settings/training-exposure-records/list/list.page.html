@@ -1,0 +1,32 @@
+<smd-header1 title='증상 노출훈련' (back)='back()'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page'>
+    <h2>
+      증상 노출훈련으로 <span class='smd-underline'>불안감 줄이기!</span>
+    </h2>
+    <div class='text-gray-500'>
+      나의 신체반응을 직면하고 감정행동을 바르게 인지하세요.
+    </div>
+    <ion-button class='w-full mt-4'>
+      <img class='absolute left-0' src='/assets/icon/footer_diary.svg'>
+      증상 노출훈련하기
+    </ion-button>
+
+    <div *ngFor='let record of records' class='mt-6' (click)='selectRecord(record)'>
+      <smd-card>
+        <div class='flex flex-row items-center'>
+          <img src='assets/img/{{ record.icon }}.png' />
+          <div class='flex-col ml-4'>
+            <div>{{ record.name }}</div>
+            <span class='text-gray-400'>{{ record.date | date:'yy.MM.dd HH:mm:ss a' }}</span>
+          </div>
+          <div class='flex grow'></div>
+          <div class='rounded-full p-2 w-16 text-center text-gray-500' style='background: {{ record.complete ? "#DDEFE8" : "#eee" }}'>
+            {{ record.complete ? '완료' : '미완료' }}
+          </div>
+        </div>
+      </smd-card>
+    </div>
+  </ion-grid>
+</ion-content>

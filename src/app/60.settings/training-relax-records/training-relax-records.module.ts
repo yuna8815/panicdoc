@@ -3,10 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
-import { DiaryPageRoutingModule } from './diary-routing.module';
-
-import { DiaryPage } from './diary.page';
+import { TrainingRelaxRecordsPageRoutingModule } from './training-relax-records-routing.module';
+import { TrainingRelaxRecordsPage } from './training-relax-records.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +12,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    DiaryPageRoutingModule,
+    TrainingRelaxRecordsPageRoutingModule,
     SharedModule
   ],
-  declarations: [DiaryPage]
+  declarations: [TrainingRelaxRecordsPage]
 })
-export class DiaryPageModule {}
+export class TrainingRelaxRecordsPageModule {}

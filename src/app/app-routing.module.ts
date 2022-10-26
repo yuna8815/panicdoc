@@ -4,9 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    // redirectTo: 'fly',
+    redirectTo: 'fly',
     // redirectTo: '/tabs/home?program=1',
-    redirectTo: '/onboarding',
     pathMatch: 'full',
   },
   // {
@@ -82,10 +81,6 @@ const routes: Routes = [
     path: 'panic-log-write',
     loadChildren: () => import('./40.paniclogs/panic-log-write/panic-log-write.module').then( m => m.PanicLogWritePageModule)
   },
-  {
-    path: 'settings',
-    loadChildren: () => import('./60.settings/settings/settings.module').then( m => m.SettingsPageModule)
-  },
   // 프로그램1
   {
     path: 'program',
@@ -103,6 +98,49 @@ const routes: Routes = [
           },
         ]
       }
+    ]
+  },
+  {
+    path: 'settings',
+    children: [
+      {
+        // 알람설정
+        path: 'settings',
+        loadChildren: () => import('./60.settings/settings/settings.module').then( m => m.SettingsPageModule)
+      },
+      // 훈련기록
+      {
+        // 이완훈련
+        path: 'training-relax-records',
+        loadChildren: () => import('./60.settings/training-relax-records/training-relax-records.module').then( m => m.TrainingRelaxRecordsPageModule)
+      },
+      {
+        path: 'training-records/exposure-records',
+        loadChildren: () => import('./60.settings/training-records/exposure-records/exposure-records.module').then( m => m.ExposureRecordsPageModule)
+      },
+      {
+        // 증상 노출훈련
+        path: 'training-exposure-records',
+        children: [
+          {
+            path: 'list',
+            loadChildren: () => import('./60.settings/training-exposure-records/list/list.module').then( m => m.ListPageModule)
+          },
+          {
+            path: 'view',
+            loadChildren: () => import('./60.settings/training-exposure-records/view/view.module').then( m => m.ViewPageModule)
+          },
+          {
+            path: '',
+            redirectTo: '/settings/training-exposure-records/list',
+            pathMatch: 'full'
+          }
+        ]
+      },
+      {
+        path: 'training-records/daily-exposure-records',
+        loadChildren: () => import('./60.settings/training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
+      },
     ]
   },
   // 프로그램2
@@ -170,19 +208,6 @@ const routes: Routes = [
   {
     path: 'widgets-demo',
     loadChildren: () => import('./dev/widgets-demo/widgets-demo.module').then( m => m.WidgetsDemoPageModule)
-  },
-  // 훈련기록
-  {
-    path: 'training-records/relax-records',
-    loadChildren: () => import('./60.settings/training-records/relax-records/relax-records.module').then( m => m.RelaxRecordsPageModule)
-  },
-  {
-    path: 'training-records/exposure-records',
-    loadChildren: () => import('./60.settings/training-records/exposure-records/exposure-records.module').then( m => m.ExposureRecordsPageModule)
-  },
-  {
-    path: 'training-records/daily-exposure-records',
-    loadChildren: () => import('./60.settings/training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
   },
 ];
 

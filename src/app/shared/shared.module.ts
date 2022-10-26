@@ -29,6 +29,7 @@ import { SmdEmotionScoreViewComponent } from '../00.component/smd-emotion-score-
 import { SmdPanicLogCardViewComponent } from '../00.component/smd-panic-log-card-view/smd-panic-log-card-view.component';
 import { SmdDiagram1Component } from '../00.component/smd-diagram1/smd-diagram1.component';
 import { SmdWeeklyScoreChartComponent } from '../00.component/smd-weekly-score-chart/smd-weekly-score-chart.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,8 @@ import { SmdWeeklyScoreChartComponent } from '../00.component/smd-weekly-score-c
   imports: [
     IonicModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgChartsModule,
   ],
   exports: [
