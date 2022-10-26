@@ -115,10 +115,6 @@ const routes: Routes = [
         loadChildren: () => import('./60.settings/training-relax-records/training-relax-records.module').then( m => m.TrainingRelaxRecordsPageModule)
       },
       {
-        path: 'training-records/exposure-records',
-        loadChildren: () => import('./60.settings/training-records/exposure-records/exposure-records.module').then( m => m.ExposureRecordsPageModule)
-      },
-      {
         // 증상 노출훈련
         path: 'training-exposure-records',
         children: [
@@ -138,6 +134,7 @@ const routes: Routes = [
         ]
       },
       {
+        // 일상생활 노출훈련
         path: 'training-daily-records',
         children: [
           {
@@ -154,10 +151,6 @@ const routes: Routes = [
             pathMatch: 'full'
           }
         ]
-      },
-      {
-        path: 'training-records/daily-exposure-records',
-        loadChildren: () => import('./60.settings/training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
       },
     ]
   },
