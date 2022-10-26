@@ -54,7 +54,6 @@ export class ListPage implements OnInit {
       behavior: '',
     },
   ];
-  selected: ExposureTrainingRecord;
 
   toHHmmss = toHHmmss;
 
@@ -66,9 +65,8 @@ export class ListPage implements OnInit {
   ngOnInit() {
   }
 
-  selectRecord(record: ExposureTrainingRecord) {
+  selectRecord() {
     this.router.navigateByUrl('/settings/training-exposure-records/view')
-    this.selected = record;
   }
 
   back() {

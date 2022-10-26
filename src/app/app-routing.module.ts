@@ -138,6 +138,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'training-daily-records',
+        children: [
+          {
+            path: 'list',
+            loadChildren: () => import('./60.settings/training-daily-records/list/list.module').then( m => m.ListPageModule)
+          },
+          {
+            path: 'view',
+            loadChildren: () => import('./60.settings/training-daily-records/view/view.module').then( m => m.ViewPageModule)
+          },
+          {
+            path: '',
+            redirectTo: '/settings/training-daily-records/list',
+            pathMatch: 'full'
+          }
+        ]
+      },
+      {
         path: 'training-records/daily-exposure-records',
         loadChildren: () => import('./60.settings/training-records/daily-exposure-records/daily-exposure-records.module').then( m => m.DailyExposureRecordsPageModule)
       },
