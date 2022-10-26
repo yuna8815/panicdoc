@@ -14,8 +14,14 @@ ion-footer {
   }
 
   .buttons-wrap {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  ion-button {
+    height: 56px;
+    margin: 10px 0 0;
+    font-size: 15px;
   }
 
   ion-button.front {

@@ -13,6 +13,7 @@ export class SmdChipComponent implements OnInit {
   @Input() checkable = true;
   @Input() checked = true;
   @Output() checkedChange = new EventEmitter<boolean>();
+  @Output() clicked = new EventEmitter();
   @Input() width: string | undefined;
   @Input() variant: ChipVariant;
   @Input() disabled = false;
@@ -25,5 +26,6 @@ export class SmdChipComponent implements OnInit {
     if (this.disabled) { return; }
     this.checked = !this.checked;
     this.checkedChange.emit(this.checked);
+    this.clicked.emit({text: this.text, checked: this.checked});
   }
 }

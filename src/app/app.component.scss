@@ -4,6 +4,7 @@
 ion-menu {
   ion-toolbar {
     --background: white;
+    --border-width: 0;
   }
   ion-content {
     > * {

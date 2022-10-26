@@ -152,6 +152,32 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'panic-factors',
+        children: [
+          {
+            path: 'panic-factors',
+            loadChildren: () => import('./60.settings/panic-factors/panic-factors/panic-factors.module').then( m => m.PanicFactorsPageModule)
+          },
+          {
+            path: 'panic-factors-select',
+            loadChildren: () => import('./60.settings/panic-factors/panic-factors-select/panic-factors-select.module').then( m => m.PanicFactorsSelectPageModule)
+          },
+          {
+            path: 'panic-factors-etc',
+            loadChildren: () => import('./60.settings/panic-factors/panic-factors-etc/panic-factors-etc.module').then( m => m.PanicFactorsEtcPageModule)
+          },
+          {
+            path: '',
+            redirectTo: '/settings/panic-factors/panic-factors',
+            pathMatch: 'full'
+          }
+        ]
+      },
+      {
+        path: 'panic-result',
+        loadChildren: () => import('./60.settings/panic-result/panic-result.module').then( m => m.PanicResultPageModule)
+      },
     ]
   },
   // 프로그램2

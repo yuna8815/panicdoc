@@ -1,5 +1,5 @@
 
-<div class='chip' [class]='{ checked, circle: variant == "circle" }' [style.width]='width'
+<div class='chip' [class]='{ checkable, checked, circle: variant == "circle" }' [style.width]='width'
   (click)='onClicked()'>
   {{ text }}
   <ng-content *ngIf='!text'></ng-content>

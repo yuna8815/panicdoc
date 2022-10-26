@@ -1,0 +1,16 @@
+<smd-header1 title='나의 공황 촉발요인' (back)='back()'>
+</smd-header1>
+
+<ion-content>
+  <ion-grid class='page grow'>
+    <h2 class='mb-4'>
+      기타(직접 입력)
+    </h2>
+    <ion-textarea class='mt-4 mb-8 p-2' placeholder='텍스트를 입력해주세요.' [rows]='6'
+      [(ngModel)]='text'>
+    </ion-textarea>
+  </ion-grid>
+</ion-content>
+
+<smd-program-footer text='작성 완료' (next)='doSave()' [disabled]='!text'>
+</smd-program-footer>

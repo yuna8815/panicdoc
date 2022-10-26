@@ -1,0 +1,18 @@
+<smd-header1 title='나의 공황 촉발요인' (back)='back()'></smd-header1>
+
+<ion-content>
+  <ion-grid class='page flex flex-col'>
+    <h2 class='mb-[10px]'>
+      주로 <span class='smd-underline'>어떤 상황</span>에서 공황이 일어났나요?
+    </h2>
+    <div class='text-gray-500'>해당 되는 경우를 모두 선택해 주세요.</div>
+  
+    <div class='flex flex-row flex-wrap mt-4'>
+      <smd-chip class='mr-2 mb-2' *ngFor='let ft of factorKinds' [text]='ft' [(checked)]='factors[ft]' (clicked)="clicked($event)">
+      </smd-chip>
+    </div>
+  </ion-grid>  
+</ion-content>
+
+<smd-program-footer text='완료' (click)='doSave()'>
+</smd-program-footer>

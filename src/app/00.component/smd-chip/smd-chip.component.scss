@@ -7,16 +7,18 @@
 
 .chip {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 13px 18px;
   background-color: $color-pale;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   color: $color-medium;
   user-select: none;
   text-align: center;
-
   &.checked {
     color: black;
     background-color: $color-primary-tint;
+    &.checkable {
+      color: $color-primary-dark;
+    }
   }
 
   &.circle {
