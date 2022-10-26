@@ -1,0 +1,23 @@
+<smd-header1 title='{{ (item.date | date:TimeFormat_MMdd_e) }} 감정일기' (back)="backHome()" (close)='backHome()'></smd-header1>
+
+<ion-content>
+  <div class="page">
+    <smd-emotion-score-view></smd-emotion-score-view>
+  </div>
+
+  <hr class='mt-[30px] h-[0.5rem] border-0 bg-gray-100'/>
+  
+  <ion-grid class='page'>
+    <h2 class='mt-8'>
+      오늘 공황과 관련된 나의 생각
+    </h2>
+    <ion-textarea class='mt-4 px-4' placeholder='작성한 내용이 없습니다.' [rows]='6' [disabled]='true'>
+    </ion-textarea>
+
+    <h2 class='mt-8'>
+      오늘 공황과 관련된 나의 행동
+    </h2>
+    <ion-textarea class='mt-4 px-4' placeholder='작성한 내용이 없습니다.' [rows]='6' [disabled]='true'>
+    </ion-textarea>
+  </ion-grid>
+</ion-content>

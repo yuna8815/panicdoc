@@ -59,20 +59,19 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./00.tabs/tabs/tabs.module').then( m => m.TabsPageModule)
   },
-  // 홈
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./10.home/home/home.module').then( m => m.HomePageModule)
-  // },
-  // {
-  //   path: 'diary',
-  //   children:[
+  {
+    path: 'diary',
+    children:[
       {
         path: 'diary-write',
         loadChildren: () => import('./30.diary/diary-write/diary-write.module').then( m => m.DiaryWritePageModule)
       },
-  //   ]
-  // },
+      {
+        path: 'diary-view',
+        loadChildren: () => import('./30.diary/diary-view/diary-view.module').then( m => m.DiaryViewPageModule)
+      },
+    ]
+  },
   {
     path: 'prescription-view',
     loadChildren: () => import('./50.report/prescription-view/prescription-view.module').then( m => m.PrescriptionViewPageModule)
@@ -231,11 +230,6 @@ const routes: Routes = [
   {
     path: 'p7',
     loadChildren: () => import('./20.program/program7/p7.module').then( m => m.P7PageModule)
-  },
-  // 나의 공황 촉발 요인
-  {
-    path: 'my-panic-factors',
-    loadChildren: () => import('./60.settings/my-panic-factors/my-panic-factors.module').then( m => m.MyPanicFactorsPageModule)
   },
   // 개발자
   {

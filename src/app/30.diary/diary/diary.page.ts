@@ -74,7 +74,8 @@ export class DiaryPage implements OnInit {
   }
 
   gotoWrite(item: EmotionDiaryDef) {
-    this.router.navigate(['/home/diary-write']);
+    if(!item.scores) this.router.navigate(['/diary/diary-write']);
+    else this.router.navigate(['/diary/diary-view']);
   }
 
 }

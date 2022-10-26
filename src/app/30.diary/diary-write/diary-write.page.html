@@ -1,61 +1,39 @@
-<smd-header1 title='{{ (item.date | date:TimeFormat_MMdd_e) }} 감정일기' (close)='backToDiary()'></smd-header1>
+<smd-header1 title='{{ (item.date | date:TimeFormat_MMdd_e) }} 감정일기' (back)="back()" (close)='backHome()'></smd-header1>
 
 <ion-content>
-  <ion-grid class='page flex flex-col'>
-
-    <ng-container *ngIf='step == "1"'>
-      <smd-score-select text='오늘 하루의 <span class="smd-underline">불안함</span>은 어느 정도인가요?' [texts]='scoreLabels'
-        [(selected)]='item.scores.anxiety'>
-      </smd-score-select>
-
-      <hr class='mt-8 mb-8' />
-
-      <smd-score-select text='오늘 하루의 <span class="smd-underline">우울함</span>은 어느 정도인가요?'
-          [texts]='scoreLabels' [(selected)]='item.scores.sadness' [disabled]='item.scores.anxiety == null'>
-      </smd-score-select>
-
-      <hr class='mt-8 mb-8' />
-
-      <smd-score-select text='<span class="smd-underline">통제력 상실</span>에 대한 걱정이 어느 정도인가요?'
-          [texts]='scoreLabels' [(selected)]='item.scores.control' [disabled]='item.scores.sadness == null'>
-      </smd-score-select>
-    </ng-container>
-
-    <ng-container *ngIf='step == "2"'>
-      <h2 class='mt-8'>
-        불안 또는 공황이 생겨났을 때 <span class='smd-underline'>나의 생각</span>은 어땠나요?
-      </h2>
-      <ion-textarea class='mt-4 px-4' placeholder='구체적으로 작성해보세요.' [rows]='6'>
-      </ion-textarea>
-
-      <h2 class='mt-8'>
-        불안 또는 공황이 생겨났을 때 <span class='smd-underline'>나의 생각</span>은 어땠나요?
-      </h2>
-      <ion-textarea class='mt-4 px-4' placeholder='구체적으로 작성해보세요.' [rows]='6'>
-      </ion-textarea>
-
-    </ng-container>
-    <ng-container *ngIf='step == "confirm"'>
-      <smd-emotion-score-view>
-      </smd-emotion-score-view>
-
-      <hr class='h-[0.5rem] border-0 bg-gray-100'/>
-
-      <h2 class='mt-8'>
-        오늘 공황과 관련된 나의 생각
-      </h2>
-      <ion-textarea class='mt-4 px-4' placeholder='작성한 내용이 없습니다.' [rows]='6' [disabled]='true'>
-      </ion-textarea>
-
-      <h2 class='mt-8'>
-        오늘 공황과 관련된 나의 행동
-      </h2>
-      <ion-textarea class='mt-4 px-4' placeholder='작성한 내용이 없습니다.' [rows]='6' [disabled]='true'>
-      </ion-textarea>
-    </ng-container>
-
-  </ion-grid>
+  <ion-slides #slides [options]="{ allowTouchMove: false }">
+    <ion-slide class="text-left">
+      <ion-grid class='page'>
+        <smd-score-select text='오늘 하루의 <span class="smd-underline">불안함</span>은 어느 정도인가요?' [texts]='scoreLabels'
+          [(selected)]='item.scores.anxiety'>
+        </smd-score-select>
+  
+        <hr class='mt-8 mb-8' />
+  
+        <smd-score-select text='오늘 하루의 <span class="smd-underline">우울함</span>은 어느 정도인가요?'
+            [texts]='scoreLabels' [(selected)]='item.scores.sadness' [disabled]='item.scores.anxiety == null'>
+        </smd-score-select>
+  
+        <hr class='mt-8 mb-8' />
+  
+        <smd-score-select text='<span class="smd-underline">통제력 상실</span>에 대한 걱정이 어느 정도인가요?'
+            [texts]='scoreLabels' [(selected)]='item.scores.control' [disabled]='item.scores.sadness == null'>
+        </smd-score-select>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide class="text-left">
+      <ion-grid class='page'>
+        <h2>불안 또는 공황이 생겨났을 때 <span class='smd-underline'>나의 생각</span>은 어땠나요?</h2>
+        <ion-textarea class='mt-4 px-4' placeholder='구체적으로 작성해보세요.' [rows]='6'>
+        </ion-textarea>
+  
+        <h2 class='mt-8'>불안 또는 공황이 생겨났을 때 <span class='smd-underline'>나의 생각</span>은 어땠나요?</h2>
+        <ion-textarea class='mt-4 px-4' placeholder='구체적으로 작성해보세요.' [rows]='6'>
+        </ion-textarea>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
 
-<smd-program-footer [text]='"다음"' (next)='next()'>
+<smd-program-footer text='{{ btnMsg }} ({{ step }}/{{ total }})' (next)='next()'>
 </smd-program-footer>

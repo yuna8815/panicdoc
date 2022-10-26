@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MyPanicFactorsStep2Component } from './my-panic-factors-step2.component';
+import { DiaryViewPage } from './diary-view.page';
 
-describe('MyPanicFactorsStep2Component', () => {
-  let component: MyPanicFactorsStep2Component;
-  let fixture: ComponentFixture<MyPanicFactorsStep2Component>;
+describe('DiaryViewPage', () => {
+  let component: DiaryViewPage;
+  let fixture: ComponentFixture<DiaryViewPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MyPanicFactorsStep2Component ],
+      declarations: [ DiaryViewPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MyPanicFactorsStep2Component);
+    fixture = TestBed.createComponent(DiaryViewPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
